@@ -922,3 +922,14 @@
 2020-03-26 16:28:41 | 1585211321.3672 | ERROR | File: /project/miniHttp/controller/Http.php
 2020-03-26 16:28:41 | 1585211321.3690 | ERROR | Line: 50
 2020-03-26 16:28:41 | 1585211321.3710 | ERROR | ================================================================================
+[2020-03-26 08:47:08 #25271.1]	NOTICE	Server is shutdown now.
+2020-03-26 16:47:08 | 1585212428.6919 | INFO | Worker 0 stop
+2020-03-26 16:47:08 | 1585212428.6921 | INFO | Worker 1 stop
+2020-03-26 16:47:10 | 1585212430.8300 | INFO | ======= HTTP master start =======
+2020-03-26 16:47:10 | 1585212430.9510 | INFO | Success to init MySQL instance
+2020-03-26 16:47:10 | 1585212430.9523 | INFO | Success to init MySQL instance
+2020-03-26 16:47:10 | 1585212430.9556 | INFO | Success to init MySQL instance
+2020-03-26 16:47:10 | 1585212430.9575 | INFO | Success to init Redis instance
+2020-03-26 16:47:10 | 1585212430.9583 | INFO | Success to init Redis instance
+2020-03-26 16:47:10 | 1585212430.9596 | INFO | Worker 1 ready for connections ...
+2020-03-26 16:47:10 | 1585212430.9609 | INFO | Worker 0 ready for connections ...
