@@ -1,0 +1,762 @@
+2020-03-24 14:54:17 | 1585032857.0908 | INFO | ======= HTTP master start =======
+2020-03-24 14:54:17 | 1585032857.2676 | INFO | Success to init MySQL instance
+2020-03-24 14:54:17 | 1585032857.2679 | INFO | Success to init MySQL instance
+2020-03-24 14:54:17 | 1585032857.2813 | INFO | Success to init MySQL instance
+2020-03-24 14:54:17 | 1585032857.2932 | INFO | Success to init Redis instance
+2020-03-24 14:54:17 | 1585032857.2936 | INFO | Success to init Redis instance
+2020-03-24 14:54:17 | 1585032857.2961 | INFO | Worker 0 ready for connections ...
+2020-03-24 14:54:17 | 1585032857.2972 | INFO | Worker 1 ready for connections ...
+2020-03-24 14:54:58 | 1585032898.9173 | ERROR | ErrorNO: 2
+2020-03-24 14:54:58 | 1585032898.9206 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:54:58 | 1585032898.9224 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:54:58 | 1585032898.9245 | ERROR | Line: 73
+2020-03-24 14:54:58 | 1585032898.9268 | ERROR | ================================================================================
+2020-03-24 14:55:04 | 1585032904.1766 | ERROR | ErrorNO: 2
+2020-03-24 14:55:04 | 1585032904.1788 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:55:04 | 1585032904.1816 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:55:04 | 1585032904.1836 | ERROR | Line: 73
+2020-03-24 14:55:04 | 1585032904.1857 | ERROR | ================================================================================
+2020-03-24 14:55:24 | 1585032924.9782 | ERROR | ErrorNO: 2
+2020-03-24 14:55:24 | 1585032924.9818 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:55:24 | 1585032924.9840 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:55:24 | 1585032924.9861 | ERROR | Line: 73
+2020-03-24 14:55:24 | 1585032924.9882 | ERROR | ================================================================================
+2020-03-24 14:55:31 | 1585032931.8804 | ERROR | ErrorNO: 2
+2020-03-24 14:55:31 | 1585032931.8832 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:55:31 | 1585032931.8853 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:55:31 | 1585032931.8872 | ERROR | Line: 73
+2020-03-24 14:55:31 | 1585032931.8892 | ERROR | ================================================================================
+2020-03-24 14:55:44 | 1585032944.5050 | ERROR | ErrorNO: 2
+2020-03-24 14:55:44 | 1585032944.5080 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:55:44 | 1585032944.5099 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:55:44 | 1585032944.5120 | ERROR | Line: 73
+2020-03-24 14:55:44 | 1585032944.5139 | ERROR | ================================================================================
+2020-03-24 14:55:48 | 1585032948.1609 | ERROR | ErrorNO: 2
+2020-03-24 14:55:48 | 1585032948.1634 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:55:48 | 1585032948.1661 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:55:48 | 1585032948.1681 | ERROR | Line: 73
+2020-03-24 14:55:48 | 1585032948.1701 | ERROR | ================================================================================
+2020-03-24 14:55:50 | 1585032950.1921 | ERROR | ErrorNO: 2
+2020-03-24 14:55:50 | 1585032950.1944 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:55:50 | 1585032950.1964 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:55:50 | 1585032950.1984 | ERROR | Line: 73
+2020-03-24 14:55:50 | 1585032950.2004 | ERROR | ================================================================================
+[2020-03-24 06:56:04 #9197.1]	NOTICE	Server is shutdown now.
+2020-03-24 14:56:04 | 1585032964.1515 | INFO | Worker 0 stop
+2020-03-24 14:56:04 | 1585032964.1517 | INFO | Worker 1 stop
+2020-03-24 14:56:06 | 1585032966.2763 | INFO | ======= HTTP master start =======
+2020-03-24 14:56:06 | 1585032966.3964 | INFO | Success to init MySQL instance
+2020-03-24 14:56:06 | 1585032966.3970 | INFO | Success to init MySQL instance
+2020-03-24 14:56:06 | 1585032966.4003 | INFO | Success to init MySQL instance
+2020-03-24 14:56:06 | 1585032966.4025 | INFO | Success to init Redis instance
+2020-03-24 14:56:06 | 1585032966.4036 | INFO | Success to init Redis instance
+2020-03-24 14:56:06 | 1585032966.4048 | INFO | Worker 1 ready for connections ...
+2020-03-24 14:56:06 | 1585032966.4063 | INFO | Worker 0 ready for connections ...
+[2020-03-24 06:56:38 #9519.1]	NOTICE	Server is shutdown now.
+2020-03-24 14:56:38 | 1585032998.2486 | INFO | Worker 0 stop
+2020-03-24 14:56:38 | 1585032998.2488 | INFO | Worker 1 stop
+2020-03-24 14:56:40 | 1585033000.3732 | INFO | ======= HTTP master start =======
+2020-03-24 14:56:40 | 1585033000.4924 | INFO | Success to init MySQL instance
+2020-03-24 14:56:40 | 1585033000.4936 | INFO | Success to init MySQL instance
+2020-03-24 14:56:40 | 1585033000.4961 | INFO | Success to init MySQL instance
+2020-03-24 14:56:40 | 1585033000.4984 | INFO | Success to init Redis instance
+2020-03-24 14:56:40 | 1585033000.4997 | INFO | Success to init Redis instance
+2020-03-24 14:56:40 | 1585033000.5010 | INFO | Worker 1 ready for connections ...
+2020-03-24 14:56:40 | 1585033000.5027 | INFO | Worker 0 ready for connections ...
+2020-03-24 14:57:16 | 1585033036.0062 | INFO | This is an info msg
+2020-03-24 14:57:16 | 1585033036.0091 | WARN | This is a warn msg
+2020-03-24 14:57:16 | 1585033036.0111 | ERROR | This is an error msg
+2020-03-24 14:57:16 | 1585033036.0130 | FATAL | This is a fatal msg
+2020-03-24 14:57:16 | 1585033036.0150 | INFO | This is a log msg
+2020-03-24 14:57:16 | 1585033036.0186 | ERROR | ErrorNO: 2
+2020-03-24 14:57:16 | 1585033036.0207 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:57:16 | 1585033036.0231 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:57:16 | 1585033036.0251 | ERROR | Line: 73
+2020-03-24 14:57:16 | 1585033036.0271 | ERROR | ================================================================================
+[2020-03-24 06:57:33 #9549.1]	NOTICE	Server is shutdown now.
+2020-03-24 14:57:33 | 1585033053.7762 | INFO | Worker 0 stop
+2020-03-24 14:57:33 | 1585033053.7764 | INFO | Worker 1 stop
+2020-03-24 14:57:35 | 1585033055.8945 | INFO | ======= HTTP master start =======
+2020-03-24 14:57:36 | 1585033056.0139 | INFO | Success to init MySQL instance
+2020-03-24 14:57:36 | 1585033056.0151 | INFO | Success to init MySQL instance
+2020-03-24 14:57:36 | 1585033056.0178 | INFO | Success to init MySQL instance
+2020-03-24 14:57:36 | 1585033056.0201 | INFO | Success to init Redis instance
+2020-03-24 14:57:36 | 1585033056.0211 | INFO | Success to init Redis instance
+2020-03-24 14:57:36 | 1585033056.0224 | INFO | Worker 1 ready for connections ...
+2020-03-24 14:57:36 | 1585033056.0239 | INFO | Worker 0 ready for connections ...
+2020-03-24 14:57:38 | 1585033058.4656 | INFO | This is an info msg
+2020-03-24 14:57:38 | 1585033058.4685 | WARN | This is a warn msg
+2020-03-24 14:57:38 | 1585033058.4705 | ERROR | This is an error msg
+2020-03-24 14:57:38 | 1585033058.4724 | FATAL | This is a fatal msg
+2020-03-24 14:57:38 | 1585033058.4744 | INFO | This is a log msg
+2020-03-24 14:58:16 | 1585033096.4096 | ERROR | ErrorNO: 8
+2020-03-24 14:58:16 | 1585033096.4126 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 14:58:16 | 1585033096.4147 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 14:58:16 | 1585033096.4168 | ERROR | Line: 56
+2020-03-24 14:58:16 | 1585033096.4188 | ERROR | ================================================================================
+2020-03-24 14:58:16 | 1585033096.4213 | ERROR | ErrorNO: 2
+2020-03-24 14:58:16 | 1585033096.4234 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:58:16 | 1585033096.4256 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:58:16 | 1585033096.4276 | ERROR | Line: 73
+2020-03-24 14:58:16 | 1585033096.4296 | ERROR | ================================================================================
+2020-03-24 14:59:04 | 1585033144.8654 | ERROR | ErrorNO: 2
+2020-03-24 14:59:04 | 1585033144.8682 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:59:04 | 1585033144.8702 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:59:04 | 1585033144.8721 | ERROR | Line: 73
+2020-03-24 14:59:04 | 1585033144.8740 | ERROR | ================================================================================
+2020-03-24 14:59:10 | 1585033150.4491 | ERROR | ErrorNO: 2
+2020-03-24 14:59:10 | 1585033150.4514 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 14:59:10 | 1585033150.4538 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 14:59:10 | 1585033150.4557 | ERROR | Line: 73
+2020-03-24 14:59:10 | 1585033150.4578 | ERROR | ================================================================================
+[2020-03-24 06:59:52 #9581.1]	NOTICE	Server is shutdown now.
+2020-03-24 14:59:52 | 1585033192.8104 | INFO | Worker 0 stop
+2020-03-24 14:59:52 | 1585033192.8105 | INFO | Worker 1 stop
+2020-03-24 14:59:54 | 1585033194.9335 | INFO | ======= HTTP master start =======
+2020-03-24 14:59:55 | 1585033195.0522 | INFO | Success to init MySQL instance
+2020-03-24 14:59:55 | 1585033195.0535 | INFO | Success to init MySQL instance
+2020-03-24 14:59:55 | 1585033195.0561 | INFO | Success to init MySQL instance
+2020-03-24 14:59:55 | 1585033195.0584 | INFO | Success to init Redis instance
+2020-03-24 14:59:55 | 1585033195.0595 | INFO | Success to init Redis instance
+2020-03-24 14:59:55 | 1585033195.0607 | INFO | Worker 1 ready for connections ...
+2020-03-24 14:59:55 | 1585033195.0622 | INFO | Worker 0 ready for connections ...
+[24-Mar-2020 14:59:57 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /project/miniSwoole/controller/Http.php on line 79
+[2020-03-24 07:00:26 #9624.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:00:26 | 1585033226.4233 | INFO | Worker 0 stop
+2020-03-24 15:00:26 | 1585033226.4235 | INFO | Worker 1 stop
+2020-03-24 15:00:28 | 1585033228.5134 | INFO | ======= HTTP master start =======
+2020-03-24 15:00:28 | 1585033228.6355 | INFO | Success to init MySQL instance
+2020-03-24 15:00:28 | 1585033228.6358 | INFO | Success to init MySQL instance
+2020-03-24 15:00:28 | 1585033228.6395 | INFO | Success to init MySQL instance
+2020-03-24 15:00:28 | 1585033228.6408 | INFO | Success to init Redis instance
+2020-03-24 15:00:28 | 1585033228.6431 | INFO | Success to init Redis instance
+2020-03-24 15:00:28 | 1585033228.6436 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:00:28 | 1585033228.6452 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:02:17 | 1585033337.3573 | ERROR | ErrorNO: 8
+2020-03-24 15:02:17 | 1585033337.3603 | ERROR | Error: Undefined index: Permission
+2020-03-24 15:02:17 | 1585033337.3625 | ERROR | File: /project/miniSwoole/library/core/Registry.php
+2020-03-24 15:02:17 | 1585033337.3646 | ERROR | Line: 12
+2020-03-24 15:02:17 | 1585033337.3669 | ERROR | ================================================================================
+[24-Mar-2020 15:02:17 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function checkPermission() on null in /project/miniSwoole/controller/Http.php:15
+Stack trace:
+#0 /project/miniSwoole/library/core/Hooker.php(72): C_Http->plugin()
+#1 {main}
+  thrown in /project/miniSwoole/controller/Http.php on line 15
+[2020-03-24 07:02:17 *9680.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function checkPermission() on null in /project/miniSwoole/controller/Http.php:15
+Stack trace:
+#0 /project/miniSwoole/library/core/Hooker.php(72): C_Http->plugin()
+#1 {main}
+  thrown in /project/miniSwoole/controller/Http.php on line 15.
+[2020-03-24 07:02:17 $9676.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+2020-03-24 15:02:17 | 1585033337.3788 | FATAL | Worker 0 exit with code 255 and signal 0
+2020-03-24 15:02:17 | 1585033337.3886 | INFO | Success to init MySQL instance
+2020-03-24 15:02:17 | 1585033337.3914 | INFO | Success to init MySQL instance
+2020-03-24 15:02:17 | 1585033337.3943 | INFO | Success to init Redis instance
+2020-03-24 15:02:17 | 1585033337.3965 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:03:12 | 1585033392.2470 | ERROR | ErrorNO: 8
+2020-03-24 15:03:12 | 1585033392.2508 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:03:12 | 1585033392.2529 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:03:12 | 1585033392.2550 | ERROR | Line: 56
+2020-03-24 15:03:12 | 1585033392.2570 | ERROR | ================================================================================
+2020-03-24 15:03:12 | 1585033392.2633 | ERROR | ErrorNO: 2
+2020-03-24 15:03:12 | 1585033392.2653 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:03:12 | 1585033392.2672 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:03:12 | 1585033392.2690 | ERROR | Line: 73
+2020-03-24 15:03:12 | 1585033392.2708 | ERROR | ================================================================================
+2020-03-24 15:04:05 | 1585033445.3745 | ERROR | ErrorNO: 8
+2020-03-24 15:04:05 | 1585033445.3773 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:04:05 | 1585033445.3792 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:04:05 | 1585033445.3814 | ERROR | Line: 56
+2020-03-24 15:04:05 | 1585033445.3836 | ERROR | ================================================================================
+2020-03-24 15:04:05 | 1585033445.3861 | ERROR | ErrorNO: 2
+2020-03-24 15:04:05 | 1585033445.3884 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:04:05 | 1585033445.3905 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:04:05 | 1585033445.3924 | ERROR | Line: 73
+2020-03-24 15:04:05 | 1585033445.3941 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.7965 | ERROR | ErrorNO: 2
+2020-03-24 15:06:20 | 1585033580.8000 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-24 15:06:20 | 1585033580.8018 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:06:20 | 1585033580.8037 | ERROR | Line: 44
+2020-03-24 15:06:20 | 1585033580.8057 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.8079 | ERROR | ErrorNO: 8
+2020-03-24 15:06:20 | 1585033580.8098 | ERROR | Error: Undefined index: rabbit_host
+2020-03-24 15:06:20 | 1585033580.8119 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:06:20 | 1585033580.8140 | ERROR | Line: 48
+2020-03-24 15:06:20 | 1585033580.8159 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.8180 | ERROR | ErrorNO: 8
+2020-03-24 15:06:20 | 1585033580.8200 | ERROR | Error: Undefined index: rabbit_port
+2020-03-24 15:06:20 | 1585033580.8219 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:06:20 | 1585033580.8239 | ERROR | Line: 49
+2020-03-24 15:06:20 | 1585033580.8258 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.8276 | ERROR | ErrorNO: 8
+2020-03-24 15:06:20 | 1585033580.8295 | ERROR | Error: Undefined index: rabbit_username
+2020-03-24 15:06:20 | 1585033580.8315 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:06:20 | 1585033580.8335 | ERROR | Line: 50
+2020-03-24 15:06:20 | 1585033580.8353 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.8371 | ERROR | ErrorNO: 8
+2020-03-24 15:06:20 | 1585033580.8392 | ERROR | Error: Undefined index: rabbit_password
+2020-03-24 15:06:20 | 1585033580.8411 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:06:20 | 1585033580.8432 | ERROR | Line: 51
+2020-03-24 15:06:20 | 1585033580.8451 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.8468 | ERROR | ErrorNO: 8
+2020-03-24 15:06:20 | 1585033580.8488 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-24 15:06:20 | 1585033580.8507 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:06:20 | 1585033580.8525 | ERROR | Line: 52
+2020-03-24 15:06:20 | 1585033580.8544 | ERROR | ================================================================================
+2020-03-24 15:06:20 | 1585033580.8580 | ERROR | ErrorNO: 2
+2020-03-24 15:06:20 | 1585033580.8601 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:06:20 | 1585033580.8619 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:06:20 | 1585033580.8637 | ERROR | Line: 73
+2020-03-24 15:06:20 | 1585033580.8655 | ERROR | ================================================================================
+[2020-03-24 07:07:33 #9675.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:07:33 | 1585033653.6151 | INFO | Worker 0 stop
+2020-03-24 15:07:33 | 1585033653.6153 | INFO | Worker 1 stop
+2020-03-24 15:07:35 | 1585033655.7410 | INFO | ======= HTTP master start =======
+2020-03-24 15:07:35 | 1585033655.8629 | INFO | Success to init MySQL instance
+2020-03-24 15:07:35 | 1585033655.8633 | INFO | Success to init MySQL instance
+2020-03-24 15:07:35 | 1585033655.8668 | INFO | Success to init MySQL instance
+2020-03-24 15:07:35 | 1585033655.8680 | INFO | Success to init Redis instance
+2020-03-24 15:07:35 | 1585033655.8702 | INFO | Success to init Redis instance
+2020-03-24 15:07:35 | 1585033655.8707 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:07:35 | 1585033655.8720 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:07:42 | 1585033662.8220 | INFO | Args in C_Http::tick => ["xyz","abc","123"]
+2020-03-24 15:07:42 | 1585033662.8251 | ERROR | ErrorNO: 2
+2020-03-24 15:07:42 | 1585033662.8269 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:07:42 | 1585033662.8288 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:07:42 | 1585033662.8308 | ERROR | Line: 476
+2020-03-24 15:07:42 | 1585033662.8328 | ERROR | ================================================================================
+2020-03-24 15:08:14 | 1585033694.4608 | INFO | Args in C_Http::tick => ["xyz","abc","123"]
+2020-03-24 15:08:14 | 1585033694.4641 | ERROR | ErrorNO: 2
+2020-03-24 15:08:14 | 1585033694.4660 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:08:14 | 1585033694.4680 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:08:14 | 1585033694.4700 | ERROR | Line: 476
+2020-03-24 15:08:14 | 1585033694.4720 | ERROR | ================================================================================
+[2020-03-24 07:09:46 #9821.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:09:46 | 1585033786.7484 | INFO | Worker 0 stop
+2020-03-24 15:09:46 | 1585033786.7485 | INFO | Worker 1 stop
+2020-03-24 15:09:48 | 1585033788.8696 | INFO | ======= HTTP master start =======
+2020-03-24 15:09:48 | 1585033788.9885 | INFO | Success to init MySQL instance
+2020-03-24 15:09:48 | 1585033788.9898 | INFO | Success to init MySQL instance
+2020-03-24 15:09:48 | 1585033788.9922 | INFO | Success to init MySQL instance
+2020-03-24 15:09:48 | 1585033788.9944 | INFO | Success to init Redis instance
+2020-03-24 15:09:48 | 1585033788.9955 | INFO | Success to init Redis instance
+2020-03-24 15:09:48 | 1585033788.9968 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:09:48 | 1585033788.9985 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:09:54 | 1585033794.0398 | INFO | Importer process is ready !
+2020-03-24 15:09:54 | 1585033794.0437 | INFO | Time in Importer::run => 2020-03-24 15:09:54
+2020-03-24 15:09:55 | 1585033795.0480 | INFO | Time in Importer::run => 2020-03-24 15:09:55
+2020-03-24 15:09:56 | 1585033796.0524 | INFO | Time in Importer::run => 2020-03-24 15:09:56
+2020-03-24 15:09:57 | 1585033797.0560 | INFO | Time in Importer::run => 2020-03-24 15:09:57
+2020-03-24 15:09:58 | 1585033798.0602 | INFO | Time in Importer::run => 2020-03-24 15:09:58
+2020-03-24 15:09:59 | 1585033799.0630 | INFO | Time in Importer::run => 2020-03-24 15:09:59
+2020-03-24 15:10:00 | 1585033800.0670 | INFO | Time in Importer::run => 2020-03-24 15:10:00
+2020-03-24 15:10:01 | 1585033801.0717 | INFO | Time in Importer::run => 2020-03-24 15:10:01
+2020-03-24 15:10:02 | 1585033802.0757 | INFO | Time in Importer::run => 2020-03-24 15:10:02
+2020-03-24 15:10:03 | 1585033803.0784 | INFO | Time in Importer::run => 2020-03-24 15:10:03
+2020-03-24 15:10:04 | 1585033804.0830 | INFO | Time in Importer::run => 2020-03-24 15:10:04
+2020-03-24 15:10:05 | 1585033805.0872 | INFO | Time in Importer::run => 2020-03-24 15:10:05
+2020-03-24 15:10:06 | 1585033806.0903 | INFO | Time in Importer::run => 2020-03-24 15:10:06
+2020-03-24 15:10:07 | 1585033807.0950 | INFO | Time in Importer::run => 2020-03-24 15:10:07
+2020-03-24 15:10:08 | 1585033808.0986 | INFO | Time in Importer::run => 2020-03-24 15:10:08
+2020-03-24 15:10:09 | 1585033809.1019 | INFO | Time in Importer::run => 2020-03-24 15:10:09
+2020-03-24 15:10:10 | 1585033810.1069 | INFO | Time in Importer::run => 2020-03-24 15:10:10
+2020-03-24 15:10:11 | 1585033811.1121 | INFO | Time in Importer::run => 2020-03-24 15:10:11
+2020-03-24 15:10:12 | 1585033812.1154 | INFO | Time in Importer::run => 2020-03-24 15:10:12
+2020-03-24 15:10:13 | 1585033813.1208 | INFO | Time in Importer::run => 2020-03-24 15:10:13
+2020-03-24 15:10:14 | 1585033814.1239 | INFO | Time in Importer::run => 2020-03-24 15:10:14
+2020-03-24 15:10:15 | 1585033815.1279 | INFO | Time in Importer::run => 2020-03-24 15:10:15
+2020-03-24 15:10:16 | 1585033816.1324 | INFO | Time in Importer::run => 2020-03-24 15:10:16
+2020-03-24 15:10:17 | 1585033817.1362 | INFO | Time in Importer::run => 2020-03-24 15:10:17
+2020-03-24 15:10:18 | 1585033818.1397 | INFO | Time in Importer::run => 2020-03-24 15:10:18
+2020-03-24 15:10:19 | 1585033819.1442 | INFO | Time in Importer::run => 2020-03-24 15:10:19
+2020-03-24 15:10:20 | 1585033820.1476 | INFO | Time in Importer::run => 2020-03-24 15:10:20
+2020-03-24 15:10:21 | 1585033821.1513 | INFO | Time in Importer::run => 2020-03-24 15:10:21
+2020-03-24 15:10:22 | 1585033822.1554 | INFO | Time in Importer::run => 2020-03-24 15:10:22
+2020-03-24 15:10:23 | 1585033823.1589 | INFO | Time in Importer::run => 2020-03-24 15:10:23
+2020-03-24 15:10:24 | 1585033824.1620 | INFO | Time in Importer::run => 2020-03-24 15:10:24
+2020-03-24 15:10:25 | 1585033825.1655 | INFO | Time in Importer::run => 2020-03-24 15:10:25
+2020-03-24 15:10:26 | 1585033826.1686 | INFO | Time in Importer::run => 2020-03-24 15:10:26
+2020-03-24 15:10:27 | 1585033827.1729 | INFO | Time in Importer::run => 2020-03-24 15:10:27
+2020-03-24 15:10:28 | 1585033828.1774 | INFO | Time in Importer::run => 2020-03-24 15:10:28
+2020-03-24 15:10:29 | 1585033829.1812 | INFO | Time in Importer::run => 2020-03-24 15:10:29
+2020-03-24 15:10:30 | 1585033830.1857 | INFO | Time in Importer::run => 2020-03-24 15:10:30
+2020-03-24 15:10:31 | 1585033831.1895 | INFO | Time in Importer::run => 2020-03-24 15:10:31
+2020-03-24 15:10:32 | 1585033832.1929 | INFO | Time in Importer::run => 2020-03-24 15:10:32
+2020-03-24 15:10:33 | 1585033833.1962 | INFO | Time in Importer::run => 2020-03-24 15:10:33
+2020-03-24 15:10:34 | 1585033834.2007 | INFO | Time in Importer::run => 2020-03-24 15:10:34
+2020-03-24 15:10:35 | 1585033835.2039 | INFO | Time in Importer::run => 2020-03-24 15:10:35
+2020-03-24 15:10:35 | 1585033835.2613 | INFO | Time in Importer::run => 2020-03-24 15:10:35
+2020-03-24 15:10:36 | 1585033836.2644 | INFO | Time in Importer::run => 2020-03-24 15:10:36
+2020-03-24 15:10:37 | 1585033837.2679 | INFO | Time in Importer::run => 2020-03-24 15:10:37
+2020-03-24 15:10:38 | 1585033838.2706 | INFO | Time in Importer::run => 2020-03-24 15:10:38
+2020-03-24 15:10:39 | 1585033839.2735 | INFO | Time in Importer::run => 2020-03-24 15:10:39
+2020-03-24 15:10:40 | 1585033840.2773 | INFO | Time in Importer::run => 2020-03-24 15:10:40
+2020-03-24 15:10:41 | 1585033841.2805 | INFO | Time in Importer::run => 2020-03-24 15:10:41
+2020-03-24 15:10:41 | 1585033841.7005 | INFO | Time in Importer::run => 2020-03-24 15:10:41
+2020-03-24 15:10:42 | 1585033842.7031 | INFO | Time in Importer::run => 2020-03-24 15:10:42
+2020-03-24 15:10:43 | 1585033843.7066 | INFO | Time in Importer::run => 2020-03-24 15:10:43
+2020-03-24 15:10:44 | 1585033844.7110 | INFO | Time in Importer::run => 2020-03-24 15:10:44
+2020-03-24 15:10:45 | 1585033845.7147 | INFO | Time in Importer::run => 2020-03-24 15:10:45
+2020-03-24 15:10:46 | 1585033846.7183 | INFO | Time in Importer::run => 2020-03-24 15:10:46
+2020-03-24 15:10:47 | 1585033847.7215 | INFO | Time in Importer::run => 2020-03-24 15:10:47
+[2020-03-24 07:10:48 #9853.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:10:48 | 1585033848.5337 | INFO | Worker 0 stop
+2020-03-24 15:10:48 | 1585033848.5341 | INFO | Time in Importer::run => 2020-03-24 15:10:48
+2020-03-24 15:10:49 | 1585033849.5393 | INFO | Time in Importer::run => 2020-03-24 15:10:49
+2020-03-24 15:10:50 | 1585033850.5440 | INFO | Time in Importer::run => 2020-03-24 15:10:50
+2020-03-24 15:10:51 | 1585033851.5479 | INFO | Time in Importer::run => 2020-03-24 15:10:51
+2020-03-24 15:10:52 | 1585033852.5511 | INFO | Time in Importer::run => 2020-03-24 15:10:52
+2020-03-24 15:10:53 | 1585033853.5563 | INFO | Time in Importer::run => 2020-03-24 15:10:53
+2020-03-24 15:10:54 | 1585033854.5593 | INFO | Time in Importer::run => 2020-03-24 15:10:54
+2020-03-24 15:10:55 | 1585033855.5631 | INFO | Time in Importer::run => 2020-03-24 15:10:55
+2020-03-24 15:10:56 | 1585033856.5673 | INFO | Time in Importer::run => 2020-03-24 15:10:56
+2020-03-24 15:10:57 | 1585033857.5706 | INFO | Time in Importer::run => 2020-03-24 15:10:57
+2020-03-24 15:10:58 | 1585033858.5753 | INFO | Time in Importer::run => 2020-03-24 15:10:58
+2020-03-24 15:10:59 | 1585033859.5810 | INFO | Time in Importer::run => 2020-03-24 15:10:59
+2020-03-24 15:11:00 | 1585033860.5858 | INFO | Time in Importer::run => 2020-03-24 15:11:00
+2020-03-24 15:11:01 | 1585033861.5897 | INFO | Time in Importer::run => 2020-03-24 15:11:01
+2020-03-24 15:11:02 | 1585033862.5939 | INFO | Time in Importer::run => 2020-03-24 15:11:02
+2020-03-24 15:11:03 | 1585033863.5976 | INFO | Time in Importer::run => 2020-03-24 15:11:03
+2020-03-24 15:11:04 | 1585033864.6006 | INFO | Time in Importer::run => 2020-03-24 15:11:04
+2020-03-24 15:11:05 | 1585033865.6043 | INFO | Time in Importer::run => 2020-03-24 15:11:05
+2020-03-24 15:11:06 | 1585033866.6079 | INFO | Time in Importer::run => 2020-03-24 15:11:06
+2020-03-24 15:11:07 | 1585033867.6114 | INFO | Time in Importer::run => 2020-03-24 15:11:07
+2020-03-24 15:11:08 | 1585033868.6162 | INFO | Time in Importer::run => 2020-03-24 15:11:08
+2020-03-24 15:11:09 | 1585033869.6204 | INFO | Time in Importer::run => 2020-03-24 15:11:09
+2020-03-24 15:11:10 | 1585033870.6259 | INFO | Time in Importer::run => 2020-03-24 15:11:10
+2020-03-24 15:11:11 | 1585033871.6306 | INFO | Time in Importer::run => 2020-03-24 15:11:11
+2020-03-24 15:11:12 | 1585033872.6349 | INFO | Time in Importer::run => 2020-03-24 15:11:12
+2020-03-24 15:11:13 | 1585033873.6392 | INFO | Time in Importer::run => 2020-03-24 15:11:13
+2020-03-24 15:11:14 | 1585033874.6440 | INFO | Time in Importer::run => 2020-03-24 15:11:14
+2020-03-24 15:11:15 | 1585033875.6476 | INFO | Time in Importer::run => 2020-03-24 15:11:15
+2020-03-24 15:11:16 | 1585033876.6513 | INFO | Time in Importer::run => 2020-03-24 15:11:16
+2020-03-24 15:11:17 | 1585033877.6560 | INFO | Time in Importer::run => 2020-03-24 15:11:17
+2020-03-24 15:11:18 | 1585033878.6590 | INFO | Time in Importer::run => 2020-03-24 15:11:18
+2020-03-24 15:11:19 | 1585033879.6627 | INFO | Time in Importer::run => 2020-03-24 15:11:19
+2020-03-24 15:11:20 | 1585033880.6671 | INFO | Time in Importer::run => 2020-03-24 15:11:20
+2020-03-24 15:11:21 | 1585033881.6713 | INFO | Time in Importer::run => 2020-03-24 15:11:21
+2020-03-24 15:11:22 | 1585033882.6755 | INFO | Time in Importer::run => 2020-03-24 15:11:22
+2020-03-24 15:11:23 | 1585033883.6808 | INFO | Time in Importer::run => 2020-03-24 15:11:23
+2020-03-24 15:11:24 | 1585033884.6849 | INFO | Time in Importer::run => 2020-03-24 15:11:24
+2020-03-24 15:12:22 | 1585033942.4545 | INFO | ======= HTTP master start =======
+2020-03-24 15:12:22 | 1585033942.5745 | INFO | Success to init MySQL instance
+2020-03-24 15:12:22 | 1585033942.5751 | INFO | Success to init MySQL instance
+2020-03-24 15:12:22 | 1585033942.5785 | INFO | Success to init MySQL instance
+2020-03-24 15:12:22 | 1585033942.5799 | INFO | Success to init Redis instance
+2020-03-24 15:12:22 | 1585033942.5813 | INFO | Success to init Redis instance
+2020-03-24 15:12:22 | 1585033942.5826 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:12:22 | 1585033942.5839 | INFO | Worker 0 ready for connections ...
+[2020-03-24 07:12:24 #10071.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:12:24 | 1585033944.2031 | INFO | Worker 0 stop
+2020-03-24 15:12:24 | 1585033944.2034 | INFO | Worker 1 stop
+2020-03-24 15:12:26 | 1585033946.2894 | INFO | ======= HTTP master start =======
+2020-03-24 15:12:26 | 1585033946.4118 | INFO | Success to init MySQL instance
+2020-03-24 15:12:26 | 1585033946.4132 | INFO | Success to init MySQL instance
+2020-03-24 15:12:26 | 1585033946.4172 | INFO | Success to init MySQL instance
+2020-03-24 15:12:26 | 1585033946.4184 | INFO | Success to init Redis instance
+2020-03-24 15:12:26 | 1585033946.4200 | INFO | Success to init Redis instance
+2020-03-24 15:12:26 | 1585033946.4208 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:12:26 | 1585033946.4222 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:19:48 | 1585034388.6710 | INFO | This is an info msg
+2020-03-24 15:19:48 | 1585034388.6750 | WARN | This is a warn msg
+2020-03-24 15:19:48 | 1585034388.6769 | ERROR | This is an error msg
+2020-03-24 15:19:48 | 1585034388.6790 | FATAL | This is a fatal msg
+2020-03-24 15:19:48 | 1585034388.6809 | INFO | This is a log msg
+2020-03-24 15:20:54 | 1585034454.6259 | ERROR | ErrorNO: 2
+2020-03-24 15:20:54 | 1585034454.6288 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-24 15:20:54 | 1585034454.6308 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:20:54 | 1585034454.6326 | ERROR | Line: 44
+2020-03-24 15:20:54 | 1585034454.6345 | ERROR | ================================================================================
+2020-03-24 15:20:54 | 1585034454.6367 | ERROR | ErrorNO: 8
+2020-03-24 15:20:54 | 1585034454.6390 | ERROR | Error: Undefined index: rabbit_host
+2020-03-24 15:20:54 | 1585034454.6411 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:20:54 | 1585034454.6431 | ERROR | Line: 48
+2020-03-24 15:20:54 | 1585034454.6451 | ERROR | ================================================================================
+2020-03-24 15:20:54 | 1585034454.6472 | ERROR | ErrorNO: 8
+2020-03-24 15:20:54 | 1585034454.6492 | ERROR | Error: Undefined index: rabbit_port
+2020-03-24 15:20:54 | 1585034454.6511 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:20:54 | 1585034454.6531 | ERROR | Line: 49
+2020-03-24 15:20:54 | 1585034454.6551 | ERROR | ================================================================================
+2020-03-24 15:20:54 | 1585034454.6572 | ERROR | ErrorNO: 8
+2020-03-24 15:20:54 | 1585034454.6592 | ERROR | Error: Undefined index: rabbit_username
+2020-03-24 15:20:54 | 1585034454.6613 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:20:54 | 1585034454.6634 | ERROR | Line: 50
+2020-03-24 15:20:54 | 1585034454.6654 | ERROR | ================================================================================
+2020-03-24 15:20:54 | 1585034454.6673 | ERROR | ErrorNO: 8
+2020-03-24 15:20:54 | 1585034454.6692 | ERROR | Error: Undefined index: rabbit_password
+2020-03-24 15:20:54 | 1585034454.6711 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:20:54 | 1585034454.6732 | ERROR | Line: 51
+2020-03-24 15:20:54 | 1585034454.6751 | ERROR | ================================================================================
+2020-03-24 15:20:54 | 1585034454.6771 | ERROR | ErrorNO: 8
+2020-03-24 15:20:54 | 1585034454.6790 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-24 15:20:54 | 1585034454.6808 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:20:54 | 1585034454.6827 | ERROR | Line: 52
+2020-03-24 15:20:54 | 1585034454.6847 | ERROR | ================================================================================
+[2020-03-24 07:27:53 #10094.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:27:53 | 1585034873.8087 | INFO | Worker 0 stop
+2020-03-24 15:27:53 | 1585034873.8090 | INFO | Worker 1 stop
+2020-03-24 15:27:55 | 1585034875.9466 | INFO | ======= UDP master start =======
+2020-03-24 15:27:56 | 1585034876.0655 | INFO | Success to init MySQL instance
+2020-03-24 15:27:56 | 1585034876.0666 | INFO | Success to init MySQL instance
+2020-03-24 15:27:56 | 1585034876.0693 | INFO | Success to init MySQL instance
+2020-03-24 15:27:56 | 1585034876.0715 | INFO | Success to init Redis instance
+2020-03-24 15:27:56 | 1585034876.0727 | INFO | Success to init Redis instance
+2020-03-24 15:27:56 | 1585034876.0739 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:27:56 | 1585034876.0757 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:28:21 | 1585034901.2553 | ERROR | ErrorNO: 2
+2020-03-24 15:28:21 | 1585034901.2583 | ERROR | Error: Swoole\Server::sendto(): data is empty.
+2020-03-24 15:28:21 | 1585034901.2602 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:28:21 | 1585034901.2619 | ERROR | Line: 162
+2020-03-24 15:28:21 | 1585034901.2637 | ERROR | ================================================================================
+[2020-03-24 07:30:30 #10272.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:30:30 | 1585035030.8589 | INFO | Worker 0 stop
+2020-03-24 15:30:30 | 1585035030.8591 | INFO | Worker 1 stop
+2020-03-24 15:30:32 | 1585035032.9818 | INFO | ======= UDP master start =======
+2020-03-24 15:30:33 | 1585035033.1024 | INFO | Success to init MySQL instance
+2020-03-24 15:30:33 | 1585035033.1035 | INFO | Success to init MySQL instance
+2020-03-24 15:30:33 | 1585035033.1066 | INFO | Success to init MySQL instance
+2020-03-24 15:30:33 | 1585035033.1090 | INFO | Success to init Redis instance
+2020-03-24 15:30:33 | 1585035033.1101 | INFO | Success to init Redis instance
+2020-03-24 15:30:33 | 1585035033.1114 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:30:33 | 1585035033.1129 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:30:45 | 1585035045.3948 | ERROR | ErrorNO: 2
+2020-03-24 15:30:45 | 1585035045.3980 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-24 15:30:45 | 1585035045.4001 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:30:45 | 1585035045.4021 | ERROR | Line: 44
+2020-03-24 15:30:45 | 1585035045.4038 | ERROR | ================================================================================
+2020-03-24 15:30:45 | 1585035045.4058 | ERROR | ErrorNO: 8
+2020-03-24 15:30:45 | 1585035045.4081 | ERROR | Error: Undefined index: rabbit_host
+2020-03-24 15:30:45 | 1585035045.4101 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:30:45 | 1585035045.4120 | ERROR | Line: 48
+2020-03-24 15:30:45 | 1585035045.4141 | ERROR | ================================================================================
+2020-03-24 15:30:45 | 1585035045.4162 | ERROR | ErrorNO: 8
+2020-03-24 15:30:45 | 1585035045.4182 | ERROR | Error: Undefined index: rabbit_port
+2020-03-24 15:30:45 | 1585035045.4201 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:30:45 | 1585035045.4221 | ERROR | Line: 49
+2020-03-24 15:30:45 | 1585035045.4241 | ERROR | ================================================================================
+2020-03-24 15:30:45 | 1585035045.4261 | ERROR | ErrorNO: 8
+2020-03-24 15:30:45 | 1585035045.4282 | ERROR | Error: Undefined index: rabbit_username
+2020-03-24 15:30:45 | 1585035045.4301 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:30:45 | 1585035045.4320 | ERROR | Line: 50
+2020-03-24 15:30:45 | 1585035045.4340 | ERROR | ================================================================================
+2020-03-24 15:30:45 | 1585035045.4358 | ERROR | ErrorNO: 8
+2020-03-24 15:30:45 | 1585035045.4378 | ERROR | Error: Undefined index: rabbit_password
+2020-03-24 15:30:45 | 1585035045.4397 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:30:45 | 1585035045.4414 | ERROR | Line: 51
+2020-03-24 15:30:45 | 1585035045.4430 | ERROR | ================================================================================
+2020-03-24 15:30:45 | 1585035045.4446 | ERROR | ErrorNO: 8
+2020-03-24 15:30:45 | 1585035045.4463 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-24 15:30:45 | 1585035045.4481 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 15:30:45 | 1585035045.4497 | ERROR | Line: 52
+2020-03-24 15:30:45 | 1585035045.4513 | ERROR | ================================================================================
+2020-03-24 15:32:54 | 1585035174.7701 | ERROR | ErrorNO: 2
+2020-03-24 15:32:54 | 1585035174.7732 | ERROR | Error: Swoole\Server::sendto(): data is empty.
+2020-03-24 15:32:54 | 1585035174.7750 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:32:54 | 1585035174.7770 | ERROR | Line: 162
+2020-03-24 15:32:54 | 1585035174.7789 | ERROR | ================================================================================
+[2020-03-24 07:41:54 #10402.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:41:54 | 1585035714.0456 | INFO | Worker 0 stop
+2020-03-24 15:41:54 | 1585035714.0458 | INFO | Worker 1 stop
+2020-03-24 15:41:56 | 1585035716.1841 | INFO | ======= HTTP master start =======
+2020-03-24 15:41:56 | 1585035716.3029 | INFO | Success to init MySQL instance
+2020-03-24 15:41:56 | 1585035716.3035 | INFO | Success to init MySQL instance
+2020-03-24 15:41:56 | 1585035716.3068 | INFO | Success to init MySQL instance
+2020-03-24 15:41:56 | 1585035716.3092 | INFO | Success to init Redis instance
+2020-03-24 15:41:56 | 1585035716.3102 | INFO | Success to init Redis instance
+2020-03-24 15:41:56 | 1585035716.3115 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:41:56 | 1585035716.3130 | INFO | Worker 0 ready for connections ...
+[2020-03-24 07:42:22 #10460.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:42:22 | 1585035742.6397 | INFO | Worker 0 stop
+2020-03-24 15:42:22 | 1585035742.6399 | INFO | Worker 1 stop
+2020-03-24 15:42:24 | 1585035744.7328 | INFO | ======= HTTP master start =======
+2020-03-24 15:42:24 | 1585035744.8523 | INFO | Success to init MySQL instance
+2020-03-24 15:42:24 | 1585035744.8531 | INFO | Success to init MySQL instance
+2020-03-24 15:42:24 | 1585035744.8562 | INFO | Success to init MySQL instance
+2020-03-24 15:42:24 | 1585035744.8586 | INFO | Success to init Redis instance
+2020-03-24 15:42:24 | 1585035744.8596 | INFO | Success to init Redis instance
+2020-03-24 15:42:24 | 1585035744.8609 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:42:24 | 1585035744.8624 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:42:32 | 1585035752.6590 | ERROR | ErrorNO: 8
+2020-03-24 15:42:32 | 1585035752.6618 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:42:32 | 1585035752.6639 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:42:32 | 1585035752.6659 | ERROR | Line: 56
+2020-03-24 15:42:32 | 1585035752.6681 | ERROR | ================================================================================
+2020-03-24 15:42:32 | 1585035752.6748 | ERROR | ErrorNO: 2
+2020-03-24 15:42:32 | 1585035752.6770 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:42:32 | 1585035752.6791 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:42:32 | 1585035752.6811 | ERROR | Line: 73
+2020-03-24 15:42:32 | 1585035752.6831 | ERROR | ================================================================================
+2020-03-24 15:42:46 | 1585035766.5244 | ERROR | ErrorNO: 8
+2020-03-24 15:42:46 | 1585035766.5273 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:42:46 | 1585035766.5292 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:42:46 | 1585035766.5309 | ERROR | Line: 56
+2020-03-24 15:42:46 | 1585035766.5330 | ERROR | ================================================================================
+2020-03-24 15:42:46 | 1585035766.5353 | ERROR | ErrorNO: 2
+2020-03-24 15:42:46 | 1585035766.5374 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:42:46 | 1585035766.5391 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:42:46 | 1585035766.5409 | ERROR | Line: 73
+2020-03-24 15:42:46 | 1585035766.5426 | ERROR | ================================================================================
+[2020-03-24 07:44:10 #10487.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:44:10 | 1585035850.9873 | INFO | Worker 0 stop
+2020-03-24 15:44:10 | 1585035850.9875 | INFO | Worker 1 stop
+2020-03-24 15:44:13 | 1585035853.1098 | INFO | ======= HTTP master start =======
+2020-03-24 15:44:13 | 1585035853.2293 | INFO | Success to init MySQL instance
+2020-03-24 15:44:13 | 1585035853.2306 | INFO | Success to init MySQL instance
+2020-03-24 15:44:13 | 1585035853.2330 | INFO | Success to init MySQL instance
+2020-03-24 15:44:13 | 1585035853.2352 | INFO | Success to init Redis instance
+2020-03-24 15:44:13 | 1585035853.2363 | INFO | Success to init Redis instance
+2020-03-24 15:44:13 | 1585035853.2376 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:44:13 | 1585035853.2391 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:44:16 | 1585035856.2732 | ERROR | ErrorNO: 8
+2020-03-24 15:44:16 | 1585035856.2751 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:44:16 | 1585035856.2775 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:44:16 | 1585035856.2793 | ERROR | Line: 56
+2020-03-24 15:44:16 | 1585035856.2813 | ERROR | ================================================================================
+2020-03-24 15:44:29 | 1585035869.4597 | ERROR | ErrorNO: 8
+2020-03-24 15:44:29 | 1585035869.4626 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:44:29 | 1585035869.4645 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:44:29 | 1585035869.4664 | ERROR | Line: 56
+2020-03-24 15:44:29 | 1585035869.4682 | ERROR | ================================================================================
+2020-03-24 15:44:37 | 1585035877.7639 | ERROR | ErrorNO: 8
+2020-03-24 15:44:37 | 1585035877.7668 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:44:37 | 1585035877.7689 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:44:37 | 1585035877.7711 | ERROR | Line: 56
+2020-03-24 15:44:37 | 1585035877.7731 | ERROR | ================================================================================
+[2020-03-24 07:45:35 #10512.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:45:35 | 1585035935.0932 | INFO | Worker 0 stop
+2020-03-24 15:45:35 | 1585035935.0935 | INFO | Worker 1 stop
+2020-03-24 15:45:37 | 1585035937.2205 | INFO | ======= HTTP master start =======
+2020-03-24 15:45:37 | 1585035937.3396 | INFO | Success to init MySQL instance
+2020-03-24 15:45:37 | 1585035937.3402 | INFO | Success to init MySQL instance
+2020-03-24 15:45:37 | 1585035937.3441 | INFO | Success to init MySQL instance
+2020-03-24 15:45:37 | 1585035937.3458 | INFO | Success to init Redis instance
+2020-03-24 15:45:37 | 1585035937.3470 | INFO | Success to init Redis instance
+2020-03-24 15:45:37 | 1585035937.3484 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:45:37 | 1585035937.3499 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:45:55 | 1585035955.0549 | ERROR | ErrorNO: 9999
+2020-03-24 15:45:55 | 1585035955.0574 | ERROR | Error: No such file or directory: /project/miniSwoole/controller/Favicon.ico.php
+2020-03-24 15:45:55 | 1585035955.0596 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:45:55 | 1585035955.0615 | ERROR | Line: 63
+2020-03-24 15:45:55 | 1585035955.0633 | ERROR | ================================================================================
+2020-03-24 15:45:59 | 1585035959.7687 | ERROR | ErrorNO: 8
+2020-03-24 15:45:59 | 1585035959.7708 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:45:59 | 1585035959.7737 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:45:59 | 1585035959.7757 | ERROR | Line: 56
+2020-03-24 15:45:59 | 1585035959.7775 | ERROR | ================================================================================
+2020-03-24 15:46:08 | 1585035968.6252 | ERROR | ErrorNO: 8
+2020-03-24 15:46:08 | 1585035968.6281 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:46:08 | 1585035968.6301 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:46:08 | 1585035968.6321 | ERROR | Line: 56
+2020-03-24 15:46:08 | 1585035968.6340 | ERROR | ================================================================================
+2020-03-24 15:46:11 | 1585035971.3511 | ERROR | ErrorNO: 8
+2020-03-24 15:46:11 | 1585035971.3534 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-24 15:46:11 | 1585035971.3553 | ERROR | File: /project/miniSwoole/controller/Http.php
+2020-03-24 15:46:11 | 1585035971.3571 | ERROR | Line: 56
+2020-03-24 15:46:11 | 1585035971.3591 | ERROR | ================================================================================
+[2020-03-24 07:47:06 #10538.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:47:06 | 1585036026.2457 | INFO | Worker 0 stop
+2020-03-24 15:47:06 | 1585036026.2460 | INFO | Worker 1 stop
+2020-03-24 15:47:08 | 1585036028.3718 | INFO | ======= HTTP master start =======
+2020-03-24 15:47:08 | 1585036028.4911 | INFO | Success to init MySQL instance
+2020-03-24 15:47:08 | 1585036028.4925 | INFO | Success to init MySQL instance
+2020-03-24 15:47:08 | 1585036028.4947 | INFO | Success to init MySQL instance
+2020-03-24 15:47:08 | 1585036028.4970 | INFO | Success to init Redis instance
+2020-03-24 15:47:08 | 1585036028.4982 | INFO | Success to init Redis instance
+2020-03-24 15:47:08 | 1585036028.4995 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:47:08 | 1585036028.5010 | INFO | Worker 0 ready for connections ...
+[2020-03-24 07:53:31 #10658.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:53:31 | 1585036411.9753 | INFO | Worker 0 stop
+2020-03-24 15:53:31 | 1585036411.9754 | INFO | Worker 1 stop
+2020-03-24 15:53:34 | 1585036414.1039 | INFO | ======= HTTP master start =======
+2020-03-24 15:53:34 | 1585036414.2245 | INFO | Success to init MySQL instance
+2020-03-24 15:53:34 | 1585036414.2250 | INFO | Success to init MySQL instance
+2020-03-24 15:53:34 | 1585036414.2285 | INFO | Success to init MySQL instance
+2020-03-24 15:53:34 | 1585036414.2296 | INFO | Success to init Redis instance
+2020-03-24 15:53:34 | 1585036414.2318 | INFO | Success to init Redis instance
+2020-03-24 15:53:34 | 1585036414.2324 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:53:34 | 1585036414.2339 | INFO | Worker 0 ready for connections ...
+[2020-03-24 07:54:19 #10708.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:54:19 | 1585036459.1064 | INFO | Worker 0 stop
+2020-03-24 15:54:19 | 1585036459.1066 | INFO | Worker 1 stop
+2020-03-24 15:54:21 | 1585036461.1971 | INFO | ======= HTTP master start =======
+2020-03-24 15:54:21 | 1585036461.3182 | INFO | Success to init MySQL instance
+2020-03-24 15:54:21 | 1585036461.3188 | INFO | Success to init MySQL instance
+2020-03-24 15:54:21 | 1585036461.3221 | INFO | Success to init MySQL instance
+2020-03-24 15:54:21 | 1585036461.3243 | INFO | Success to init Redis instance
+2020-03-24 15:54:21 | 1585036461.3254 | INFO | Success to init Redis instance
+2020-03-24 15:54:21 | 1585036461.3267 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:54:21 | 1585036461.3283 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:54:24 | 1585036464.2784 | ERROR | ErrorNO: 2
+2020-03-24 15:54:24 | 1585036464.2811 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:24 | 1585036464.2830 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:24 | 1585036464.2849 | ERROR | Line: 73
+2020-03-24 15:54:24 | 1585036464.2868 | ERROR | ================================================================================
+2020-03-24 15:54:24 | 1585036464.8615 | ERROR | ErrorNO: 2
+2020-03-24 15:54:24 | 1585036464.8634 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:24 | 1585036464.8655 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:24 | 1585036464.8676 | ERROR | Line: 73
+2020-03-24 15:54:24 | 1585036464.8693 | ERROR | ================================================================================
+2020-03-24 15:54:26 | 1585036466.6826 | ERROR | ErrorNO: 2
+2020-03-24 15:54:26 | 1585036466.6845 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:26 | 1585036466.6865 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:26 | 1585036466.6884 | ERROR | Line: 73
+2020-03-24 15:54:26 | 1585036466.6903 | ERROR | ================================================================================
+2020-03-24 15:54:38 | 1585036478.2157 | ERROR | ErrorNO: 2
+2020-03-24 15:54:38 | 1585036478.2184 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:38 | 1585036478.2202 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:38 | 1585036478.2221 | ERROR | Line: 73
+2020-03-24 15:54:38 | 1585036478.2238 | ERROR | ================================================================================
+[2020-03-24 07:54:46 #10731.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:54:46 | 1585036486.8981 | INFO | Worker 0 stop
+2020-03-24 15:54:46 | 1585036486.8984 | INFO | Worker 1 stop
+2020-03-24 15:54:49 | 1585036489.0066 | INFO | ======= HTTP master start =======
+2020-03-24 15:54:49 | 1585036489.1272 | INFO | Success to init MySQL instance
+2020-03-24 15:54:49 | 1585036489.1279 | INFO | Success to init MySQL instance
+2020-03-24 15:54:49 | 1585036489.1311 | INFO | Success to init MySQL instance
+2020-03-24 15:54:49 | 1585036489.1349 | INFO | Success to init Redis instance
+2020-03-24 15:54:49 | 1585036489.1352 | INFO | Success to init Redis instance
+2020-03-24 15:54:49 | 1585036489.1370 | INFO | Worker 0 ready for connections ...
+2020-03-24 15:54:49 | 1585036489.1384 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:54:51 | 1585036491.8144 | ERROR | ErrorNO: 2
+2020-03-24 15:54:51 | 1585036491.8172 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:51 | 1585036491.8189 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:51 | 1585036491.8210 | ERROR | Line: 73
+2020-03-24 15:54:51 | 1585036491.8229 | ERROR | ================================================================================
+2020-03-24 15:54:52 | 1585036492.5595 | ERROR | ErrorNO: 2
+2020-03-24 15:54:52 | 1585036492.5614 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:52 | 1585036492.5634 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:52 | 1585036492.5654 | ERROR | Line: 73
+2020-03-24 15:54:52 | 1585036492.5675 | ERROR | ================================================================================
+2020-03-24 15:54:57 | 1585036497.2213 | ERROR | ErrorNO: 2
+2020-03-24 15:54:57 | 1585036497.2231 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:54:57 | 1585036497.2256 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:54:57 | 1585036497.2276 | ERROR | Line: 73
+2020-03-24 15:54:57 | 1585036497.2296 | ERROR | ================================================================================
+2020-03-24 15:55:02 | 1585036502.7417 | ERROR | ErrorNO: 2
+2020-03-24 15:55:02 | 1585036502.7438 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:55:02 | 1585036502.7461 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:55:02 | 1585036502.7477 | ERROR | Line: 73
+2020-03-24 15:55:02 | 1585036502.7493 | ERROR | ================================================================================
+2020-03-24 15:55:21 | 1585036521.1816 | ERROR | ErrorNO: 2
+2020-03-24 15:55:21 | 1585036521.1840 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:55:21 | 1585036521.1856 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:55:21 | 1585036521.1875 | ERROR | Line: 73
+2020-03-24 15:55:21 | 1585036521.1894 | ERROR | ================================================================================
+2020-03-24 15:55:29 | 1585036529.7196 | ERROR | ErrorNO: 2
+2020-03-24 15:55:29 | 1585036529.7219 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:55:29 | 1585036529.7237 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:55:29 | 1585036529.7256 | ERROR | Line: 73
+2020-03-24 15:55:29 | 1585036529.7275 | ERROR | ================================================================================
+2020-03-24 15:56:01 | 1585036561.3303 | ERROR | ErrorNO: 2
+2020-03-24 15:56:01 | 1585036561.3330 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:56:01 | 1585036561.3348 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:56:01 | 1585036561.3367 | ERROR | Line: 73
+2020-03-24 15:56:01 | 1585036561.3387 | ERROR | ================================================================================
+2020-03-24 15:56:05 | 1585036565.4790 | ERROR | ErrorNO: 2
+2020-03-24 15:56:05 | 1585036565.4810 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:56:05 | 1585036565.4836 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:56:05 | 1585036565.4855 | ERROR | Line: 73
+2020-03-24 15:56:05 | 1585036565.4874 | ERROR | ================================================================================
+2020-03-24 15:57:03 | 1585036623.5875 | ERROR | ErrorNO: 2
+2020-03-24 15:57:03 | 1585036623.5910 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:57:03 | 1585036623.5928 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:57:03 | 1585036623.5947 | ERROR | Line: 73
+2020-03-24 15:57:03 | 1585036623.5965 | ERROR | ================================================================================
+2020-03-24 15:57:07 | 1585036627.7054 | ERROR | ErrorNO: 2
+2020-03-24 15:57:07 | 1585036627.7075 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-24 15:57:07 | 1585036627.7100 | ERROR | File: /project/miniSwoole/library/core/Hooker.php
+2020-03-24 15:57:07 | 1585036627.7119 | ERROR | Line: 73
+2020-03-24 15:57:07 | 1585036627.7137 | ERROR | ================================================================================
+[2020-03-24 07:57:34 #10754.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:57:34 | 1585036654.9093 | INFO | Worker 0 stop
+2020-03-24 15:57:34 | 1585036654.9095 | INFO | Worker 1 stop
+2020-03-24 15:57:37 | 1585036657.0359 | INFO | ======= HTTP master start =======
+2020-03-24 15:57:37 | 1585036657.1556 | INFO | Success to init MySQL instance
+2020-03-24 15:57:37 | 1585036657.1570 | INFO | Success to init MySQL instance
+2020-03-24 15:57:37 | 1585036657.1595 | INFO | Success to init MySQL instance
+2020-03-24 15:57:37 | 1585036657.1618 | INFO | Success to init Redis instance
+2020-03-24 15:57:37 | 1585036657.1628 | INFO | Success to init Redis instance
+2020-03-24 15:57:37 | 1585036657.1642 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:57:37 | 1585036657.1659 | INFO | Worker 0 ready for connections ...
+[2020-03-24 07:59:20 #10778.1]	NOTICE	Server is shutdown now.
+2020-03-24 15:59:20 | 1585036760.9888 | INFO | Worker 0 stop
+2020-03-24 15:59:20 | 1585036760.9890 | INFO | Worker 1 stop
+2020-03-24 15:59:23 | 1585036763.1122 | INFO | ======= HTTP master start =======
+2020-03-24 15:59:23 | 1585036763.2321 | INFO | Success to init MySQL instance
+2020-03-24 15:59:23 | 1585036763.2327 | INFO | Success to init MySQL instance
+2020-03-24 15:59:23 | 1585036763.2363 | INFO | Success to init MySQL instance
+2020-03-24 15:59:23 | 1585036763.2378 | INFO | Success to init Redis instance
+2020-03-24 15:59:23 | 1585036763.2398 | INFO | Success to init Redis instance
+2020-03-24 15:59:23 | 1585036763.2405 | INFO | Worker 1 ready for connections ...
+2020-03-24 15:59:23 | 1585036763.2419 | INFO | Worker 0 ready for connections ...
+[2020-03-24 08:01:58 #10801.1]	NOTICE	Server is shutdown now.
+2020-03-24 16:01:58 | 1585036918.9297 | INFO | Worker 0 stop
+2020-03-24 16:01:58 | 1585036918.9298 | INFO | Worker 1 stop
+2020-03-24 16:02:01 | 1585036921.0586 | INFO | ======= HTTP master start =======
+2020-03-24 16:02:01 | 1585036921.1789 | INFO | Success to init MySQL instance
+2020-03-24 16:02:01 | 1585036921.1795 | INFO | Success to init MySQL instance
+2020-03-24 16:02:01 | 1585036921.1829 | INFO | Success to init MySQL instance
+2020-03-24 16:02:01 | 1585036921.1845 | INFO | Success to init Redis instance
+2020-03-24 16:02:01 | 1585036921.1864 | INFO | Success to init Redis instance
+2020-03-24 16:02:01 | 1585036921.1872 | INFO | Worker 1 ready for connections ...
+2020-03-24 16:02:01 | 1585036921.1891 | INFO | Worker 0 ready for connections ...
+[2020-03-24 08:04:24 #10839.1]	NOTICE	Server is shutdown now.
+2020-03-24 16:04:24 | 1585037064.5999 | INFO | Worker 0 stop
+2020-03-24 16:04:24 | 1585037064.6001 | INFO | Worker 1 stop
+2020-03-24 16:04:26 | 1585037066.7467 | INFO | ======= HTTP master start =======
+2020-03-24 16:04:26 | 1585037066.8670 | INFO | Success to init MySQL instance
+2020-03-24 16:04:26 | 1585037066.8674 | INFO | Success to init MySQL instance
+2020-03-24 16:04:26 | 1585037066.8710 | INFO | Success to init MySQL instance
+2020-03-24 16:04:26 | 1585037066.8727 | INFO | Success to init Redis instance
+2020-03-24 16:04:26 | 1585037066.8746 | INFO | Success to init Redis instance
+2020-03-24 16:04:26 | 1585037066.8751 | INFO | Worker 1 ready for connections ...
+2020-03-24 16:04:26 | 1585037066.8766 | INFO | Worker 0 ready for connections ...
+[2020-03-24 08:04:39 #10888.1]	NOTICE	Server is shutdown now.
+2020-03-24 16:04:39 | 1585037079.6795 | INFO | Worker 0 stop
+2020-03-24 16:04:39 | 1585037079.6796 | INFO | Worker 1 stop
+2020-03-24 16:04:41 | 1585037081.7667 | INFO | ======= HTTP master start =======
+2020-03-24 16:04:41 | 1585037081.8876 | INFO | Success to init MySQL instance
+2020-03-24 16:04:41 | 1585037081.8882 | INFO | Success to init MySQL instance
+2020-03-24 16:04:41 | 1585037081.8916 | INFO | Success to init MySQL instance
+2020-03-24 16:04:41 | 1585037081.8934 | INFO | Success to init Redis instance
+2020-03-24 16:04:41 | 1585037081.8948 | INFO | Success to init Redis instance
+2020-03-24 16:04:41 | 1585037081.8961 | INFO | Worker 1 ready for connections ...
+2020-03-24 16:04:41 | 1585037081.8981 | INFO | Worker 0 ready for connections ...
+2020-03-24 16:06:45 | 1585037205.5028 | INFO | This is an info msg
+2020-03-24 16:06:45 | 1585037205.5065 | WARN | This is a warn msg
+2020-03-24 16:06:45 | 1585037205.5085 | ERROR | This is an error msg
+2020-03-24 16:06:45 | 1585037205.5105 | FATAL | This is a fatal msg
+2020-03-24 16:06:45 | 1585037205.5126 | INFO | This is a log msg
+2020-03-24 17:10:30 | 1585041030.5882 | ERROR | ErrorNO: 2
+2020-03-24 17:10:30 | 1585041030.5925 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-24 17:10:30 | 1585041030.5942 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 17:10:30 | 1585041030.5960 | ERROR | Line: 44
+2020-03-24 17:10:30 | 1585041030.5981 | ERROR | ================================================================================
+2020-03-24 17:10:30 | 1585041030.6001 | ERROR | ErrorNO: 8
+2020-03-24 17:10:30 | 1585041030.6021 | ERROR | Error: Undefined index: rabbit_host
+2020-03-24 17:10:30 | 1585041030.6041 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 17:10:30 | 1585041030.6062 | ERROR | Line: 48
+2020-03-24 17:10:30 | 1585041030.6081 | ERROR | ================================================================================
+2020-03-24 17:10:30 | 1585041030.6100 | ERROR | ErrorNO: 8
+2020-03-24 17:10:30 | 1585041030.6119 | ERROR | Error: Undefined index: rabbit_port
+2020-03-24 17:10:30 | 1585041030.6138 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 17:10:30 | 1585041030.6159 | ERROR | Line: 49
+2020-03-24 17:10:30 | 1585041030.6179 | ERROR | ================================================================================
+2020-03-24 17:10:30 | 1585041030.6198 | ERROR | ErrorNO: 8
+2020-03-24 17:10:30 | 1585041030.6218 | ERROR | Error: Undefined index: rabbit_username
+2020-03-24 17:10:30 | 1585041030.6237 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 17:10:30 | 1585041030.6256 | ERROR | Line: 50
+2020-03-24 17:10:30 | 1585041030.6275 | ERROR | ================================================================================
+2020-03-24 17:10:30 | 1585041030.6295 | ERROR | ErrorNO: 8
+2020-03-24 17:10:30 | 1585041030.6315 | ERROR | Error: Undefined index: rabbit_password
+2020-03-24 17:10:30 | 1585041030.6331 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 17:10:30 | 1585041030.6347 | ERROR | Line: 51
+2020-03-24 17:10:30 | 1585041030.6367 | ERROR | ================================================================================
+2020-03-24 17:10:30 | 1585041030.6387 | ERROR | ErrorNO: 8
+2020-03-24 17:10:30 | 1585041030.6405 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-24 17:10:30 | 1585041030.6426 | ERROR | File: /project/miniSwoole/library/RabbitMQ.php
+2020-03-24 17:10:30 | 1585041030.6446 | ERROR | Line: 52
+2020-03-24 17:10:30 | 1585041030.6467 | ERROR | ================================================================================
+[2020-03-24 09:22:14 #10911.1]	NOTICE	Server is shutdown now.
+2020-03-24 17:22:14 | 1585041734.1013 | INFO | Worker 0 stop
+2020-03-24 17:22:14 | 1585041734.1014 | INFO | Worker 1 stop

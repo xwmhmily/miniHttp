@@ -1,0 +1,508 @@
+# Mini HTTP
+### Write Less and Do More ###
+
+```
+ __  __ _       _   ____                     _      
+|  \/  (_)_ __ (_) / ___|_      _____   ___ | | ___ 
+| |\/| | | '_ \| | \___ \ \ /\ / / _ \ / _ \| |/ _ \
+| |  | | | | | | |  ___) \ V  V / (_) | (_) | |  __/
+|_|  |_|_|_| |_|_| |____/ \_/\_/ \___/ \___/|_|\___|
+```
+<hr />
+
+- 仅支持HTTP<br />
+- Master-Worker 模式<br />
+- Module-Controller-Model 分层 <br />
+- MySQL 断线自动重连 <br />
+- Timer, Task 简易封装 <br />
+- MySQL, Redis 连接池<br />
+- MySQL 分表分库 <br />
+- JSON 作数据通信格式<br />
+- Shell 脚本控制服务<br />
+- Autoload<br />
+- 安全过滤<br />
+- 日志收集<br />
+- 心跳检测<br />
+- 自动路由<br />
+- 多模块划分
+- 中间件与插件
+- Process 管理
+<hr />
+
+#### 环境要求
+- PHP >= 7.0 <br />
+- swoole, 建议 2.2.0 <br />
+- pdo <br />
+- redis <br />
+- pdo_mysql <br />
+<hr />
+
+#### 安装
+- Git clone 至任一目录
+- 创建数据库并导入SQL 文件
+
+<hr />
+
+#### 配置
+- EVN 的定义在 Boostrap.php 的第一句, 请升级脚本(deploy.py)自行根据环境修改<br />
+- 配置文件是 conf/ENV.php。 ENV 区分为 DEV, UAT, PRODUCTION, 请自行根据运行环境调整 <br />
+- common 为公共配置部分, 影响整体 <br />
+- $section 分为: common, http, mysql, redis 配置 <br />
+- 配置文件的 key 务必使用小写字母 <br />
+- 任意地方均可使用 Config::get($section) 来获取配置文件中 $section 的参数
+- 任意地方均可使用 Config::get($section, $key) 来获取配置文件中 $section 中的 $key 对应的参数
+<hr />
+
+#### CLI 命令
+- 启动: sh shell/socket.sh start <br />
+- 状态: sh shell/socket.sh status <br />
+- 停止: sh shell/socket.sh stop <br />
+- 重启: sh shell/socket.sh restart <br />
+- Reload: sh shell/socket.sh reload, 重启所有Worker/Task进程 <br />
+<hr />
+
+#### 心跳检测
+- 利用Crond 定时运行 shell/socket.sh heartbeat 即可<br />
+<hr />
+
+#### 使用
+- 采用 Module-Controll-Model 模式, 所有的请求均转至 Module-Controller下处理 <br />
+- 默认 Module 为index, 无须声明, 对应的控制器文件位是根目录的 controller<br />
+- 在配置文件的 module 中声明新模块，以英文逗号分隔，如 'Api, Admin, Mall, Shop', 对应的控制器文件是 /module/$moduleName/controller<br />
+- 中间件：很多时候，我们需要在请求前与后做一些前置与后置的统一业务，比如授权认证，日志与流量收集，中件间就派上用场了。
+
+<hr />
+
+#### 日志和错误处理
+- 系统的错误文件由 $config['common']['log_file'] 指定<br />
+- $config['common']['error_level'] 指定手动记录日志的级别, [1|2|3|4|5], 分别代表 DEBUG, INFO, WARN, ERROR, FATAL，低于规定的日志级别则不记录 <br />
+- $config['common']['error_file'] 指定手动记录日志的文件<br />
+- 任意地方调用 Logger::debug($msg); Logger::info($msg); Logger::warn($msg); Logger::error($msg); Logger::fatal($msg); 则将 $msg 以指定的级别写入 $config['common']['error_file']<br />
+- SQL 的错误文件由 $config['common']['mysql_log_file'] 指定, 当执行SQL发生错误时，自动写入, 级别均为 ERROR<br />
+
+```
+public function log(){
+    Logger::debug('This is a debug msg');
+    Logger::info('This is an info msg');
+    Logger::warn('This is a warn msg');
+    Logger::error('This is an error msg');
+    Logger::fatal('This is a fatal msg');
+    Logger::log('This is a log msg');
+
+    $level = Config::get('common', 'error_level');
+    return 'Current error_level => '.$level;
+}
+```
+- log_method 指定保存日志的方式，默认是 file, 可选 redis. 若选择 redis, 则配置多一个 redis_log, 好处是啥？直接对接至 ELK ！
+```
+    'redis_log' => [
+        'db'    => '0',
+        'host'  => '192.168.1.50',
+        'port'  => 6379,
+        'pwd'   => '123456',
+        'queue' => 'Queue_log',
+    ],
+```
+
+<hr />
+
+#### HTTP 服务
+- 将 http 段的enable 设置为 true, 其他服务设置为 false <br />
+- sh shell/socket.sh restart 重启服务 <br />
+- ps -ef | grep Mini 将看到 <br />
+    > Mini_Swoole_http_master: 为 master 进程  <br />
+    > Mini_Swoole_manager: 为 manager 进程<br />
+    > Mini_Swoole_task: N 个 task 进程 <br />
+    > Mini_Swoole_worker: M 个 worker 进程 <br />
+
+<hr />
+
+##### 注: N 和 M 由 $config['common']['worker_num'] 与 $config['common']['task_worker_num'] 指定 <br />
+
+<hr />
+
+#### HTTP 服务之控制器
+- 根目录的 controller 的 Index.php/index(), 负责处理 http 的 index 事件, 也就是首页<br />
+- 为了将控制权由 onRequest 路由至控制器, 客户端应该在URL中指定处理该请求的 module (默认是index, 可以忽略), controller 及 action (默认是index, 可以忽略), 示例如下: 
+
+``` 
+// ==== GET 的示例 ==== //
+// Index 控制器下的 index() 来处理, 也就是首页, 则URL
+http://127.0.0.1:9100
+
+// Http 控制器下的 index() 来处理, 并且带上GET参数, 则URL
+http://127.0.0.1:9100/http?username=dym&password=123456
+
+// Http 控制器下的 login() 来处理, 并且带上GET参数, 则URL
+http://127.0.0.1:9100/http/login?username=dym&password=123456
+
+// ==== POST 的示例 ==== //
+$url = 'http://127.0.0.1:9100/http/login';
+$postData = [];
+$postData['key'] = 'FOO';
+
+$retval = HttpClient::post($url, $postData);
+print_r($retval);
+
+// Api模块的Login控制器下的 logout() 来处理, 则URL
+http://127.0.0.1:9100/api/login/logout
+
+// Api模块的User控制器下的 index() 来处理, 则URL
+http://127.0.0.1:9100/api/user  
+```
+- 暂时只支持 GET / POST 方法<br />
+- 如果 Controller 不存在, 客户端收到: Controller $controller not found<br />
+- 如果 action 不存在, 客户端收到: Method $action not found<br />
+- 控制器的方法中调用 $this->response->write($rep) 将数据发送至客户端, 可以调用多次 <br />
+- 控制器的示例为 controller下的 Index.php 与 Http.php 及 module/Api/controller 下的 Login.php 和 User.php <br />
+- 更多 http server 信息请参考 https://wiki.swoole.com/wiki/page/326.html
+
+<hr />
+
+#### MySQL
+```
+'mysql' => [
+    'db'   => 'slave',
+    'host' => '192.168.1.34',
+    'port' => 3306,
+    'user' => 'root',
+    'pwd'  => '123456',
+    'max'  => 3,
+    'log_sql' => true,
+],
+```
+- 断线自动重连3次<br />
+- 配置文件中的 max 是指每一个 worker 有多少个连接对象组成一个连接池
+- 控制器中使用 $this->m_user = $this->load('User'); 加载模型<br />
+- 使用链式操作 Filed($field)->Where($where)->Order($order)->Limit() 构建 SQL<br />
+- Insert(), MultiInsert(), SelectOne(), Select(), UpdateOne(), Update(), UpdateByID(), DeleteOne(), Delete(), DeleteByID() <br />
+- 根据ID 查询: SelectByID(), SelectFieldByID()<br />
+- 执行复杂的 SQL: Query($sql), QueryOne($sql)<br />
+- BeginTransaction(), Commit(), Rollback() 操作事务<br />
+- 通用模型(Default)减少复用性方法很少的模型文件<br />
+- 将 log_sql 设置为 true 将在 $config['common']['mysql_log_file'] 中记录下每一条被执行的 SQL 语句, 级别为 INFO
+- 分页？ 在 HTTP 为 GET 的情况下，调用 ->Limit() 方法, 就自动分页了，默认是一页 10 条记录
+```
+    查询10条： Filed($field)->Where($where)->Order($order)->Limit()->Select();
+    一页20条： Filed($field)->Where($where)->Order($order)->Limit(20)->Select();
+```
+- 示例为 model 下的 User.php 和 Default.php, 其中 Default 为默认通用模型文件<br />
+
+```
+<?php
+class M_User extends Model {
+    
+    function __construct(){
+        $this->table = 'user';
+        parent::__construct();
+    }
+
+    public function SelectAll(){
+        $field = ['id', 'username', 'password'];
+        return $this->Field($field)->Select();
+    }
+
+    //复杂的SQL(join 等)使用原生的SQL来写，方便维护
+    public function getOnlineUsers($roomID){
+        $sql = 'SELECT u.id, u.username, c.roomName FROM '.$this->table.' AS u LEFT JOIN '.TB_PREFIX.'chatroom AS c ON u.roomID = c.id WHERE u.roomID = "'.$roomID.'" ORDER BY u.id DESC LIMIT 20';
+        return $this->Query($sql);
+    }
+}
+```
+
+``` 
+    // 控制器中调用通用的方法
+    $this->m_user = $this->load('User');
+    $field = ['id', 'username'];
+    $where = ['status' => 1];
+    $order = ['id' => 'DESC'];
+    $users = $this->m_user->Field($field)->Where($where)->Order($order)->Limit()->Select();
+    return JSON($users);
+```
+
+``` 
+    // 调用可复用的 SelectAll();
+    $users = $this->m_user->SelectAll();
+    return JSON($users);
+```
+```
+// 默认的通用模型使用, model 目录下并没有 News.php, 但一样可以这样使用
+    $this->m_news = $this->load('News');
+    $where = ['status' => 1];
+    $order = ['id' => 'DESC'];
+    $news = $this->m_news->Where($where)->Order($order)->Select();
+    return JSON($news);
+```
+<hr />
+
+#### 分表
+- 调用 Suffix($tb_suffix) 即可, 如 customer 有 1 至 100 个表，分别是 customer_1, customer_2, .... customer_100, 模型有一个 M_Customer 即可, 访问分表 customer_38 像这样
+```
+1: 配置文件中设置 tb_suffix_sf 为 _
+2: 代码中: $customer = $this->load('Customer')->Suffix(38)->SelectOne();
+```
+<hr />
+
+#### 分库
+- 为了减轻MySQL 主库压力, 有些时候有必要做读写分离，如何支持和切换主从呢? (注: 仅支持 Select 语句读从库, 因此从库的连接只有一个，并不像主库那样有连接池。当然，如果要实现从库也是连接池，也不难，改改即可) <br />
+- 配置文件中像 mysql 节点一样设置一个 mysql_slave <br />
+
+```
+'mysql_slave' => [
+    'db'   => 'slave',
+    'host' => '192.168.1.34',
+    'port' => 3306,
+    'user' => 'root',
+    'pwd'  => '123456',
+],
+```
+
+- 代码中调用 SetDB('SLAVE') 后再 Select() <br />
+```
+$user = $this->load('User')->SetDB('SLAVE')->SelectOne();
+```
+- 调皮的你又想切换为 MASTER 呢
+```
+$user = $this->load('User')->SetDB('MASTER')->SelectOne();
+```
+- 还可以结合分表一起使用
+```
+$customer = $this->load('Customer')->SetDB('SLAVE')->Suffix(38)->SelectOne();
+```
+- 来个长的链式操作
+```
+    $field = ['id', 'mobile', 'summary', 'address'];
+    $where = ['companyID' => 38];
+    $order = ['id' => 'DESC'];
+    $customer = $this->load('Customer_ref')->SetDB('SLAVE')->Suffix(38)->Field($field)->Where($where)->Order($order)->Limit()->Select();
+    return 'Slave with suffix => '.JSON($customer);
+```
+
+<hr />
+
+#### Redis
+- Cache::get($key) <br />
+- Cache::del($key) <br />
+- Cache::set($key, $val) <br />
+- 任意地方均可调用
+
+<hr />
+
+#### Autoload
+- 框架设置了 autoload 的目录是 library, 因此只要将类位于此目录下, 就能实现自动加载<br />
+- 例如控制器中要实例化 RabbitMQ, 文件名是 /library/RabbitMQ.php
+```
+public function rabbit(){
+    $rabbit = new RabbitMQ();
+    return 'A Rabbit is running happily now';
+}
+```
+
+<hr />
+
+#### 安全与过滤
+- 控制器中使用 $this->getParam($key) 来获取请求的参数，比如 $username = $this->getParam('username'), 默认会对数据进行过滤，若不过滤，将第二个参数设置为 FALSE: $username = $this->getParam('username', FALSE) <br />
+- getParam() 默认会进行 XSS 过滤, addslashes(), trim() <br />
+- 文件是 library/core/Security.php
+
+<hr />
+
+#### 普通方法
+- 将要增加的方法写入 library/Function.php 即可随处调用
+
+<hr />
+
+#### 定时器 Timer
+- 控制器中想每2秒执行当前类的 tick() 方法, 并且传递 xyx 作为参数, 则这样做
+```
+Timer::add(2000, [$this, 'tick'], 'xyz');
+```
+tick 方法则这样接收, 然后使用Timer::clear($timerID);来清除定时器
+
+```
+public function tick(int $timerID, $args){
+    $this->response('Time in tick '.date("Y-m-d H:i:s\n"));
+    $this->response('Args in tick '.JSON($args));
+
+    // Clear timer
+    Timer::clear($timerID);
+    return 'success';
+}
+```
+
+- 控制器中想5秒后执行当前类的 after() 方法, 则这样做。
+```
+Timer::after(5000, [$this, 'after']);
+```
+
+after 方法
+
+```
+// 注: after定时器不接收任何参数
+public function after(){
+    return 'Execute '.__METHOD__.' in after timer';
+}
+```
+
+<hr />
+
+#### 任务投递 Task
+- 以数组形式指定 callback 与 param, 调用 Task::add($args)
+- 以下例子投递一个任务, 由 Importer 的 Run() 处理, 参数是 ['Lakers', 'Swoole', 'Westlife'];
+```
+public function task(){
+    $args   = [];
+    $args['callback'] = ['Importer', 'Run'];
+    $args['param']    = ['Lakers', 'Swoole', 'Westlife'];
+    $taskID = Task::add($args);
+    return 'Task has been set, id is => '.$taskID;
+}
+```
+
+```
+class Importer {
+    public static function run(...$param){
+        Logger::log('Param in '.__METHOD__.' => '.JSON($param));
+    }
+}
+```
+2：任务完成时，task进程会将结果发送给onFinish函数，再由onFinish函数返回给worker
+```
+public static function onFinish(swoole_server $server, int $taskID, string $data){
+    Logger::log('taskID => '.$taskID.' => finish');
+}
+```
+
+<hr />
+
+#### 中间件
+- 基于 Pipeline 模式实现 <br />
+- 实现该中间件的类必须实现 Middleware 中的 handle() 方法。 <br />
+- 若要中止流程, throw 一个 Error 即可, 最后别忘了调用 $next(); <br />
+- TCP, UDP, HTTP, WEBSOCKET 均可使用哦 <br />
+- 请参考 Auth.php 与 Importer.php <br />
+```
+<?php
+    interface Middleware {
+        public static function handle(Closure $next);
+    }
+```
+```
+<?php
+    class Auth implements Middleware {
+        public static function handle(Closure $next){
+            if(!Request::has('token') || empty(Request::get('token'))){
+                throw new Error('Access denied !', 401);
+                return;
+            }else{
+                Request::set('token', 'ABCDEFG');
+                $next();
+            }
+        }
+    }
+```
+```
+<?php
+    class Importer {
+        public static function handle(Closure $next){
+            if(!Request::has('file') || empty(Request::get('file'))){
+                throw new Error('Empty file !', 402);
+                return;
+            }else{
+                $next();
+            }
+        }
+    }
+```
+- 调用方法: 控制器的构造函数中调用 $this->middleware([$pipe1, $pipe2, $pipeN]);
+```
+    // Auth中间件
+    function __construct(){
+        $this->middleware(['Auth']);
+        return $this->getParam('token');
+    }
+    // Importer中间件
+    function __construct(){
+        $this->middleware(['Importer']);
+        return $this->getParam('token');
+    }
+    // 多个中间件一起使用, 先执行 Auth::handle(), 再执行 Importer::handle();
+    function __construct(){
+        $this->middleware(['Auth', 'Importer']);
+        return $this->getParam('token');
+    }
+```
+
+#### 插件
+- 将插件放在 plugin 目录下, 文件名与类名保持一致。如类名为 Permission, 则文件名为 Permission.php <br />
+- 插件均需要实现 interface Plugin 定义的 routerStartup() 与 routerShutdown() <br />
+- 插件在系统启动时自动加载，并存在 Registry <br />
+- 按如下示例取出插件并使用
+```
+    public function plugin(){
+        $token = $this->getParam('token', FALSE);
+        // Permission 插件
+        $retval = Registry::get('Permission')->checkPermission($token);
+        if(!$retval){
+            $this->response->end('Bad token !');
+            return;
+        }
+        // I18N 插件
+        $i18n = Registry::get('I18N');
+        $username_text = $i18n->translate('username');
+        $password_text = $i18n->translate('password');
+        $this->response->write('English username_text => '.$username_text.'<br />');
+        $this->response->write('English password_text => '.$password_text.'<br />');
+        $username_text = $i18n->translate('username', 2);
+        $password_text = $i18n->translate('password', 2);
+        $this->response->write('Chinese username_text => '.$username_text.'<br />');
+        $this->response->write('Chinese password_text => '.$password_text.'<br />');
+    }
+```
+
+#### 进程管理器
+- 很多业务需要长驻内存不断的跑[while(true)]，worker 和 task 就不适合了，更好的方式是创建自己的进程来处理 <br />
+- 配置文件的 process 中配置自己想要创建的进程, 格式为<br />
+
+```
+    'process' => [
+        $进程名 => [        
+            'num'   => 进程的数量, 数字 
+            'mysql' => 是否连接 MySQL, 布尔,
+            'redis' => 是否连接 Redis, 布尔,
+            'param' => 要带入的参数, 索引数组,
+            'callback' => 回调函数, 也就是进程创建后要执行的方法
+        ],
+    ],
+```
+```
+    'process' => [
+        'Tiny_Swoole_importer'=> [
+            'num' => 1, 
+            'mysql' => true,
+            'redis' => true,
+            'callback' => ['Importer', 'run'],
+		],
+	],
+```
+```
+    class Importer {
+
+        public static function run(...$param){
+            Logger::log('Importer process is ready !');
+
+            while (TRUE) {
+                $key = 'Key_current_time';
+                Cache::set($key, date('Y-m-d H:i:s'));
+                $val = Cache::get($key);
+                Logger::log('Time => '.$val);
+                sleep(3);
+            }
+        }
+    }
+```
+
+- 定时调用 shell/process.sh 对进程作心跳检测 <br />
+- 要单独停止一个 process 则需要编写单独的 shell 脚本, 参考 importer.sh <br />
+
+<hr />

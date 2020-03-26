@@ -1,0 +1,924 @@
+[2020-03-26 02:25:57 #21240.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:25:57 | 1585189557.4835 | INFO | Worker 0 stop
+2020-03-26 10:25:57 | 1585189557.4838 | INFO | Worker 1 stop
+2020-03-26 10:25:59 | 1585189559.6096 | INFO | ======= HTTP master start =======
+2020-03-26 10:25:59 | 1585189559.7299 | INFO | Success to init MySQL instance
+2020-03-26 10:25:59 | 1585189559.7309 | INFO | Success to init MySQL instance
+2020-03-26 10:25:59 | 1585189559.7344 | INFO | Success to init MySQL instance
+2020-03-26 10:25:59 | 1585189559.7358 | INFO | Success to init Redis instance
+2020-03-26 10:25:59 | 1585189559.7372 | INFO | Success to init Redis instance
+2020-03-26 10:25:59 | 1585189559.7385 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:25:59 | 1585189559.7398 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:34:10 | 1585190050.5721 | ERROR | ErrorNO: 2
+2020-03-26 10:34:10 | 1585190050.5754 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:34:10 | 1585190050.5772 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:34:10 | 1585190050.5790 | ERROR | Line: 74
+2020-03-26 10:34:10 | 1585190050.5807 | ERROR | ================================================================================
+2020-03-26 10:34:18 | 1585190058.3164 | ERROR | ErrorNO: 8
+2020-03-26 10:34:18 | 1585190058.3192 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 10:34:18 | 1585190058.3212 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 10:34:18 | 1585190058.3230 | ERROR | Line: 50
+2020-03-26 10:34:18 | 1585190058.3247 | ERROR | ================================================================================
+2020-03-26 10:34:18 | 1585190058.3267 | ERROR | ErrorNO: 2
+2020-03-26 10:34:18 | 1585190058.3287 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 10:34:18 | 1585190058.3307 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 10:34:18 | 1585190058.3327 | ERROR | Line: 179
+2020-03-26 10:34:18 | 1585190058.3348 | ERROR | ================================================================================
+2020-03-26 10:34:18 | 1585190058.3370 | ERROR | ErrorNO: 2
+2020-03-26 10:34:18 | 1585190058.3390 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 10:34:18 | 1585190058.3409 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 10:34:18 | 1585190058.3427 | ERROR | Line: 170
+2020-03-26 10:34:18 | 1585190058.3448 | ERROR | ================================================================================
+2020-03-26 10:34:21 | 1585190061.4695 | INFO | This is an info msg
+2020-03-26 10:34:21 | 1585190061.4717 | WARN | This is a warn msg
+2020-03-26 10:34:21 | 1585190061.4743 | ERROR | This is an error msg
+2020-03-26 10:34:21 | 1585190061.4761 | FATAL | This is a fatal msg
+2020-03-26 10:34:21 | 1585190061.4780 | INFO | This is a log msg
+2020-03-26 10:34:24 | 1585190064.9520 | ERROR | ErrorNO: 2
+2020-03-26 10:34:24 | 1585190064.9539 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:34:24 | 1585190064.9564 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:34:24 | 1585190064.9582 | ERROR | Line: 74
+2020-03-26 10:34:24 | 1585190064.9600 | ERROR | ================================================================================
+[2020-03-26 02:34:49 #21298.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:34:49 | 1585190089.2757 | INFO | Worker 0 stop
+2020-03-26 10:34:49 | 1585190089.2759 | INFO | Worker 1 stop
+2020-03-26 10:34:51 | 1585190091.4001 | INFO | ======= HTTP master start =======
+2020-03-26 10:34:51 | 1585190091.5192 | INFO | Success to init MySQL instance
+2020-03-26 10:34:51 | 1585190091.5215 | INFO | Success to init MySQL instance
+2020-03-26 10:34:51 | 1585190091.5241 | INFO | Success to init MySQL instance
+2020-03-26 10:34:51 | 1585190091.5256 | INFO | Success to init Redis instance
+2020-03-26 10:34:51 | 1585190091.5267 | INFO | Success to init Redis instance
+2020-03-26 10:34:51 | 1585190091.5281 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:34:51 | 1585190091.5297 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:34:55 | 1585190095.6372 | ERROR | ErrorNO: 2
+2020-03-26 10:34:55 | 1585190095.6396 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 10:34:55 | 1585190095.6413 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 10:34:55 | 1585190095.6431 | ERROR | Line: 179
+2020-03-26 10:34:55 | 1585190095.6450 | ERROR | ================================================================================
+2020-03-26 10:34:55 | 1585190095.6469 | ERROR | ErrorNO: 2
+2020-03-26 10:34:55 | 1585190095.6485 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 10:34:55 | 1585190095.6504 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 10:34:55 | 1585190095.6521 | ERROR | Line: 170
+2020-03-26 10:34:55 | 1585190095.6538 | ERROR | ================================================================================
+2020-03-26 10:35:20 | 1585190120.5280 | INFO | This is an info msg
+2020-03-26 10:35:20 | 1585190120.5309 | WARN | This is a warn msg
+2020-03-26 10:35:20 | 1585190120.5329 | ERROR | This is an error msg
+2020-03-26 10:35:20 | 1585190120.5347 | FATAL | This is a fatal msg
+2020-03-26 10:35:20 | 1585190120.5367 | INFO | This is a log msg
+2020-03-26 10:35:40 | 1585190140.5984 | ERROR | ErrorNO: 8
+2020-03-26 10:35:40 | 1585190140.6011 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 10:35:40 | 1585190140.6031 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 10:35:40 | 1585190140.6049 | ERROR | Line: 50
+2020-03-26 10:35:40 | 1585190140.6068 | ERROR | ================================================================================
+[2020-03-26 02:36:57 #21514.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:36:57 | 1585190217.8223 | INFO | Worker 0 stop
+2020-03-26 10:36:57 | 1585190217.8224 | INFO | Worker 1 stop
+2020-03-26 10:36:59 | 1585190219.9475 | INFO | ======= HTTP master start =======
+2020-03-26 10:37:00 | 1585190220.0673 | INFO | Success to init MySQL instance
+2020-03-26 10:37:00 | 1585190220.0681 | INFO | Success to init MySQL instance
+2020-03-26 10:37:00 | 1585190220.0718 | INFO | Success to init MySQL instance
+2020-03-26 10:37:00 | 1585190220.0735 | INFO | Success to init Redis instance
+2020-03-26 10:37:00 | 1585190220.0748 | INFO | Success to init Redis instance
+2020-03-26 10:37:00 | 1585190220.0761 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:37:00 | 1585190220.0780 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:37:03 | 1585190223.4745 | ERROR | ErrorNO: 8
+2020-03-26 10:37:03 | 1585190223.4767 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 10:37:03 | 1585190223.4793 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 10:37:03 | 1585190223.4813 | ERROR | Line: 50
+2020-03-26 10:37:03 | 1585190223.4831 | ERROR | ================================================================================
+2020-03-26 10:38:09 | 1585190289.2401 | ERROR | ErrorNO: 2
+2020-03-26 10:38:09 | 1585190289.2429 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 10:38:09 | 1585190289.2448 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 10:38:09 | 1585190289.2469 | ERROR | Line: 44
+2020-03-26 10:38:09 | 1585190289.2489 | ERROR | ================================================================================
+2020-03-26 10:38:09 | 1585190289.2509 | ERROR | ErrorNO: 8
+2020-03-26 10:38:09 | 1585190289.2528 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 10:38:09 | 1585190289.2547 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 10:38:09 | 1585190289.2566 | ERROR | Line: 48
+2020-03-26 10:38:09 | 1585190289.2586 | ERROR | ================================================================================
+2020-03-26 10:38:09 | 1585190289.2606 | ERROR | ErrorNO: 8
+2020-03-26 10:38:09 | 1585190289.2627 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 10:38:09 | 1585190289.2648 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 10:38:09 | 1585190289.2671 | ERROR | Line: 49
+2020-03-26 10:38:09 | 1585190289.2689 | ERROR | ================================================================================
+2020-03-26 10:38:09 | 1585190289.2711 | ERROR | ErrorNO: 8
+2020-03-26 10:38:09 | 1585190289.2729 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 10:38:09 | 1585190289.2747 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 10:38:09 | 1585190289.2768 | ERROR | Line: 50
+2020-03-26 10:38:09 | 1585190289.2789 | ERROR | ================================================================================
+2020-03-26 10:38:09 | 1585190289.2808 | ERROR | ErrorNO: 8
+2020-03-26 10:38:09 | 1585190289.2827 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 10:38:09 | 1585190289.2847 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 10:38:09 | 1585190289.2867 | ERROR | Line: 51
+2020-03-26 10:38:09 | 1585190289.2888 | ERROR | ================================================================================
+2020-03-26 10:38:09 | 1585190289.2909 | ERROR | ErrorNO: 8
+2020-03-26 10:38:09 | 1585190289.2927 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 10:38:09 | 1585190289.2947 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 10:38:09 | 1585190289.2966 | ERROR | Line: 52
+2020-03-26 10:38:09 | 1585190289.2986 | ERROR | ================================================================================
+2020-03-26 10:38:31 | 1585190311.4255 | ERROR | ErrorNO: 2
+2020-03-26 10:38:31 | 1585190311.4281 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:38:31 | 1585190311.4300 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:38:31 | 1585190311.4319 | ERROR | Line: 74
+2020-03-26 10:38:31 | 1585190311.4340 | ERROR | ================================================================================
+2020-03-26 10:38:45 | 1585190325.4787 | ERROR | ErrorNO: 2
+2020-03-26 10:38:45 | 1585190325.4816 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:38:45 | 1585190325.4837 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:38:45 | 1585190325.4855 | ERROR | Line: 74
+2020-03-26 10:38:45 | 1585190325.4876 | ERROR | ================================================================================
+2020-03-26 10:39:04 | 1585190344.0026 | ERROR | ErrorNO: 2
+2020-03-26 10:39:04 | 1585190344.0092 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:39:04 | 1585190344.0111 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:39:04 | 1585190344.0128 | ERROR | Line: 74
+2020-03-26 10:39:04 | 1585190344.0144 | ERROR | ================================================================================
+[2020-03-26 02:41:16 #21537.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:41:16 | 1585190476.7373 | INFO | Worker 0 stop
+2020-03-26 10:41:16 | 1585190476.7374 | INFO | Worker 1 stop
+2020-03-26 10:41:18 | 1585190478.8607 | INFO | ======= HTTP master start =======
+2020-03-26 10:41:18 | 1585190478.9818 | INFO | Success to init MySQL instance
+2020-03-26 10:41:18 | 1585190478.9824 | INFO | Success to init MySQL instance
+2020-03-26 10:41:18 | 1585190478.9861 | INFO | Success to init MySQL instance
+2020-03-26 10:41:18 | 1585190478.9878 | INFO | Success to init Redis instance
+2020-03-26 10:41:18 | 1585190478.9892 | INFO | Success to init Redis instance
+2020-03-26 10:41:18 | 1585190478.9905 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:41:18 | 1585190478.9920 | INFO | Worker 0 ready for connections ...
+[2020-03-26 02:43:27 #21587.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:43:27 | 1585190607.1368 | INFO | Worker 0 stop
+2020-03-26 10:43:27 | 1585190607.1370 | INFO | Worker 1 stop
+2020-03-26 10:43:29 | 1585190609.2535 | INFO | ======= HTTP master start =======
+2020-03-26 10:43:29 | 1585190609.3746 | INFO | Success to init MySQL instance
+2020-03-26 10:43:29 | 1585190609.3754 | INFO | Success to init MySQL instance
+2020-03-26 10:43:29 | 1585190609.3787 | INFO | Success to init MySQL instance
+2020-03-26 10:43:29 | 1585190609.3811 | INFO | Success to init Redis instance
+2020-03-26 10:43:29 | 1585190609.3821 | INFO | Success to init Redis instance
+2020-03-26 10:43:29 | 1585190609.3832 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:43:29 | 1585190609.3848 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:43:39 | 1585190619.7662 | ERROR | ErrorNO: 9999
+2020-03-26 10:43:39 | 1585190619.7690 | ERROR | Error: No such file or directory: /project/miniHttp/module/Api/controller/Logout.php
+2020-03-26 10:43:39 | 1585190619.7709 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:43:39 | 1585190619.7728 | ERROR | Line: 63
+2020-03-26 10:43:39 | 1585190619.7748 | ERROR | ================================================================================
+2020-03-26 10:44:24 | 1585190664.0384 | ERROR | ErrorNO: 2
+2020-03-26 10:44:24 | 1585190664.0411 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:44:24 | 1585190664.0428 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:44:24 | 1585190664.0450 | ERROR | Line: 74
+2020-03-26 10:44:24 | 1585190664.0467 | ERROR | ================================================================================
+2020-03-26 10:44:36 | 1585190676.7536 | ERROR | ErrorNO: 2
+2020-03-26 10:44:36 | 1585190676.7563 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:44:36 | 1585190676.7582 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:44:36 | 1585190676.7599 | ERROR | Line: 74
+2020-03-26 10:44:36 | 1585190676.7629 | ERROR | ================================================================================
+2020-03-26 10:44:44 | 1585190684.5651 | ERROR | ErrorNO: 2
+2020-03-26 10:44:44 | 1585190684.5677 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:44:44 | 1585190684.5696 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:44:44 | 1585190684.5717 | ERROR | Line: 74
+2020-03-26 10:44:44 | 1585190684.5736 | ERROR | ================================================================================
+[2020-03-26 02:45:06 #21610.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:45:06 | 1585190706.1994 | INFO | Worker 0 stop
+2020-03-26 10:45:06 | 1585190706.1996 | INFO | Worker 1 stop
+2020-03-26 10:45:08 | 1585190708.3273 | INFO | ======= HTTP master start =======
+2020-03-26 10:45:08 | 1585190708.4472 | INFO | Success to init MySQL instance
+2020-03-26 10:45:08 | 1585190708.4485 | INFO | Success to init MySQL instance
+2020-03-26 10:45:08 | 1585190708.4517 | INFO | Success to init MySQL instance
+2020-03-26 10:45:08 | 1585190708.4535 | INFO | Success to init Redis instance
+2020-03-26 10:45:08 | 1585190708.4547 | INFO | Success to init Redis instance
+2020-03-26 10:45:08 | 1585190708.4560 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:45:08 | 1585190708.4577 | INFO | Worker 0 ready for connections ...
+[2020-03-26 02:47:43 #21633.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:47:43 | 1585190863.6491 | INFO | Worker 0 stop
+2020-03-26 10:47:43 | 1585190863.6492 | INFO | Worker 1 stop
+2020-03-26 10:47:45 | 1585190865.7793 | INFO | ======= HTTP master start =======
+2020-03-26 10:47:45 | 1585190865.8991 | INFO | Success to init MySQL instance
+2020-03-26 10:47:45 | 1585190865.9005 | INFO | Success to init MySQL instance
+2020-03-26 10:47:45 | 1585190865.9033 | INFO | Success to init MySQL instance
+2020-03-26 10:47:45 | 1585190865.9070 | INFO | Success to init Redis instance
+2020-03-26 10:47:45 | 1585190865.9074 | INFO | Success to init Redis instance
+2020-03-26 10:47:45 | 1585190865.9092 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:47:45 | 1585190865.9107 | INFO | Worker 1 ready for connections ...
+[2020-03-26 02:48:11 #21671.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:48:11 | 1585190891.6603 | INFO | Worker 0 stop
+2020-03-26 10:48:11 | 1585190891.6606 | INFO | Worker 1 stop
+2020-03-26 10:48:13 | 1585190893.7455 | INFO | ======= HTTP master start =======
+2020-03-26 10:48:13 | 1585190893.8664 | INFO | Success to init MySQL instance
+2020-03-26 10:48:13 | 1585190893.8670 | INFO | Success to init MySQL instance
+2020-03-26 10:48:13 | 1585190893.8704 | INFO | Success to init MySQL instance
+2020-03-26 10:48:13 | 1585190893.8720 | INFO | Success to init Redis instance
+2020-03-26 10:48:13 | 1585190893.8734 | INFO | Success to init Redis instance
+2020-03-26 10:48:13 | 1585190893.8747 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:48:13 | 1585190893.8761 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:50:50 | 1585191050.6794 | ERROR | ErrorNO: 2
+2020-03-26 10:50:50 | 1585191050.6830 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:50:50 | 1585191050.6849 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:50:50 | 1585191050.6869 | ERROR | Line: 74
+2020-03-26 10:50:50 | 1585191050.6889 | ERROR | ================================================================================
+2020-03-26 10:50:58 | 1585191058.3755 | ERROR | ErrorNO: 2
+2020-03-26 10:50:58 | 1585191058.3785 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 10:50:58 | 1585191058.3804 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:50:58 | 1585191058.3823 | ERROR | Line: 74
+2020-03-26 10:50:58 | 1585191058.3841 | ERROR | ================================================================================
+[2020-03-26 02:51:21 #21926.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:51:21 | 1585191081.3934 | INFO | Worker 0 stop
+2020-03-26 10:51:21 | 1585191081.3936 | INFO | Worker 1 stop
+2020-03-26 10:51:23 | 1585191083.5186 | INFO | ======= HTTP master start =======
+2020-03-26 10:51:23 | 1585191083.6383 | INFO | Success to init MySQL instance
+2020-03-26 10:51:23 | 1585191083.6400 | INFO | Success to init MySQL instance
+2020-03-26 10:51:23 | 1585191083.6432 | INFO | Success to init MySQL instance
+2020-03-26 10:51:23 | 1585191083.6447 | INFO | Success to init Redis instance
+2020-03-26 10:51:23 | 1585191083.6460 | INFO | Success to init Redis instance
+2020-03-26 10:51:23 | 1585191083.6474 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:51:23 | 1585191083.6489 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:51:36 | 1585191096.3187 | ERROR | ErrorNO: 9999
+2020-03-26 10:51:36 | 1585191096.3214 | ERROR | Error: No such file or directory: /project/miniHttp/controller/Favicon.ico.php
+2020-03-26 10:51:36 | 1585191096.3234 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 10:51:36 | 1585191096.3252 | ERROR | Line: 63
+2020-03-26 10:51:36 | 1585191096.3269 | ERROR | ================================================================================
+[2020-03-26 02:56:17 #21954.1]	NOTICE	Server is shutdown now.
+2020-03-26 10:56:17 | 1585191377.5851 | INFO | Worker 0 stop
+2020-03-26 10:56:17 | 1585191377.5852 | INFO | Worker 1 stop
+2020-03-26 10:56:19 | 1585191379.7122 | INFO | ======= HTTP master start =======
+2020-03-26 10:56:19 | 1585191379.8315 | INFO | Success to init MySQL instance
+2020-03-26 10:56:19 | 1585191379.8338 | INFO | Success to init MySQL instance
+2020-03-26 10:56:19 | 1585191379.8361 | INFO | Success to init MySQL instance
+2020-03-26 10:56:19 | 1585191379.8379 | INFO | Success to init Redis instance
+2020-03-26 10:56:19 | 1585191379.8390 | INFO | Success to init Redis instance
+2020-03-26 10:56:19 | 1585191379.8404 | INFO | Worker 1 ready for connections ...
+2020-03-26 10:56:19 | 1585191379.8421 | INFO | Worker 0 ready for connections ...
+2020-03-26 10:58:11 | 1585191491.2737 | INFO | File is => 123
+2020-03-26 10:58:14 | 1585191494.3001 | INFO | File is => 123333333333
+2020-03-26 10:58:22 | 1585191502.6598 | INFO | File is => 123333333333xxxxxxxx
+2020-03-26 11:04:07 | 1585191847.6048 | INFO | Heartbeating process ......
+2020-03-26 11:04:07 | 1585191847.6081 | INFO | Process config => {"Mini_Swoole_importer":{"num":1,"mysql":true,"redis":true,"callback":["Importer","run"]}}
+2020-03-26 11:04:07 | 1585191847.6360 | WARN | Heartbeat: Mini_Swoole_importer is DOWN, restarting ......
+2020-03-26 11:04:07 | 1585191847.6383 | INFO | Forking Mini_Swoole_importer......
+2020-03-26 11:04:07 | 1585191847.6411 | INFO | Process Mini_Swoole_importer with pid 22136 is running !
+2020-03-26 11:04:07 | 1585191847.6479 | INFO | Success to init MySQL instance
+2020-03-26 11:04:07 | 1585191847.6509 | INFO | Success to init MySQL instance
+2020-03-26 11:04:07 | 1585191847.6537 | INFO | Success to init Redis instance
+2020-03-26 11:04:07 | 1585191847.6583 | INFO | Importer process is ready !
+2020-03-26 11:04:07 | 1585191847.6605 | INFO | Time in Importer::run => 2020-03-26 11:04:07
+2020-03-26 11:04:08 | 1585191848.6630 | INFO | Time in Importer::run => 2020-03-26 11:04:08
+2020-03-26 11:04:09 | 1585191849.6672 | INFO | Time in Importer::run => 2020-03-26 11:04:09
+2020-03-26 11:04:10 | 1585191850.6698 | INFO | Time in Importer::run => 2020-03-26 11:04:10
+2020-03-26 11:04:11 | 1585191851.6739 | INFO | Time in Importer::run => 2020-03-26 11:04:11
+2020-03-26 11:04:12 | 1585191852.6767 | INFO | Time in Importer::run => 2020-03-26 11:04:12
+2020-03-26 11:04:13 | 1585191853.6807 | INFO | Time in Importer::run => 2020-03-26 11:04:13
+2020-03-26 11:04:14 | 1585191854.6844 | INFO | Time in Importer::run => 2020-03-26 11:04:14
+2020-03-26 11:04:15 | 1585191855.6875 | INFO | Time in Importer::run => 2020-03-26 11:04:15
+2020-03-26 11:04:16 | 1585191856.6910 | INFO | Time in Importer::run => 2020-03-26 11:04:16
+2020-03-26 11:04:17 | 1585191857.6944 | INFO | Time in Importer::run => 2020-03-26 11:04:17
+2020-03-26 11:04:18 | 1585191858.6981 | INFO | Time in Importer::run => 2020-03-26 11:04:18
+2020-03-26 11:04:19 | 1585191859.7015 | INFO | Time in Importer::run => 2020-03-26 11:04:19
+2020-03-26 11:04:20 | 1585191860.7051 | INFO | Time in Importer::run => 2020-03-26 11:04:20
+2020-03-26 11:04:21 | 1585191861.7087 | INFO | Time in Importer::run => 2020-03-26 11:04:21
+2020-03-26 11:04:22 | 1585191862.7121 | INFO | Time in Importer::run => 2020-03-26 11:04:22
+2020-03-26 11:04:23 | 1585191863.7159 | INFO | Time in Importer::run => 2020-03-26 11:04:23
+2020-03-26 11:06:26 | 1585191986.5999 | INFO | Importer process is ready !
+2020-03-26 11:06:26 | 1585191986.6035 | INFO | Time in Importer::run => 2020-03-26 11:06:26
+2020-03-26 11:06:27 | 1585191987.6060 | INFO | Time in Importer::run => 2020-03-26 11:06:27
+2020-03-26 11:06:28 | 1585191988.6088 | INFO | Time in Importer::run => 2020-03-26 11:06:28
+2020-03-26 11:06:29 | 1585191989.6136 | INFO | Time in Importer::run => 2020-03-26 11:06:29
+2020-03-26 11:06:30 | 1585191990.6186 | INFO | Time in Importer::run => 2020-03-26 11:06:30
+2020-03-26 11:06:31 | 1585191991.6225 | INFO | Time in Importer::run => 2020-03-26 11:06:31
+2020-03-26 11:06:32 | 1585191992.6262 | INFO | Time in Importer::run => 2020-03-26 11:06:32
+2020-03-26 11:06:33 | 1585191993.6306 | INFO | Time in Importer::run => 2020-03-26 11:06:33
+2020-03-26 11:06:34 | 1585191994.6342 | INFO | Time in Importer::run => 2020-03-26 11:06:34
+2020-03-26 11:06:35 | 1585191995.6374 | INFO | Time in Importer::run => 2020-03-26 11:06:35
+2020-03-26 11:06:36 | 1585191996.6409 | INFO | Time in Importer::run => 2020-03-26 11:06:36
+2020-03-26 11:06:37 | 1585191997.6452 | INFO | Time in Importer::run => 2020-03-26 11:06:37
+2020-03-26 11:06:38 | 1585191998.6496 | INFO | Time in Importer::run => 2020-03-26 11:06:38
+2020-03-26 11:06:39 | 1585191999.6545 | INFO | Time in Importer::run => 2020-03-26 11:06:39
+2020-03-26 11:06:40 | 1585192000.6593 | INFO | Time in Importer::run => 2020-03-26 11:06:40
+2020-03-26 11:06:41 | 1585192001.6635 | INFO | Time in Importer::run => 2020-03-26 11:06:41
+2020-03-26 11:06:42 | 1585192002.6689 | INFO | Time in Importer::run => 2020-03-26 11:06:42
+2020-03-26 11:06:43 | 1585192003.6724 | INFO | Time in Importer::run => 2020-03-26 11:06:43
+2020-03-26 11:06:44 | 1585192004.6756 | INFO | Time in Importer::run => 2020-03-26 11:06:44
+2020-03-26 11:06:45 | 1585192005.6798 | INFO | Time in Importer::run => 2020-03-26 11:06:45
+2020-03-26 11:06:46 | 1585192006.6832 | INFO | Time in Importer::run => 2020-03-26 11:06:46
+2020-03-26 11:06:47 | 1585192007.6868 | INFO | Time in Importer::run => 2020-03-26 11:06:47
+2020-03-26 11:06:48 | 1585192008.6905 | INFO | Time in Importer::run => 2020-03-26 11:06:48
+2020-03-26 11:06:49 | 1585192009.6939 | INFO | Time in Importer::run => 2020-03-26 11:06:49
+2020-03-26 11:06:50 | 1585192010.6972 | INFO | Time in Importer::run => 2020-03-26 11:06:50
+2020-03-26 11:06:51 | 1585192011.7009 | INFO | Time in Importer::run => 2020-03-26 11:06:51
+2020-03-26 11:06:52 | 1585192012.7044 | INFO | Time in Importer::run => 2020-03-26 11:06:52
+2020-03-26 11:06:53 | 1585192013.7081 | INFO | Time in Importer::run => 2020-03-26 11:06:53
+2020-03-26 11:06:54 | 1585192014.7116 | INFO | Time in Importer::run => 2020-03-26 11:06:54
+2020-03-26 11:06:55 | 1585192015.7145 | INFO | Time in Importer::run => 2020-03-26 11:06:55
+2020-03-26 11:06:56 | 1585192016.7181 | INFO | Time in Importer::run => 2020-03-26 11:06:56
+2020-03-26 11:06:57 | 1585192017.7226 | INFO | Time in Importer::run => 2020-03-26 11:06:57
+2020-03-26 11:06:58 | 1585192018.7253 | INFO | Time in Importer::run => 2020-03-26 11:06:58
+2020-03-26 11:06:59 | 1585192019.7283 | INFO | Time in Importer::run => 2020-03-26 11:06:59
+2020-03-26 11:07:00 | 1585192020.7316 | INFO | Time in Importer::run => 2020-03-26 11:07:00
+2020-03-26 11:07:01 | 1585192021.7346 | INFO | Time in Importer::run => 2020-03-26 11:07:01
+2020-03-26 11:07:02 | 1585192022.7374 | INFO | Time in Importer::run => 2020-03-26 11:07:02
+2020-03-26 11:07:03 | 1585192023.7413 | INFO | Time in Importer::run => 2020-03-26 11:07:03
+2020-03-26 11:07:04 | 1585192024.7447 | INFO | Time in Importer::run => 2020-03-26 11:07:04
+2020-03-26 11:07:05 | 1585192025.7479 | INFO | Time in Importer::run => 2020-03-26 11:07:05
+2020-03-26 11:07:06 | 1585192026.7518 | INFO | Time in Importer::run => 2020-03-26 11:07:06
+2020-03-26 11:07:07 | 1585192027.7549 | INFO | Time in Importer::run => 2020-03-26 11:07:07
+2020-03-26 11:07:08 | 1585192028.7587 | INFO | Time in Importer::run => 2020-03-26 11:07:08
+2020-03-26 11:07:09 | 1585192029.7622 | INFO | Time in Importer::run => 2020-03-26 11:07:09
+2020-03-26 11:07:10 | 1585192030.7657 | INFO | Time in Importer::run => 2020-03-26 11:07:10
+2020-03-26 11:07:11 | 1585192031.7695 | INFO | Time in Importer::run => 2020-03-26 11:07:11
+2020-03-26 11:07:12 | 1585192032.7735 | INFO | Time in Importer::run => 2020-03-26 11:07:12
+2020-03-26 11:07:13 | 1585192033.7769 | INFO | Time in Importer::run => 2020-03-26 11:07:13
+2020-03-26 11:07:14 | 1585192034.0902 | INFO | Worker 0 stop
+2020-03-26 11:07:14 | 1585192034.0990 | INFO | Success to init MySQL instance
+2020-03-26 11:07:14 | 1585192034.1025 | INFO | Success to init MySQL instance
+2020-03-26 11:07:14 | 1585192034.1054 | INFO | Success to init Redis instance
+2020-03-26 11:07:14 | 1585192034.1076 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:07:14 | 1585192034.7805 | INFO | Time in Importer::run => 2020-03-26 11:07:14
+2020-03-26 11:07:15 | 1585192035.7851 | INFO | Time in Importer::run => 2020-03-26 11:07:15
+2020-03-26 11:07:16 | 1585192036.7883 | INFO | Time in Importer::run => 2020-03-26 11:07:16
+2020-03-26 11:07:17 | 1585192037.7921 | INFO | Time in Importer::run => 2020-03-26 11:07:17
+2020-03-26 11:07:18 | 1585192038.7974 | INFO | Time in Importer::run => 2020-03-26 11:07:18
+2020-03-26 11:07:19 | 1585192039.8015 | INFO | Time in Importer::run => 2020-03-26 11:07:19
+2020-03-26 11:07:20 | 1585192040.8056 | INFO | Time in Importer::run => 2020-03-26 11:07:20
+2020-03-26 11:07:21 | 1585192041.8099 | INFO | Time in Importer::run => 2020-03-26 11:07:21
+2020-03-26 11:07:22 | 1585192042.8135 | INFO | Time in Importer::run => 2020-03-26 11:07:22
+2020-03-26 11:07:23 | 1585192043.8166 | INFO | Time in Importer::run => 2020-03-26 11:07:23
+[2020-03-26 03:07:24 #21977.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:07:24 | 1585192044.4882 | INFO | Worker 0 stop
+2020-03-26 11:07:24 | 1585192044.4886 | INFO | Time in Importer::run => 2020-03-26 11:07:24
+2020-03-26 11:07:25 | 1585192045.4962 | INFO | Time in Importer::run => 2020-03-26 11:07:25
+2020-03-26 11:07:26 | 1585192046.5011 | INFO | Time in Importer::run => 2020-03-26 11:07:26
+2020-03-26 11:07:27 | 1585192047.5047 | INFO | Time in Importer::run => 2020-03-26 11:07:27
+2020-03-26 11:07:28 | 1585192048.5085 | INFO | Time in Importer::run => 2020-03-26 11:07:28
+2020-03-26 11:07:29 | 1585192049.5117 | INFO | Time in Importer::run => 2020-03-26 11:07:29
+2020-03-26 11:07:30 | 1585192050.5158 | INFO | Time in Importer::run => 2020-03-26 11:07:30
+2020-03-26 11:07:31 | 1585192051.5200 | INFO | Time in Importer::run => 2020-03-26 11:07:31
+2020-03-26 11:07:32 | 1585192052.5231 | INFO | Time in Importer::run => 2020-03-26 11:07:32
+2020-03-26 11:07:33 | 1585192053.5269 | INFO | Time in Importer::run => 2020-03-26 11:07:33
+2020-03-26 11:07:34 | 1585192054.5307 | INFO | Time in Importer::run => 2020-03-26 11:07:34
+2020-03-26 11:07:35 | 1585192055.5343 | INFO | Time in Importer::run => 2020-03-26 11:07:35
+2020-03-26 11:07:36 | 1585192056.5379 | INFO | Time in Importer::run => 2020-03-26 11:07:36
+2020-03-26 11:07:37 | 1585192057.5424 | INFO | Time in Importer::run => 2020-03-26 11:07:37
+2020-03-26 11:07:38 | 1585192058.5458 | INFO | Time in Importer::run => 2020-03-26 11:07:38
+2020-03-26 11:07:39 | 1585192059.5491 | INFO | Time in Importer::run => 2020-03-26 11:07:39
+2020-03-26 11:07:40 | 1585192060.5527 | INFO | Time in Importer::run => 2020-03-26 11:07:40
+2020-03-26 11:07:41 | 1585192061.5569 | INFO | Time in Importer::run => 2020-03-26 11:07:41
+2020-03-26 11:07:42 | 1585192062.5613 | INFO | Time in Importer::run => 2020-03-26 11:07:42
+2020-03-26 11:07:43 | 1585192063.5653 | INFO | Time in Importer::run => 2020-03-26 11:07:43
+2020-03-26 11:07:44 | 1585192064.5698 | INFO | Time in Importer::run => 2020-03-26 11:07:44
+2020-03-26 11:07:45 | 1585192065.5745 | INFO | Time in Importer::run => 2020-03-26 11:07:45
+2020-03-26 11:07:46 | 1585192066.5783 | INFO | Time in Importer::run => 2020-03-26 11:07:46
+2020-03-26 11:07:47 | 1585192067.5819 | INFO | Time in Importer::run => 2020-03-26 11:07:47
+2020-03-26 11:07:48 | 1585192068.5853 | INFO | Time in Importer::run => 2020-03-26 11:07:48
+2020-03-26 11:07:49 | 1585192069.5893 | INFO | Time in Importer::run => 2020-03-26 11:07:49
+2020-03-26 11:07:50 | 1585192070.5929 | INFO | Time in Importer::run => 2020-03-26 11:07:50
+2020-03-26 11:07:51 | 1585192071.5966 | INFO | Time in Importer::run => 2020-03-26 11:07:51
+2020-03-26 11:07:52 | 1585192072.6008 | INFO | Time in Importer::run => 2020-03-26 11:07:52
+2020-03-26 11:07:53 | 1585192073.6048 | INFO | Time in Importer::run => 2020-03-26 11:07:53
+2020-03-26 11:07:54 | 1585192074.6081 | INFO | Time in Importer::run => 2020-03-26 11:07:54
+2020-03-26 11:07:55 | 1585192075.6121 | INFO | Time in Importer::run => 2020-03-26 11:07:55
+2020-03-26 11:07:56 | 1585192076.6157 | INFO | Time in Importer::run => 2020-03-26 11:07:56
+2020-03-26 11:07:57 | 1585192077.6197 | INFO | Time in Importer::run => 2020-03-26 11:07:57
+2020-03-26 11:07:58 | 1585192078.6241 | INFO | Time in Importer::run => 2020-03-26 11:07:58
+2020-03-26 11:07:59 | 1585192079.6268 | INFO | Time in Importer::run => 2020-03-26 11:07:59
+2020-03-26 11:08:00 | 1585192080.6311 | INFO | Time in Importer::run => 2020-03-26 11:08:00
+2020-03-26 11:08:01 | 1585192081.6358 | INFO | Time in Importer::run => 2020-03-26 11:08:01
+2020-03-26 11:08:02 | 1585192082.6392 | INFO | Time in Importer::run => 2020-03-26 11:08:02
+2020-03-26 11:08:03 | 1585192083.6437 | INFO | Time in Importer::run => 2020-03-26 11:08:03
+2020-03-26 11:08:04 | 1585192084.6480 | INFO | Time in Importer::run => 2020-03-26 11:08:04
+2020-03-26 11:08:05 | 1585192085.6523 | INFO | Time in Importer::run => 2020-03-26 11:08:05
+2020-03-26 11:08:06 | 1585192086.6555 | INFO | Time in Importer::run => 2020-03-26 11:08:06
+2020-03-26 11:08:07 | 1585192087.6597 | INFO | Time in Importer::run => 2020-03-26 11:08:07
+2020-03-26 11:08:08 | 1585192088.6630 | INFO | Time in Importer::run => 2020-03-26 11:08:08
+2020-03-26 11:08:09 | 1585192089.6662 | INFO | Time in Importer::run => 2020-03-26 11:08:09
+2020-03-26 11:08:10 | 1585192090.6696 | INFO | Time in Importer::run => 2020-03-26 11:08:10
+2020-03-26 11:08:11 | 1585192091.6739 | INFO | Time in Importer::run => 2020-03-26 11:08:11
+2020-03-26 11:08:12 | 1585192092.6775 | INFO | Time in Importer::run => 2020-03-26 11:08:12
+2020-03-26 11:08:13 | 1585192093.6819 | INFO | Time in Importer::run => 2020-03-26 11:08:13
+2020-03-26 11:08:14 | 1585192094.6856 | INFO | Time in Importer::run => 2020-03-26 11:08:14
+2020-03-26 11:08:15 | 1585192095.6891 | INFO | Time in Importer::run => 2020-03-26 11:08:15
+2020-03-26 11:08:16 | 1585192096.6932 | INFO | Time in Importer::run => 2020-03-26 11:08:16
+2020-03-26 11:08:17 | 1585192097.6967 | INFO | Time in Importer::run => 2020-03-26 11:08:17
+2020-03-26 11:08:18 | 1585192098.6996 | INFO | Time in Importer::run => 2020-03-26 11:08:18
+2020-03-26 11:08:19 | 1585192099.7033 | INFO | Time in Importer::run => 2020-03-26 11:08:19
+2020-03-26 11:08:20 | 1585192100.7078 | INFO | Time in Importer::run => 2020-03-26 11:08:20
+2020-03-26 11:08:21 | 1585192101.7113 | INFO | Time in Importer::run => 2020-03-26 11:08:21
+2020-03-26 11:08:22 | 1585192102.7158 | INFO | Time in Importer::run => 2020-03-26 11:08:22
+2020-03-26 11:08:22 | 1585192102.7812 | INFO | Time in Importer::run => 2020-03-26 11:08:22
+2020-03-26 11:08:23 | 1585192103.7848 | INFO | Time in Importer::run => 2020-03-26 11:08:23
+2020-03-26 11:08:24 | 1585192104.7883 | INFO | Time in Importer::run => 2020-03-26 11:08:24
+2020-03-26 11:08:25 | 1585192105.7928 | INFO | Time in Importer::run => 2020-03-26 11:08:25
+2020-03-26 11:08:26 | 1585192106.7970 | INFO | Time in Importer::run => 2020-03-26 11:08:26
+2020-03-26 11:08:27 | 1585192107.8024 | INFO | Time in Importer::run => 2020-03-26 11:08:27
+2020-03-26 11:08:28 | 1585192108.8079 | INFO | Time in Importer::run => 2020-03-26 11:08:28
+2020-03-26 11:08:29 | 1585192109.8110 | INFO | Time in Importer::run => 2020-03-26 11:08:29
+2020-03-26 11:08:30 | 1585192110.8161 | INFO | Time in Importer::run => 2020-03-26 11:08:30
+2020-03-26 11:08:31 | 1585192111.8196 | INFO | Time in Importer::run => 2020-03-26 11:08:31
+2020-03-26 11:08:32 | 1585192112.8236 | INFO | Time in Importer::run => 2020-03-26 11:08:32
+2020-03-26 11:10:14 | 1585192214.4438 | INFO | ======= HTTP master start =======
+2020-03-26 11:10:14 | 1585192214.5628 | INFO | Success to init MySQL instance
+2020-03-26 11:10:14 | 1585192214.5644 | INFO | Success to init MySQL instance
+2020-03-26 11:10:14 | 1585192214.5688 | INFO | Success to init MySQL instance
+2020-03-26 11:10:14 | 1585192214.5701 | INFO | Success to init Redis instance
+2020-03-26 11:10:14 | 1585192214.5713 | INFO | Success to init Redis instance
+2020-03-26 11:10:14 | 1585192214.5726 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:10:14 | 1585192214.5741 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:17:43 | 1585192663.9250 | ERROR | ErrorNO: 2
+2020-03-26 11:17:43 | 1585192663.9283 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 11:17:43 | 1585192663.9300 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 11:17:43 | 1585192663.9318 | ERROR | Line: 182
+2020-03-26 11:17:43 | 1585192663.9337 | ERROR | ================================================================================
+2020-03-26 11:17:45 | 1585192665.3352 | INFO | This is an info msg
+2020-03-26 11:17:45 | 1585192665.3372 | WARN | This is a warn msg
+2020-03-26 11:17:45 | 1585192665.3391 | ERROR | This is an error msg
+2020-03-26 11:17:45 | 1585192665.3410 | FATAL | This is a fatal msg
+2020-03-26 11:17:45 | 1585192665.3430 | INFO | This is a log msg
+2020-03-26 11:17:49 | 1585192669.3394 | INFO | This is an info msg
+2020-03-26 11:17:49 | 1585192669.3418 | WARN | This is a warn msg
+2020-03-26 11:17:49 | 1585192669.3444 | ERROR | This is an error msg
+2020-03-26 11:17:49 | 1585192669.3464 | FATAL | This is a fatal msg
+2020-03-26 11:17:49 | 1585192669.3483 | INFO | This is a log msg
+[2020-03-26 03:19:11 #23579.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:19:11 | 1585192751.7294 | INFO | Worker 0 stop
+2020-03-26 11:19:11 | 1585192751.7296 | INFO | Worker 1 stop
+2020-03-26 11:19:13 | 1585192753.8601 | INFO | ======= HTTP master start =======
+2020-03-26 11:19:13 | 1585192753.9803 | INFO | Success to init MySQL instance
+2020-03-26 11:19:13 | 1585192753.9817 | INFO | Success to init MySQL instance
+2020-03-26 11:19:13 | 1585192753.9849 | INFO | Success to init MySQL instance
+2020-03-26 11:19:13 | 1585192753.9865 | INFO | Success to init Redis instance
+2020-03-26 11:19:13 | 1585192753.9880 | INFO | Success to init Redis instance
+2020-03-26 11:19:13 | 1585192753.9892 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:19:13 | 1585192753.9908 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:19:15 | 1585192755.9442 | INFO | This is an info msg
+2020-03-26 11:19:15 | 1585192755.9470 | WARN | This is a warn msg
+2020-03-26 11:19:15 | 1585192755.9490 | ERROR | This is an error msg
+2020-03-26 11:19:15 | 1585192755.9510 | FATAL | This is a fatal msg
+2020-03-26 11:19:15 | 1585192755.9528 | INFO | This is a log msg
+[2020-03-26 03:20:07 #23640.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:20:07 | 1585192807.5668 | INFO | Worker 0 stop
+2020-03-26 11:20:07 | 1585192807.5670 | INFO | Worker 1 stop
+2020-03-26 11:20:09 | 1585192809.6614 | INFO | ======= HTTP master start =======
+2020-03-26 11:20:09 | 1585192809.7848 | INFO | Success to init MySQL instance
+2020-03-26 11:20:09 | 1585192809.7854 | INFO | Success to init MySQL instance
+2020-03-26 11:20:09 | 1585192809.7903 | INFO | Success to init MySQL instance
+2020-03-26 11:20:09 | 1585192809.7906 | INFO | Success to init Redis instance
+2020-03-26 11:20:09 | 1585192809.7930 | INFO | Success to init Redis instance
+2020-03-26 11:20:09 | 1585192809.7936 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:20:09 | 1585192809.7952 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:20:11 | 1585192811.7273 | INFO | This is an info msg
+2020-03-26 11:20:11 | 1585192811.7298 | WARN | This is a warn msg
+2020-03-26 11:20:11 | 1585192811.7317 | ERROR | This is an error msg
+2020-03-26 11:20:11 | 1585192811.7338 | FATAL | This is a fatal msg
+2020-03-26 11:20:11 | 1585192811.7358 | INFO | This is a log msg
+[2020-03-26 03:20:27 #23663.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:20:27 | 1585192827.3260 | INFO | Worker 0 stop
+2020-03-26 11:20:27 | 1585192827.3262 | INFO | Worker 1 stop
+2020-03-26 11:20:29 | 1585192829.4373 | INFO | ======= HTTP master start =======
+2020-03-26 11:20:29 | 1585192829.5584 | INFO | Success to init MySQL instance
+2020-03-26 11:20:29 | 1585192829.5590 | INFO | Success to init MySQL instance
+2020-03-26 11:20:29 | 1585192829.5629 | INFO | Success to init MySQL instance
+2020-03-26 11:20:29 | 1585192829.5646 | INFO | Success to init Redis instance
+2020-03-26 11:20:29 | 1585192829.5657 | INFO | Success to init Redis instance
+2020-03-26 11:20:29 | 1585192829.5670 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:20:29 | 1585192829.5686 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:20:32 | 1585192832.5926 | INFO | This is an info msg
+2020-03-26 11:20:32 | 1585192832.5948 | WARN | This is a warn msg
+2020-03-26 11:20:32 | 1585192832.6050 | ERROR | This is an error msg
+2020-03-26 11:20:32 | 1585192832.6071 | FATAL | This is a fatal msg
+2020-03-26 11:20:32 | 1585192832.6092 | INFO | This is a log msg
+[2020-03-26 03:34:28 #23686.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:34:28 | 1585193668.6896 | INFO | Worker 0 stop
+2020-03-26 11:34:28 | 1585193668.6898 | INFO | Worker 1 stop
+2020-03-26 11:34:30 | 1585193670.8564 | INFO | ======= HTTP master start =======
+2020-03-26 11:34:30 | 1585193670.9768 | INFO | Success to init MySQL instance
+2020-03-26 11:34:30 | 1585193670.9774 | INFO | Success to init MySQL instance
+2020-03-26 11:34:30 | 1585193670.9814 | INFO | Success to init MySQL instance
+2020-03-26 11:34:30 | 1585193670.9831 | INFO | Success to init Redis instance
+2020-03-26 11:34:30 | 1585193670.9844 | INFO | Success to init Redis instance
+2020-03-26 11:34:30 | 1585193670.9857 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:34:30 | 1585193670.9877 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:34:36 | 1585193676.8550 | INFO | This is an info msg
+2020-03-26 11:34:36 | 1585193676.8576 | WARN | This is a warn msg
+2020-03-26 11:34:36 | 1585193676.8596 | ERROR | This is an error msg
+2020-03-26 11:34:36 | 1585193676.8613 | FATAL | This is a fatal msg
+2020-03-26 11:34:36 | 1585193676.8632 | INFO | This is a log msg
+2020-03-26 11:34:36 | 1585193676.8650 | ERROR | ErrorNO: 2
+2020-03-26 11:34:36 | 1585193676.8668 | ERROR | Error: Use of undefined constant HTTP_CODE_SUCCESS - assumed 'HTTP_CODE_SUCCESS' (this will throw an Error in a future version of PHP)
+2020-03-26 11:34:36 | 1585193676.8685 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 11:34:36 | 1585193676.8702 | ERROR | Line: 74
+2020-03-26 11:34:36 | 1585193676.8721 | ERROR | ================================================================================
+2020-03-26 11:34:36 | 1585193676.8742 | ERROR | ErrorNO: 2
+2020-03-26 11:34:36 | 1585193676.8760 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 11:34:36 | 1585193676.8780 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 11:34:36 | 1585193676.8798 | ERROR | Line: 182
+2020-03-26 11:34:36 | 1585193676.8817 | ERROR | ================================================================================
+[2020-03-26 03:36:05 #23739.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:36:05 | 1585193765.7817 | INFO | Worker 0 stop
+2020-03-26 11:36:05 | 1585193765.7820 | INFO | Worker 1 stop
+2020-03-26 11:36:52 | 1585193812.4884 | INFO | ======= HTTP master start =======
+2020-03-26 11:36:52 | 1585193812.6110 | INFO | Success to init MySQL instance
+2020-03-26 11:36:52 | 1585193812.6108 | INFO | Success to init MySQL instance
+2020-03-26 11:36:52 | 1585193812.6186 | INFO | Success to init MySQL instance
+2020-03-26 11:36:52 | 1585193812.6189 | INFO | Success to init Redis instance
+2020-03-26 11:36:52 | 1585193812.6217 | INFO | Success to init Redis instance
+2020-03-26 11:36:52 | 1585193812.6226 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:36:52 | 1585193812.6240 | INFO | Worker 0 ready for connections ...
+2020-03-26 11:37:06 | 1585193826.2513 | INFO | This is an info msg
+2020-03-26 11:37:06 | 1585193826.2536 | WARN | This is a warn msg
+2020-03-26 11:37:06 | 1585193826.2552 | ERROR | This is an error msg
+2020-03-26 11:37:06 | 1585193826.2568 | FATAL | This is a fatal msg
+2020-03-26 11:37:06 | 1585193826.2584 | INFO | This is a log msg
+[2020-03-26 03:46:25 #23782.1]	NOTICE	Server is shutdown now.
+2020-03-26 11:46:25 | 1585194385.4281 | INFO | Worker 0 stop
+2020-03-26 11:46:25 | 1585194385.4284 | INFO | Worker 1 stop
+2020-03-26 11:46:27 | 1585194387.5729 | INFO | ======= HTTP master start =======
+2020-03-26 11:46:27 | 1585194387.6947 | INFO | Success to init MySQL instance
+2020-03-26 11:46:27 | 1585194387.6952 | INFO | Success to init MySQL instance
+2020-03-26 11:46:27 | 1585194387.6999 | INFO | Success to init MySQL instance
+2020-03-26 11:46:27 | 1585194387.7001 | INFO | Success to init Redis instance
+2020-03-26 11:46:27 | 1585194387.7027 | INFO | Success to init Redis instance
+2020-03-26 11:46:27 | 1585194387.7034 | INFO | Worker 1 ready for connections ...
+2020-03-26 11:46:27 | 1585194387.7050 | INFO | Worker 0 ready for connections ...
+2020-03-26 12:12:12 | 1585195932.4875 | ERROR | ErrorNO: 2
+2020-03-26 12:12:12 | 1585195932.4908 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 12:12:12 | 1585195932.4927 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 12:12:12 | 1585195932.4948 | ERROR | Line: 182
+2020-03-26 12:12:12 | 1585195932.4967 | ERROR | ================================================================================
+2020-03-26 12:15:58 | 1585196158.1303 | ERROR | ErrorNO: 2
+2020-03-26 12:15:58 | 1585196158.1345 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 12:15:58 | 1585196158.1364 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 12:15:58 | 1585196158.1384 | ERROR | Line: 182
+2020-03-26 12:15:58 | 1585196158.1404 | ERROR | ================================================================================
+2020-03-26 12:16:01 | 1585196161.3407 | ERROR | ErrorNO: 2
+2020-03-26 12:16:01 | 1585196161.3427 | ERROR | Error: Invalid argument supplied for foreach()
+2020-03-26 12:16:01 | 1585196161.3453 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 12:16:01 | 1585196161.3472 | ERROR | Line: 182
+2020-03-26 12:16:01 | 1585196161.3492 | ERROR | ================================================================================
+[2020-03-26 04:16:26 #23854.1]	NOTICE	Server is shutdown now.
+2020-03-26 12:16:26 | 1585196186.3916 | INFO | Worker 0 stop
+2020-03-26 12:16:26 | 1585196186.3918 | INFO | Worker 1 stop
+2020-03-26 12:16:28 | 1585196188.5525 | INFO | ======= HTTP master start =======
+2020-03-26 12:16:28 | 1585196188.6753 | INFO | Success to init MySQL instance
+2020-03-26 12:16:28 | 1585196188.6758 | INFO | Success to init MySQL instance
+2020-03-26 12:16:28 | 1585196188.6793 | INFO | Success to init MySQL instance
+2020-03-26 12:16:28 | 1585196188.6808 | INFO | Success to init Redis instance
+2020-03-26 12:16:28 | 1585196188.6824 | INFO | Success to init Redis instance
+2020-03-26 12:16:28 | 1585196188.6836 | INFO | Worker 1 ready for connections ...
+2020-03-26 12:16:28 | 1585196188.6854 | INFO | Worker 0 ready for connections ...
+2020-03-26 14:06:52 | 1585202812.5491 | ERROR | ErrorNO: 9999
+2020-03-26 14:06:52 | 1585202812.5532 | ERROR | Error: No such file or directory: /project/miniHttp/controller/Https.php
+2020-03-26 14:06:52 | 1585202812.5550 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 14:06:52 | 1585202812.5570 | ERROR | Line: 63
+2020-03-26 14:06:52 | 1585202812.5588 | ERROR | ================================================================================
+[2020-03-26 06:07:42 #23983.1]	NOTICE	Server is shutdown now.
+2020-03-26 14:07:42 | 1585202862.2674 | INFO | Worker 0 stop
+2020-03-26 14:07:42 | 1585202862.2676 | INFO | Worker 1 stop
+2020-03-26 14:07:44 | 1585202864.4298 | INFO | ======= HTTP master start =======
+2020-03-26 14:07:44 | 1585202864.5506 | INFO | Success to init MySQL instance
+2020-03-26 14:07:44 | 1585202864.5518 | INFO | Success to init MySQL instance
+2020-03-26 14:07:44 | 1585202864.5556 | INFO | Success to init MySQL instance
+2020-03-26 14:07:44 | 1585202864.5578 | INFO | Success to init Redis instance
+2020-03-26 14:07:44 | 1585202864.5592 | INFO | Success to init Redis instance
+2020-03-26 14:07:44 | 1585202864.5605 | INFO | Worker 1 ready for connections ...
+2020-03-26 14:07:44 | 1585202864.5620 | INFO | Worker 0 ready for connections ...
+2020-03-26 14:07:59 | 1585202879.3262 | ERROR | ErrorNO: 9999
+2020-03-26 14:07:59 | 1585202879.3291 | ERROR | Error: No such file or directory: /project/miniHttp/controller/Https.php
+2020-03-26 14:07:59 | 1585202879.3311 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 14:07:59 | 1585202879.3331 | ERROR | Line: 63
+2020-03-26 14:07:59 | 1585202879.3350 | ERROR | ================================================================================
+[2020-03-26 06:33:09 #24307.1]	NOTICE	Server is shutdown now.
+2020-03-26 14:33:09 | 1585204389.8847 | INFO | Worker 0 stop
+2020-03-26 14:33:09 | 1585204389.8849 | INFO | Worker 1 stop
+2020-03-26 14:33:12 | 1585204392.0396 | INFO | ======= HTTP master start =======
+2020-03-26 14:33:12 | 1585204392.1621 | INFO | Success to init MySQL instance
+2020-03-26 14:33:12 | 1585204392.1623 | INFO | Success to init MySQL instance
+2020-03-26 14:33:12 | 1585204392.1665 | INFO | Success to init Redis instance
+2020-03-26 14:33:12 | 1585204392.1682 | INFO | Success to init MySQL instance
+2020-03-26 14:33:12 | 1585204392.1687 | INFO | Worker 1 ready for connections ...
+2020-03-26 14:33:12 | 1585204392.1709 | INFO | Success to init Redis instance
+2020-03-26 14:33:12 | 1585204392.1738 | INFO | Worker 0 ready for connections ...
+2020-03-26 14:33:25 | 1585204405.4187 | ERROR | ErrorNO: 9999
+2020-03-26 14:33:25 | 1585204405.4216 | ERROR | Error: No such file or directory: /project/miniHttp/controller/Https.php
+2020-03-26 14:33:25 | 1585204405.4234 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 14:33:25 | 1585204405.4254 | ERROR | Line: 63
+2020-03-26 14:33:25 | 1585204405.4274 | ERROR | ================================================================================
+2020-03-26 14:33:55 | 1585204435.2043 | INFO | This is an info msg
+2020-03-26 14:33:55 | 1585204435.2070 | WARN | This is a warn msg
+2020-03-26 14:33:55 | 1585204435.2086 | ERROR | This is an error msg
+2020-03-26 14:33:55 | 1585204435.2105 | FATAL | This is a fatal msg
+2020-03-26 14:33:55 | 1585204435.2130 | INFO | This is a log msg
+[2020-03-26 06:37:02 #24391.1]	NOTICE	Server is shutdown now.
+2020-03-26 14:37:02 | 1585204622.1625 | INFO | Worker 0 stop
+2020-03-26 14:37:02 | 1585204622.1627 | INFO | Worker 1 stop
+2020-03-26 14:37:04 | 1585204624.2974 | INFO | ======= HTTP master start =======
+2020-03-26 14:37:04 | 1585204624.4182 | INFO | Success to init MySQL instance
+2020-03-26 14:37:04 | 1585204624.4200 | INFO | Success to init MySQL instance
+2020-03-26 14:37:04 | 1585204624.4231 | INFO | Success to init MySQL instance
+2020-03-26 14:37:04 | 1585204624.4247 | INFO | Success to init Redis instance
+2020-03-26 14:37:04 | 1585204624.4259 | INFO | Success to init Redis instance
+2020-03-26 14:37:04 | 1585204624.4288 | INFO | Worker 0 ready for connections ...
+2020-03-26 14:37:04 | 1585204624.4291 | INFO | Worker 1 ready for connections ...
+[2020-03-26 06:37:52 #24415.1]	NOTICE	Server is shutdown now.
+2020-03-26 14:37:52 | 1585204672.6818 | INFO | Worker 0 stop
+2020-03-26 14:37:52 | 1585204672.6820 | INFO | Worker 1 stop
+2020-03-26 14:37:54 | 1585204674.7788 | INFO | ======= HTTP master start =======
+2020-03-26 14:37:54 | 1585204674.8995 | INFO | Success to init MySQL instance
+2020-03-26 14:37:54 | 1585204674.8999 | INFO | Success to init MySQL instance
+2020-03-26 14:37:54 | 1585204674.9050 | INFO | Success to init Redis instance
+2020-03-26 14:37:54 | 1585204674.9053 | INFO | Success to init MySQL instance
+2020-03-26 14:37:54 | 1585204674.9070 | INFO | Worker 1 ready for connections ...
+2020-03-26 14:37:54 | 1585204674.9095 | INFO | Success to init Redis instance
+2020-03-26 14:37:54 | 1585204674.9114 | INFO | Worker 0 ready for connections ...
+2020-03-26 14:49:50 | 1585205390.5637 | INFO | This is an info msg
+2020-03-26 14:49:50 | 1585205390.5680 | WARN | This is a warn msg
+2020-03-26 14:49:50 | 1585205390.5702 | ERROR | This is an error msg
+2020-03-26 14:49:50 | 1585205390.5720 | FATAL | This is a fatal msg
+2020-03-26 14:49:50 | 1585205390.5739 | INFO | This is a log msg
+2020-03-26 14:50:49 | 1585205449.8370 | ERROR | ErrorNO: 8
+2020-03-26 14:50:49 | 1585205449.8399 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 14:50:49 | 1585205449.8420 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 14:50:49 | 1585205449.8441 | ERROR | Line: 50
+2020-03-26 14:50:49 | 1585205449.8460 | ERROR | ================================================================================
+2020-03-26 14:51:43 | 1585205503.5313 | INFO | This is an info msg
+2020-03-26 14:51:43 | 1585205503.5345 | WARN | This is a warn msg
+2020-03-26 14:51:43 | 1585205503.5364 | ERROR | This is an error msg
+2020-03-26 14:51:43 | 1585205503.5385 | FATAL | This is a fatal msg
+2020-03-26 14:51:43 | 1585205503.5407 | INFO | This is a log msg
+2020-03-26 14:52:05 | 1585205525.5557 | ERROR | ErrorNO: 2
+2020-03-26 14:52:05 | 1585205525.5591 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 14:52:05 | 1585205525.5610 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:05 | 1585205525.5630 | ERROR | Line: 44
+2020-03-26 14:52:05 | 1585205525.5651 | ERROR | ================================================================================
+2020-03-26 14:52:05 | 1585205525.5671 | ERROR | ErrorNO: 8
+2020-03-26 14:52:05 | 1585205525.5690 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 14:52:05 | 1585205525.5711 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:05 | 1585205525.5732 | ERROR | Line: 48
+2020-03-26 14:52:05 | 1585205525.5748 | ERROR | ================================================================================
+2020-03-26 14:52:05 | 1585205525.5767 | ERROR | ErrorNO: 8
+2020-03-26 14:52:05 | 1585205525.5787 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 14:52:05 | 1585205525.5807 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:05 | 1585205525.5828 | ERROR | Line: 49
+2020-03-26 14:52:05 | 1585205525.5845 | ERROR | ================================================================================
+2020-03-26 14:52:05 | 1585205525.5865 | ERROR | ErrorNO: 8
+2020-03-26 14:52:05 | 1585205525.5888 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 14:52:05 | 1585205525.5909 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:05 | 1585205525.5930 | ERROR | Line: 50
+2020-03-26 14:52:05 | 1585205525.5950 | ERROR | ================================================================================
+2020-03-26 14:52:05 | 1585205525.5969 | ERROR | ErrorNO: 8
+2020-03-26 14:52:05 | 1585205525.5987 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 14:52:05 | 1585205525.6005 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:05 | 1585205525.6023 | ERROR | Line: 51
+2020-03-26 14:52:05 | 1585205525.6043 | ERROR | ================================================================================
+2020-03-26 14:52:05 | 1585205525.6064 | ERROR | ErrorNO: 8
+2020-03-26 14:52:05 | 1585205525.6084 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 14:52:05 | 1585205525.6104 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:05 | 1585205525.6124 | ERROR | Line: 52
+2020-03-26 14:52:05 | 1585205525.6142 | ERROR | ================================================================================
+2020-03-26 14:52:15 | 1585205535.4716 | ERROR | ErrorNO: 2
+2020-03-26 14:52:15 | 1585205535.4745 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 14:52:15 | 1585205535.4765 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:15 | 1585205535.4785 | ERROR | Line: 44
+2020-03-26 14:52:15 | 1585205535.4804 | ERROR | ================================================================================
+2020-03-26 14:52:15 | 1585205535.4822 | ERROR | ErrorNO: 8
+2020-03-26 14:52:15 | 1585205535.4841 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 14:52:15 | 1585205535.4861 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:15 | 1585205535.4881 | ERROR | Line: 48
+2020-03-26 14:52:15 | 1585205535.4901 | ERROR | ================================================================================
+2020-03-26 14:52:15 | 1585205535.4922 | ERROR | ErrorNO: 8
+2020-03-26 14:52:15 | 1585205535.4940 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 14:52:15 | 1585205535.4961 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:15 | 1585205535.4981 | ERROR | Line: 49
+2020-03-26 14:52:15 | 1585205535.5002 | ERROR | ================================================================================
+2020-03-26 14:52:15 | 1585205535.5023 | ERROR | ErrorNO: 8
+2020-03-26 14:52:15 | 1585205535.5044 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 14:52:15 | 1585205535.5064 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:15 | 1585205535.5084 | ERROR | Line: 50
+2020-03-26 14:52:15 | 1585205535.5105 | ERROR | ================================================================================
+2020-03-26 14:52:15 | 1585205535.5126 | ERROR | ErrorNO: 8
+2020-03-26 14:52:15 | 1585205535.5146 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 14:52:15 | 1585205535.5167 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:15 | 1585205535.5187 | ERROR | Line: 51
+2020-03-26 14:52:15 | 1585205535.5209 | ERROR | ================================================================================
+2020-03-26 14:52:15 | 1585205535.5229 | ERROR | ErrorNO: 8
+2020-03-26 14:52:15 | 1585205535.5246 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 14:52:15 | 1585205535.5265 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 14:52:15 | 1585205535.5283 | ERROR | Line: 52
+2020-03-26 14:52:15 | 1585205535.5301 | ERROR | ================================================================================
+2020-03-26 14:56:44 | 1585205804.0489 | ERROR | ErrorNO: 2
+2020-03-26 14:56:44 | 1585205804.0523 | ERROR | Error: Swoole\Http\Response::status(): Http request is finished.
+2020-03-26 14:56:44 | 1585205804.0542 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 14:56:44 | 1585205804.0559 | ERROR | Line: 48
+2020-03-26 14:56:44 | 1585205804.0577 | ERROR | ================================================================================
+2020-03-26 14:56:44 | 1585205804.0596 | ERROR | ErrorNO: 2
+2020-03-26 14:56:44 | 1585205804.0615 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 14:56:44 | 1585205804.0820 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 14:56:44 | 1585205804.0837 | ERROR | Line: 75
+2020-03-26 14:56:44 | 1585205804.0857 | ERROR | ================================================================================
+[2020-03-26 06:57:03 #24438.1]	NOTICE	Server is shutdown now.
+2020-03-26 14:57:03 | 1585205823.6602 | INFO | Worker 0 stop
+2020-03-26 14:57:03 | 1585205823.6604 | INFO | Worker 1 stop
+2020-03-26 14:57:05 | 1585205825.7940 | INFO | ======= HTTP master start =======
+2020-03-26 14:57:05 | 1585205825.9141 | INFO | Success to init MySQL instance
+2020-03-26 14:57:05 | 1585205825.9166 | INFO | Success to init MySQL instance
+2020-03-26 14:57:05 | 1585205825.9190 | INFO | Success to init MySQL instance
+2020-03-26 14:57:05 | 1585205825.9205 | INFO | Success to init Redis instance
+2020-03-26 14:57:05 | 1585205825.9216 | INFO | Success to init Redis instance
+2020-03-26 14:57:05 | 1585205825.9228 | INFO | Worker 1 ready for connections ...
+2020-03-26 14:57:05 | 1585205825.9243 | INFO | Worker 0 ready for connections ...
+[2020-03-26 06:59:10 #24516.1]	NOTICE	Server is shutdown now.
+2020-03-26 14:59:10 | 1585205950.2797 | INFO | Worker 1 stop
+2020-03-26 15:01:44 | 1585206104.8999 | INFO | ======= HTTP master start =======
+2020-03-26 15:01:45 | 1585206105.0205 | INFO | Success to init MySQL instance
+2020-03-26 15:01:45 | 1585206105.0211 | INFO | Success to init MySQL instance
+2020-03-26 15:01:45 | 1585206105.0277 | INFO | Success to init MySQL instance
+2020-03-26 15:01:45 | 1585206105.0279 | INFO | Success to init Redis instance
+2020-03-26 15:01:45 | 1585206105.0307 | INFO | Success to init Redis instance
+2020-03-26 15:01:45 | 1585206105.0316 | INFO | Worker 1 ready for connections ...
+2020-03-26 15:01:45 | 1585206105.0330 | INFO | Worker 0 ready for connections ...
+[2020-03-26 07:02:13 #25248.1]	NOTICE	Server is shutdown now.
+2020-03-26 15:02:13 | 1585206133.1729 | INFO | Worker 0 stop
+2020-03-26 15:02:13 | 1585206133.1731 | INFO | Worker 1 stop
+2020-03-26 15:02:15 | 1585206135.2621 | INFO | ======= HTTP master start =======
+2020-03-26 15:02:15 | 1585206135.3834 | INFO | Success to init MySQL instance
+2020-03-26 15:02:15 | 1585206135.3841 | INFO | Success to init MySQL instance
+2020-03-26 15:02:15 | 1585206135.3897 | INFO | Success to init MySQL instance
+2020-03-26 15:02:15 | 1585206135.3909 | INFO | Success to init Redis instance
+2020-03-26 15:02:15 | 1585206135.3923 | INFO | Success to init Redis instance
+2020-03-26 15:02:15 | 1585206135.3936 | INFO | Worker 1 ready for connections ...
+2020-03-26 15:02:15 | 1585206135.3951 | INFO | Worker 0 ready for connections ...
+2020-03-26 15:03:45 | 1585206225.0013 | INFO | This is an info msg
+2020-03-26 15:03:45 | 1585206225.0040 | WARN | This is a warn msg
+2020-03-26 15:03:45 | 1585206225.0059 | ERROR | This is an error msg
+2020-03-26 15:03:45 | 1585206225.0077 | FATAL | This is a fatal msg
+2020-03-26 15:03:45 | 1585206225.0097 | INFO | This is a log msg
+2020-03-26 15:03:52 | 1585206232.7313 | ERROR | ErrorNO: 8
+2020-03-26 15:03:52 | 1585206232.7346 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 15:03:52 | 1585206232.7365 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 15:03:52 | 1585206232.7383 | ERROR | Line: 50
+2020-03-26 15:03:52 | 1585206232.7402 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.4146 | ERROR | ErrorNO: 2
+2020-03-26 15:04:33 | 1585206273.4178 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 15:04:33 | 1585206273.4197 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:04:33 | 1585206273.4216 | ERROR | Line: 44
+2020-03-26 15:04:33 | 1585206273.4234 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.4253 | ERROR | ErrorNO: 8
+2020-03-26 15:04:33 | 1585206273.4269 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 15:04:33 | 1585206273.4287 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:04:33 | 1585206273.4306 | ERROR | Line: 48
+2020-03-26 15:04:33 | 1585206273.4325 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.4344 | ERROR | ErrorNO: 8
+2020-03-26 15:04:33 | 1585206273.4364 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 15:04:33 | 1585206273.4383 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:04:33 | 1585206273.4401 | ERROR | Line: 49
+2020-03-26 15:04:33 | 1585206273.4420 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.4440 | ERROR | ErrorNO: 8
+2020-03-26 15:04:33 | 1585206273.4458 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 15:04:33 | 1585206273.4475 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:04:33 | 1585206273.4491 | ERROR | Line: 50
+2020-03-26 15:04:33 | 1585206273.4509 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.4528 | ERROR | ErrorNO: 8
+2020-03-26 15:04:33 | 1585206273.4548 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 15:04:33 | 1585206273.4566 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:04:33 | 1585206273.4586 | ERROR | Line: 51
+2020-03-26 15:04:33 | 1585206273.4605 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.4624 | ERROR | ErrorNO: 8
+2020-03-26 15:04:33 | 1585206273.4643 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 15:04:33 | 1585206273.4663 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:04:33 | 1585206273.4682 | ERROR | Line: 52
+2020-03-26 15:04:33 | 1585206273.4701 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.5085 | ERROR | ErrorNO: 2
+2020-03-26 15:04:33 | 1585206273.5103 | ERROR | Error: Swoole\Http\Response::status(): Http request is finished.
+2020-03-26 15:04:33 | 1585206273.5122 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 15:04:33 | 1585206273.5140 | ERROR | Line: 48
+2020-03-26 15:04:33 | 1585206273.5157 | ERROR | ================================================================================
+2020-03-26 15:04:33 | 1585206273.5176 | ERROR | ErrorNO: 2
+2020-03-26 15:04:33 | 1585206273.5194 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 15:04:33 | 1585206273.5213 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 15:04:33 | 1585206273.5230 | ERROR | Line: 75
+2020-03-26 15:04:33 | 1585206273.5248 | ERROR | ================================================================================
+2020-03-26 15:05:00 | 1585206300.5267 | ERROR | ErrorNO: 2
+2020-03-26 15:05:00 | 1585206300.5296 | ERROR | Error: Swoole\Http\Response::status(): Http request is finished.
+2020-03-26 15:05:00 | 1585206300.5319 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 15:05:00 | 1585206300.5339 | ERROR | Line: 48
+2020-03-26 15:05:00 | 1585206300.5358 | ERROR | ================================================================================
+2020-03-26 15:05:00 | 1585206300.5377 | ERROR | ErrorNO: 2
+2020-03-26 15:05:00 | 1585206300.5397 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 15:05:00 | 1585206300.5418 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 15:05:00 | 1585206300.5436 | ERROR | Line: 75
+2020-03-26 15:05:00 | 1585206300.5456 | ERROR | ================================================================================
+2020-03-26 15:05:02 | 1585206302.6798 | ERROR | ErrorNO: 2
+2020-03-26 15:05:02 | 1585206302.6820 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 15:05:02 | 1585206302.6839 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:05:02 | 1585206302.6859 | ERROR | Line: 44
+2020-03-26 15:05:02 | 1585206302.6877 | ERROR | ================================================================================
+2020-03-26 15:05:02 | 1585206302.6898 | ERROR | ErrorNO: 8
+2020-03-26 15:05:02 | 1585206302.6920 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 15:05:02 | 1585206302.6940 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:05:02 | 1585206302.6959 | ERROR | Line: 48
+2020-03-26 15:05:02 | 1585206302.6977 | ERROR | ================================================================================
+2020-03-26 15:05:02 | 1585206302.6997 | ERROR | ErrorNO: 8
+2020-03-26 15:05:02 | 1585206302.7018 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 15:05:02 | 1585206302.7037 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:05:02 | 1585206302.7055 | ERROR | Line: 49
+2020-03-26 15:05:02 | 1585206302.7074 | ERROR | ================================================================================
+2020-03-26 15:05:02 | 1585206302.7092 | ERROR | ErrorNO: 8
+2020-03-26 15:05:02 | 1585206302.7110 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 15:05:02 | 1585206302.7129 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:05:02 | 1585206302.7149 | ERROR | Line: 50
+2020-03-26 15:05:02 | 1585206302.7170 | ERROR | ================================================================================
+2020-03-26 15:05:02 | 1585206302.7191 | ERROR | ErrorNO: 8
+2020-03-26 15:05:02 | 1585206302.7211 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 15:05:02 | 1585206302.7231 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:05:02 | 1585206302.7249 | ERROR | Line: 51
+2020-03-26 15:05:02 | 1585206302.7269 | ERROR | ================================================================================
+2020-03-26 15:05:02 | 1585206302.7288 | ERROR | ErrorNO: 8
+2020-03-26 15:05:02 | 1585206302.7307 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 15:05:02 | 1585206302.7326 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 15:05:02 | 1585206302.7345 | ERROR | Line: 52
+2020-03-26 15:05:02 | 1585206302.7363 | ERROR | ================================================================================
+2020-03-26 15:05:55 | 1585206355.8416 | ERROR | ErrorNO: 8
+2020-03-26 15:05:55 | 1585206355.8446 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 15:05:55 | 1585206355.8466 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 15:05:55 | 1585206355.8486 | ERROR | Line: 50
+2020-03-26 15:05:55 | 1585206355.8506 | ERROR | ================================================================================
+2020-03-26 15:07:02 | 1585206422.4528 | ERROR | ErrorNO: 2
+2020-03-26 15:07:02 | 1585206422.4564 | ERROR | Error: Swoole\Http\Response::status(): Http request is finished.
+2020-03-26 15:07:02 | 1585206422.4584 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 15:07:02 | 1585206422.4605 | ERROR | Line: 48
+2020-03-26 15:07:02 | 1585206422.4622 | ERROR | ================================================================================
+2020-03-26 15:07:02 | 1585206422.4638 | ERROR | ErrorNO: 2
+2020-03-26 15:07:02 | 1585206422.4657 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 15:07:02 | 1585206422.4675 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 15:07:02 | 1585206422.4696 | ERROR | Line: 75
+2020-03-26 15:07:02 | 1585206422.4715 | ERROR | ================================================================================
+2020-03-26 15:07:19 | 1585206439.3551 | ERROR | ErrorNO: 2
+2020-03-26 15:07:19 | 1585206439.3593 | ERROR | Error: Swoole\Http\Response::status(): Http request is finished.
+2020-03-26 15:07:19 | 1585206439.3612 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 15:07:19 | 1585206439.3628 | ERROR | Line: 48
+2020-03-26 15:07:19 | 1585206439.3647 | ERROR | ================================================================================
+2020-03-26 15:07:19 | 1585206439.3666 | ERROR | ErrorNO: 2
+2020-03-26 15:07:19 | 1585206439.3684 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 15:07:19 | 1585206439.3701 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 15:07:19 | 1585206439.3720 | ERROR | Line: 75
+2020-03-26 15:07:19 | 1585206439.3740 | ERROR | ================================================================================
+2020-03-26 15:07:29 | 1585206449.2444 | ERROR | ErrorNO: 8
+2020-03-26 15:07:29 | 1585206449.2473 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 15:07:29 | 1585206449.2492 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 15:07:29 | 1585206449.2511 | ERROR | Line: 50
+2020-03-26 15:07:29 | 1585206449.2531 | ERROR | ================================================================================
+2020-03-26 15:07:52 | 1585206472.9953 | INFO | File is => 123333333333xxxxxxxx
+2020-03-26 15:12:39 | 1585206759.1871 | INFO | Heartbeating process ......
+2020-03-26 15:12:39 | 1585206759.1913 | INFO | Process config => {"Mini_Swoole_importer":{"num":1,"mysql":true,"redis":true,"callback":["Importer","run"]}}
+2020-03-26 15:12:39 | 1585206759.2163 | WARN | Heartbeat: Mini_Swoole_importer is DOWN, restarting ......
+2020-03-26 15:12:39 | 1585206759.2183 | INFO | Forking Mini_Swoole_importer......
+2020-03-26 15:12:39 | 1585206759.2207 | INFO | Process Mini_Swoole_importer with pid 25796 is running !
+2020-03-26 15:12:39 | 1585206759.2270 | INFO | Success to init MySQL instance
+2020-03-26 15:12:39 | 1585206759.2308 | INFO | Success to init MySQL instance
+2020-03-26 15:12:39 | 1585206759.2337 | INFO | Success to init Redis instance
+2020-03-26 15:12:39 | 1585206759.2384 | INFO | Importer process is ready !
+2020-03-26 15:12:39 | 1585206759.2407 | INFO | Time in Importer::run => 2020-03-26 15:12:39
+2020-03-26 15:12:40 | 1585206760.2437 | INFO | Time in Importer::run => 2020-03-26 15:12:40
+2020-03-26 15:12:41 | 1585206761.2484 | INFO | Time in Importer::run => 2020-03-26 15:12:41
+2020-03-26 15:12:42 | 1585206762.2529 | INFO | Time in Importer::run => 2020-03-26 15:12:42
+2020-03-26 15:12:43 | 1585206763.2587 | INFO | Time in Importer::run => 2020-03-26 15:12:43
+2020-03-26 15:12:44 | 1585206764.2399 | INFO | Heartbeating process ......
+2020-03-26 15:12:44 | 1585206764.2419 | INFO | Process config => {"Mini_Swoole_importer":{"num":1,"mysql":true,"redis":true,"callback":["Importer","run"]}}
+2020-03-26 15:12:44 | 1585206764.2623 | INFO | Time in Importer::run => 2020-03-26 15:12:44
+2020-03-26 15:12:44 | 1585206764.2688 | INFO | Heartbeat: Mini_Swoole_importer is running
+2020-03-26 15:12:45 | 1585206765.2665 | INFO | Time in Importer::run => 2020-03-26 15:12:45
+2020-03-26 15:12:46 | 1585206766.2709 | INFO | Time in Importer::run => 2020-03-26 15:12:46
+2020-03-26 15:12:47 | 1585206767.2752 | INFO | Time in Importer::run => 2020-03-26 15:12:47
+2020-03-26 15:12:48 | 1585206768.2786 | INFO | Time in Importer::run => 2020-03-26 15:12:48
+2020-03-26 15:12:49 | 1585206769.2821 | INFO | Time in Importer::run => 2020-03-26 15:12:49
+2020-03-26 15:12:50 | 1585206770.2848 | INFO | Time in Importer::run => 2020-03-26 15:12:50
+2020-03-26 15:12:51 | 1585206771.2877 | INFO | Time in Importer::run => 2020-03-26 15:12:51
+2020-03-26 15:12:52 | 1585206772.2915 | INFO | Time in Importer::run => 2020-03-26 15:12:52
+2020-03-26 15:12:52 | 1585206772.9831 | INFO | Heartbeating process ......
+2020-03-26 15:12:52 | 1585206772.9850 | INFO | Process config => {"Mini_Swoole_importer":{"num":1,"mysql":true,"redis":true,"callback":["Importer","run"]}}
+2020-03-26 15:12:53 | 1585206773.0105 | INFO | Heartbeat: Mini_Swoole_importer is running
+2020-03-26 15:12:53 | 1585206773.2952 | INFO | Time in Importer::run => 2020-03-26 15:12:53
+2020-03-26 15:12:54 | 1585206774.2983 | INFO | Time in Importer::run => 2020-03-26 15:12:54
+2020-03-26 15:12:55 | 1585206775.3029 | INFO | Time in Importer::run => 2020-03-26 15:12:55
+2020-03-26 15:12:56 | 1585206776.3063 | INFO | Time in Importer::run => 2020-03-26 15:12:56
+2020-03-26 15:12:57 | 1585206777.3100 | INFO | Time in Importer::run => 2020-03-26 15:12:57
+2020-03-26 15:12:58 | 1585206778.3144 | INFO | Time in Importer::run => 2020-03-26 15:12:58
+2020-03-26 15:12:59 | 1585206779.3181 | INFO | Time in Importer::run => 2020-03-26 15:12:59
+2020-03-26 15:13:00 | 1585206780.3222 | INFO | Time in Importer::run => 2020-03-26 15:13:00
+2020-03-26 15:13:01 | 1585206781.3259 | INFO | Time in Importer::run => 2020-03-26 15:13:01
+2020-03-26 15:13:02 | 1585206782.3287 | INFO | Time in Importer::run => 2020-03-26 15:13:02
+2020-03-26 15:13:03 | 1585206783.3331 | INFO | Time in Importer::run => 2020-03-26 15:13:03
+2020-03-26 15:13:04 | 1585206784.3380 | INFO | Time in Importer::run => 2020-03-26 15:13:04
+2020-03-26 15:13:05 | 1585206785.3418 | INFO | Time in Importer::run => 2020-03-26 15:13:05
+2020-03-26 15:13:06 | 1585206786.3451 | INFO | Time in Importer::run => 2020-03-26 15:13:06
+2020-03-26 15:13:07 | 1585206787.3493 | INFO | Time in Importer::run => 2020-03-26 15:13:07
+2020-03-26 15:13:08 | 1585206788.3522 | INFO | Time in Importer::run => 2020-03-26 15:13:08
+2020-03-26 15:13:09 | 1585206789.3554 | INFO | Time in Importer::run => 2020-03-26 15:13:09
+2020-03-26 15:13:10 | 1585206790.3599 | INFO | Time in Importer::run => 2020-03-26 15:13:10
+2020-03-26 15:13:11 | 1585206791.3629 | INFO | Time in Importer::run => 2020-03-26 15:13:11
+2020-03-26 15:13:12 | 1585206792.3660 | INFO | Time in Importer::run => 2020-03-26 15:13:12
+2020-03-26 15:13:13 | 1585206793.3706 | INFO | Time in Importer::run => 2020-03-26 15:13:13
+2020-03-26 15:13:14 | 1585206794.3748 | INFO | Time in Importer::run => 2020-03-26 15:13:14
+2020-03-26 15:13:15 | 1585206795.3783 | INFO | Time in Importer::run => 2020-03-26 15:13:15
+2020-03-26 16:28:39 | 1585211319.4808 | INFO | This is an info msg
+2020-03-26 16:28:39 | 1585211319.4837 | WARN | This is a warn msg
+2020-03-26 16:28:39 | 1585211319.4858 | ERROR | This is an error msg
+2020-03-26 16:28:39 | 1585211319.4878 | FATAL | This is a fatal msg
+2020-03-26 16:28:39 | 1585211319.4898 | INFO | This is a log msg
+2020-03-26 16:28:41 | 1585211321.3629 | ERROR | ErrorNO: 8
+2020-03-26 16:28:41 | 1585211321.3652 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 16:28:41 | 1585211321.3672 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 16:28:41 | 1585211321.3690 | ERROR | Line: 50
+2020-03-26 16:28:41 | 1585211321.3710 | ERROR | ================================================================================
