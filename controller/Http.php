@@ -157,6 +157,7 @@ class C_Http extends Controller {
         $order = ['id' => 'DESC'];
         $user = $this->m_user->SetDB('SLAVE')->Suffix(38)->Field($field)->Where($where)->Order($order)->Limit(10)->Select();
         $this->response->write('Slave with suffix => '.JSON($user)."<br />");
+        
         return;
     }
 
@@ -257,6 +258,7 @@ class C_Http extends Controller {
 
         $user = $this->m_user->SelectByID('', 24);
         $this->response->write('User => '.JSON($user).'<br />');
+
         return;
     }
 
@@ -306,6 +308,7 @@ class C_Http extends Controller {
 
             sleep(1);
         }
+
         return;
     }
 
@@ -316,7 +319,7 @@ class C_Http extends Controller {
         
         if($key){
             $i = 1;
-            while($i < 10){
+            while($i < 3){
                 $val = Cache::get($key);
                 $this->response->write(date('Y-m-d H:i:s'). ' => '.$val.'<br />');
                 $i++; sleep(1);
