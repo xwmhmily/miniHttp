@@ -10,27 +10,6 @@ class C_Http extends Controller {
         $this->m_news = $this->load('News');
     }
 
-    public function plugin(){
-        $token = $this->getParam('token', FALSE);
-        $retval = Registry::get('Permission')->checkPermission($token);
-        if(!$retval){
-            return 'Bad token !';
-        }
-
-        $i18n = Registry::get('I18N');
-        $username_text = $i18n->translate('username');
-        $password_text = $i18n->translate('password');
-        $this->response->write('English username_text => '.$username_text.'<br />');
-        $this->response->write('English password_text => '.$password_text.'<br />');
-
-        $username_text = $i18n->translate('username', 2);
-        $password_text = $i18n->translate('password', 2);
-        $this->response->write('Chinese username_text => '.$username_text.'<br />');
-        $this->response->write('Chinese password_text => '.$password_text.'<br />');
-
-        return;
-    }
-
     public function log(){
         Logger::debug('This is a debug msg');
         Logger::info('This is an info msg');
@@ -104,63 +83,6 @@ class C_Http extends Controller {
         return JSON($one_news);
     }
 
-    // Mix common sql and transaction test
-    public function mix(){
-        $users = $this->m_user->SelectAll();
-        $this->response->write(JSON($users));
-
-        $news = $this->m_news->Select();
-        $this->response->write(JSON($news));
-
-        $one_news = $this->m_news->SelectOne();
-        $this->response->write(JSON($one_news));
-
-        $this->response->write(PHP_EOL.'======= HERE IS TRANSACTION ========='.PHP_EOL);
-
-        $this->m_user->BeginTransaction();
-        $users = $this->m_user->SelectAll();
-        $news = $this->m_news->Select();
-
-        if($users && $news){
-            $this->m_news->Commit();
-            $this->response->write(JSON($users));
-            $this->response->write(JSON($news));
-        }else{
-            $this->m_news->Rollback();
-            $this->response->write('ERRORRRRRRRRRRRRRR');
-        }
-
-        return;
-    }
-
-    // Transaction
-    public function transaction(){
-        $this->m_user->BeginTransaction();
-        $user = $this->m_user->SelectOne();
-        $news = $this->m_news->Select();
-
-        if($user && $news){
-            $this->m_news->Commit();
-            $this->response->write('Master user => '.JSON($user)."<br />");
-            $this->response->write('Master news => '.JSON($news)."<br />");
-        }else{
-            $this->m_news->Rollback();
-            $this->response->write('ERRORRRRRRRRRRRRR');
-        }
-
-        $field = ['id', 'username', 'password'];
-        $where = ['id' => 2];
-        $user = $this->m_user->SetDB('SLAVE')->ClearSuffix()->Field($field)->Where($where)->SelectOne();
-        $this->response->write('Slave => '.JSON($user)."<br />");
-
-        $where = ['status' => 1];
-        $order = ['id' => 'DESC'];
-        $user = $this->m_user->SetDB('SLAVE')->Suffix(38)->Field($field)->Where($where)->Order($order)->Limit(10)->Select();
-        $this->response->write('Slave with suffix => '.JSON($user)."<br />");
-        
-        return;
-    }
-
     // Security
     public function security(){
         return JSON($this->request);
@@ -186,55 +108,24 @@ class C_Http extends Controller {
         $i = 1;
         $max = 1000;
         while($i <= $max){
-            $m_user = $this->m_user->SelectOne();
-            if(!$m_user){
-                $m_user = 'Stop reconnecting';
-                Logger::log($m_user);
-                $retval = $this->response->write($m_user);
+            $user = $this->m_user->SelectOne();
+            if(!$user){
+                $msg = 'Stop reconnecting';
+                Logger::log($msg);
+                $retval = $this->response->write($msg);
                 break;
             }else{
-                $m_user = JSON($m_user);
+                $users = JSON($user);
             }
 
-            $retval = $this->response->write($i.' => '.$m_user.'<br />');
+            $retval = $this->response->write($i.' => '.$users.'<br />');
             if(!$retval){
                 break;
             }
 
             $where  = ['id' => 1035];
-            $m_user = $this->m_user->Where($where)->SelectOne();
-            $retval = $this->response->write('Another '.JSON($m_user).'<br />');
-
-            $i++; sleep(1);
-        }
-
-        return;
-    }
-
-    // MySQL slave
-    public function slave(){
-        $m_user = $this->load('User');
-
-        $i = 1;
-        while($i <= 3){
-            $user = $m_user->SetDB('SLAVE')->SelectOne();
-            $this->response->write('Slave first => '.JSON($user).'<br />');
-
-            $user = $m_user->SetDB('MASTER')->SelectOne();
-            $this->response->write('Master => '.JSON($user).'<br />');
-
-            $field = ['id', 'username'];
-            $where = ['id' => 2];
-            $user = $m_user->SetDB('SLAVE')->Field($field)->Where($where)->SelectOne();
-            $this->response->write('Slave again => '.JSON($user).'<br />');
-
-            $field = ['id', 'username'];
-            $user = $m_user->SetDB('SLAVE')->SelectByID($field, 2);
-            $this->response->write('Slave by ID => '.JSON($user).'<br />');
-
-            $field = ['id', 'username', 'password'];
-            $user = $this->load('User')->SetDB('SLAVE')->Field($field)->Suffix(38)->SelectOne();
-            $this->response->write('Slave with suffix => '.JSON($user).'<br />');
+            $user = $this->m_user->Where($where)->SelectOne();
+            $retval = $this->response->write('Another '.JSON($user).'<br />');
 
             $i++; sleep(1);
         }
@@ -258,56 +149,6 @@ class C_Http extends Controller {
 
         $user = $this->m_user->SelectByID('', 24);
         $this->response->write('User => '.JSON($user).'<br />');
-
-        return;
-    }
-
-    // Suffix
-    public function suffix(){
-        $user = $this->load('User')->Suffix(38)->ClearSuffix()->Suffix(52)->SelectOne();
-        return 'Suffix user => '.JSON($user);
-    }
-
-    // Redis and MySQL with Master / slave
-    public function connector(){
-        for($i = 1; $i <= 100; $i++){
-            $this->response->write('=============='.$i.'===================<br />');
-
-            // Master
-            $news = $this->m_news->Select();
-            $this->response->write(' Master => '.JSON($news).'<br />');
-
-            $users = $this->m_user->SetDB('MASTER')->SelectAll();
-            $this->response->write(' Master => '.JSON($users).'<br />');
-
-            // Master
-            $user = $this->m_user->SelectByID('', 2);
-            $this->response->write(' Master => '.JSON($user).'<br />');
-
-            $key = $this->getParam('key');
-            $val = Cache::get($key);
-            $this->response->write(' Redis => '.$val.'<br />');
-
-            // Suffix
-            $user = $this->load('User')->SetDB('SLAVE')->Suffix(38)->SelectOne();
-            $this->response->write(' Suffix user => '.JSON($user).'<br />');
-
-            // What if errors occur
-            $user = $this->load('User')->SetDB('SLAVE')->Suffix(52)->SelectOne();
-            $this->response->write(' Suffix user => '.JSON($user).'<br />');
-
-            // Master
-            $user = $this->m_user->SelectByID('', 1);
-            $this->response->write(' Master => '.JSON($user).'<br />');
-
-            // Change Master to Slave, just call the SetDB()
-            $user = $this->m_user->SetDB('SLAVE')->SelectByID('', 1);
-            $this->response->write(' Slave => '.JSON($user).'<br />');
-
-            $this->response->write(PHP_EOL.'==============='.$i.'============'.'<br />');
-
-            sleep(1);
-        }
 
         return;
     }
@@ -376,5 +217,10 @@ class C_Http extends Controller {
         $args['param']    = ['Lakers', 'Swoole', 'Westlife'];
         $taskID = Task::add($args);
         return 'Task has been set, id is => '.$taskID;
+    }
+
+    public function follow(){
+        $follows = $this->load('Follow')->SelectOne();
+        return JSON($follows);
     }
 }
