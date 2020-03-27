@@ -28,7 +28,7 @@ class C_Http extends Controller {
         $this->response->write('Chinese username_text => '.$username_text.'<br />');
         $this->response->write('Chinese password_text => '.$password_text.'<br />');
 
-        $this->response->end('__DONE__');
+        return;
     }
 
     public function log(){
@@ -257,7 +257,7 @@ class C_Http extends Controller {
 
         $user = $this->m_user->SelectByID('', 24);
         $this->response->write('User => '.JSON($user).'<br />');
-        $this->response->end();
+        return;
     }
 
     // Suffix
