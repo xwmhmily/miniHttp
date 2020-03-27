@@ -326,7 +326,7 @@ public function tick(int $timerID, $args){
 
     // Clear timer
     Timer::clear($timerID);
-    return 'success';
+    return;
 }
 ```
 
