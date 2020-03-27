@@ -72,7 +72,11 @@ class Hooker {
                 try{
                     $retval = $instance->$action();
                     Response::status(HTTP_CODE_SUCCESS);
-                    $response->end($retval);
+                    if($retval){
+                        $response->write($retval);
+                    }
+                    
+                    $response->end();
                 }catch(Throwable $e){
                     Response::status(HTTP_CODE_INTERNAL_ERROR);
                     Response::error($e);

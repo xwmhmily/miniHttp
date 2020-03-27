@@ -130,7 +130,7 @@ class C_Http extends Controller {
             $this->response->write('ERRORRRRRRRRRRRRRR');
         }
 
-        $this->response->end();
+        return;
     }
 
     // Transaction
@@ -157,7 +157,7 @@ class C_Http extends Controller {
         $order = ['id' => 'DESC'];
         $user = $this->m_user->SetDB('SLAVE')->Suffix(38)->Field($field)->Where($where)->Order($order)->Limit(10)->Select();
         $this->response->write('Slave with suffix => '.JSON($user)."<br />");
-        $this->response->end();
+        return;
     }
 
     // Security
@@ -172,66 +172,42 @@ class C_Http extends Controller {
     }
 
     public function selectOne(){
-        $news = $this->m_news->SelectOne();
-        $this->response->write(JSON($news).'<br />');
-
-        $u = [];
-        $u['title'] = 'Curry 复出勇士胜小牛';
-        $retval = $this->m_news->UpdateByID($u, $news['id']);
-
-        $news = $this->m_news->SelectByID('', $news['id']);
-        $this->response->write(JSON($news).'<br />');
-
-        $news = $this->m_news->DeleteByID(2);
-        $this->response->end();
+        $news = $this->m_user->SelectOne();
+        return JSON($news);
     }
 
     public function pagination(){
-        $news = $this->m_news->Select();
-        $this->response->write('ALL => '.sizeof($news));
-        $this->response->write('<br />============================<br />');
-
-        $news = $this->m_news->Limit()->Select();
-        $this->response->write('Limit 10 => '.sizeof($news));
-        $this->response->write('<br />============================<br />');
-
-        $news = $this->m_news->Limit(20)->Select();
-        $this->response->write('Limit 20 => '.sizeof($news));
-        $this->response->write('<br />============================<br />');
-        $this->response->end();
+        return JSON($this->m_user->Limit()->Select());
     }
     
-    // 测试 MySQL 自动断线重连及压测
+    // 测试 MySQL 自动断线重连
     public function reconnect(){
         $i = 1;
         $max = 1000;
         while($i <= $max){
-            $news = $this->m_news->SelectOne();
-            if(!$news){
-                $news = 'Stop reconnecting';
-                Logger::log($news);
-                $retval = $this->response->write($news);
+            $m_user = $this->m_user->SelectOne();
+            if(!$m_user){
+                $m_user = 'Stop reconnecting';
+                Logger::log($m_user);
+                $retval = $this->response->write($m_user);
                 break;
             }else{
-                $news = JSON($news);
+                $m_user = JSON($m_user);
             }
 
-            $retval = $this->response->write($i.' => '.$news.'<br />');
+            $retval = $this->response->write($i.' => '.$m_user.'<br />');
             if(!$retval){
                 break;
             }
 
-            $where  = ['id' => 2];
-            $news   = $this->m_news->Where($where)->SelectOne();
-            $retval = $this->response->write('Another '.JSON($news).'<br />');
-
-            $u = [];
-            $u['remark'] = $i;
-            $news = $this->m_news->Where($where)->UpdateOne($u);
+            $where  = ['id' => 1035];
+            $m_user = $this->m_user->Where($where)->SelectOne();
+            $retval = $this->response->write('Another '.JSON($m_user).'<br />');
 
             $i++; sleep(1);
         }
-        $this->response->end();
+
+        return;
     }
 
     // MySQL slave
@@ -261,7 +237,8 @@ class C_Http extends Controller {
 
             $i++; sleep(1);
         }
-        $this->response->end();
+
+        return;
     }
 
     // 测试SQL 报错
@@ -329,7 +306,7 @@ class C_Http extends Controller {
 
             sleep(1);
         }
-        $this->response->end();
+        return;
     }
 
     // Redis
@@ -347,7 +324,8 @@ class C_Http extends Controller {
         }else{
             $this->response->write('Key is required !');
         }
-        $this->response->end();
+        
+        return;
     }
 
     public function param(){
@@ -365,17 +343,14 @@ class C_Http extends Controller {
 
         $user['username'] = 'Kobe';
         $user['password'] = md5('Lakers');
-        $user['status']   = 1;
         $users[] = $user;
 
         $user['username'] = 'Curry';
         $user['password'] = md5('Warriors');
-        $user['status']   = 1;
         $users[] = $user;
 
         $user['username'] = 'Thompson';
         $user['password'] = md5('Warriors');
-        $user['status']   = 1;
         $users[] = $user;
 
         return $this->m_user->multiInsert($users);
@@ -389,7 +364,7 @@ class C_Http extends Controller {
     public function tick($timerID, $args){
         Logger::log('Args in '.__METHOD__.' => '.JSON($args));
         Timer::clear($timerID);
-        return 'success';
+        return;
     }
 
     public function task(){

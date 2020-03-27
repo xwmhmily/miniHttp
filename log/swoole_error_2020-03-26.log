@@ -933,3 +933,109 @@
 2020-03-26 16:47:10 | 1585212430.9583 | INFO | Success to init Redis instance
 2020-03-26 16:47:10 | 1585212430.9596 | INFO | Worker 1 ready for connections ...
 2020-03-26 16:47:10 | 1585212430.9609 | INFO | Worker 0 ready for connections ...
+2020-03-26 17:05:59 | 1585213559.6860 | INFO | This is an info msg
+2020-03-26 17:05:59 | 1585213559.6900 | WARN | This is a warn msg
+2020-03-26 17:05:59 | 1585213559.6918 | ERROR | This is an error msg
+2020-03-26 17:05:59 | 1585213559.6936 | FATAL | This is a fatal msg
+2020-03-26 17:05:59 | 1585213559.6955 | INFO | This is a log msg
+2020-03-26 17:06:03 | 1585213563.4987 | INFO | This is an info msg
+2020-03-26 17:06:03 | 1585213563.5011 | WARN | This is a warn msg
+2020-03-26 17:06:03 | 1585213563.5033 | ERROR | This is an error msg
+2020-03-26 17:06:03 | 1585213563.5051 | FATAL | This is a fatal msg
+2020-03-26 17:06:03 | 1585213563.5069 | INFO | This is a log msg
+2020-03-26 17:06:08 | 1585213568.1733 | ERROR | ErrorNO: 8
+2020-03-26 17:06:08 | 1585213568.1753 | ERROR | Error: Undefined property: C_Http::$m_player
+2020-03-26 17:06:08 | 1585213568.1777 | ERROR | File: /project/miniHttp/controller/Http.php
+2020-03-26 17:06:08 | 1585213568.1798 | ERROR | Line: 50
+2020-03-26 17:06:08 | 1585213568.1820 | ERROR | ================================================================================
+2020-03-26 17:06:54 | 1585213614.2679 | ERROR | ErrorNO: 2
+2020-03-26 17:06:54 | 1585213614.2707 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 17:06:54 | 1585213614.2726 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:54 | 1585213614.2743 | ERROR | Line: 44
+2020-03-26 17:06:54 | 1585213614.2760 | ERROR | ================================================================================
+2020-03-26 17:06:54 | 1585213614.2779 | ERROR | ErrorNO: 8
+2020-03-26 17:06:54 | 1585213614.2799 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 17:06:54 | 1585213614.2817 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:54 | 1585213614.2836 | ERROR | Line: 48
+2020-03-26 17:06:54 | 1585213614.2854 | ERROR | ================================================================================
+2020-03-26 17:06:54 | 1585213614.2872 | ERROR | ErrorNO: 8
+2020-03-26 17:06:54 | 1585213614.2890 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 17:06:54 | 1585213614.2909 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:54 | 1585213614.2930 | ERROR | Line: 49
+2020-03-26 17:06:54 | 1585213614.2949 | ERROR | ================================================================================
+2020-03-26 17:06:54 | 1585213614.2968 | ERROR | ErrorNO: 8
+2020-03-26 17:06:54 | 1585213614.2988 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 17:06:54 | 1585213614.3009 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:54 | 1585213614.3029 | ERROR | Line: 50
+2020-03-26 17:06:54 | 1585213614.3049 | ERROR | ================================================================================
+2020-03-26 17:06:54 | 1585213614.3070 | ERROR | ErrorNO: 8
+2020-03-26 17:06:54 | 1585213614.3091 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 17:06:54 | 1585213614.3111 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:54 | 1585213614.3130 | ERROR | Line: 51
+2020-03-26 17:06:54 | 1585213614.3150 | ERROR | ================================================================================
+2020-03-26 17:06:54 | 1585213614.3170 | ERROR | ErrorNO: 8
+2020-03-26 17:06:54 | 1585213614.3188 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 17:06:54 | 1585213614.3206 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:54 | 1585213614.3223 | ERROR | Line: 52
+2020-03-26 17:06:54 | 1585213614.3240 | ERROR | ================================================================================
+2020-03-26 17:06:56 | 1585213616.4062 | ERROR | ErrorNO: 2
+2020-03-26 17:06:56 | 1585213616.4085 | ERROR | Error: Use of undefined constant AMQP_EX_TYPE_DIRECT - assumed 'AMQP_EX_TYPE_DIRECT' (this will throw an Error in a future version of PHP)
+2020-03-26 17:06:56 | 1585213616.4103 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:56 | 1585213616.4121 | ERROR | Line: 44
+2020-03-26 17:06:56 | 1585213616.4140 | ERROR | ================================================================================
+2020-03-26 17:06:56 | 1585213616.4155 | ERROR | ErrorNO: 8
+2020-03-26 17:06:56 | 1585213616.4172 | ERROR | Error: Undefined index: rabbit_host
+2020-03-26 17:06:56 | 1585213616.4192 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:56 | 1585213616.4212 | ERROR | Line: 48
+2020-03-26 17:06:56 | 1585213616.4231 | ERROR | ================================================================================
+2020-03-26 17:06:56 | 1585213616.4251 | ERROR | ErrorNO: 8
+2020-03-26 17:06:56 | 1585213616.4271 | ERROR | Error: Undefined index: rabbit_port
+2020-03-26 17:06:56 | 1585213616.4291 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:56 | 1585213616.4311 | ERROR | Line: 49
+2020-03-26 17:06:56 | 1585213616.4329 | ERROR | ================================================================================
+2020-03-26 17:06:56 | 1585213616.4350 | ERROR | ErrorNO: 8
+2020-03-26 17:06:56 | 1585213616.4371 | ERROR | Error: Undefined index: rabbit_username
+2020-03-26 17:06:56 | 1585213616.4390 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:56 | 1585213616.4409 | ERROR | Line: 50
+2020-03-26 17:06:56 | 1585213616.4427 | ERROR | ================================================================================
+2020-03-26 17:06:56 | 1585213616.4446 | ERROR | ErrorNO: 8
+2020-03-26 17:06:56 | 1585213616.4466 | ERROR | Error: Undefined index: rabbit_password
+2020-03-26 17:06:56 | 1585213616.4484 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:56 | 1585213616.4504 | ERROR | Line: 51
+2020-03-26 17:06:56 | 1585213616.4524 | ERROR | ================================================================================
+2020-03-26 17:06:56 | 1585213616.4542 | ERROR | ErrorNO: 8
+2020-03-26 17:06:56 | 1585213616.4561 | ERROR | Error: Undefined index: rabbit_vhost
+2020-03-26 17:06:56 | 1585213616.4579 | ERROR | File: /project/miniHttp/library/RabbitMQ.php
+2020-03-26 17:06:56 | 1585213616.4598 | ERROR | Line: 52
+2020-03-26 17:06:56 | 1585213616.4619 | ERROR | ================================================================================
+2020-03-26 17:07:08 | 1585213628.6692 | ERROR | ErrorNO: 2
+2020-03-26 17:07:08 | 1585213628.6721 | ERROR | Error: Swoole\Http\Response::status(): Http request is finished.
+2020-03-26 17:07:08 | 1585213628.6740 | ERROR | File: /project/miniHttp/library/core/Response.php
+2020-03-26 17:07:08 | 1585213628.6759 | ERROR | Line: 48
+2020-03-26 17:07:08 | 1585213628.6778 | ERROR | ================================================================================
+2020-03-26 17:07:08 | 1585213628.6799 | ERROR | ErrorNO: 2
+2020-03-26 17:07:08 | 1585213628.6818 | ERROR | Error: Swoole\Http\Response::end(): Http request is finished.
+2020-03-26 17:07:08 | 1585213628.6838 | ERROR | File: /project/miniHttp/library/core/Hooker.php
+2020-03-26 17:07:08 | 1585213628.6857 | ERROR | Line: 75
+2020-03-26 17:07:08 | 1585213628.6876 | ERROR | ================================================================================
+2020-03-26 17:07:08 | 1585213628.6966 | INFO | File is => 123333333333xxxxxxxx
+2020-03-26 17:07:10 | 1585213630.1102 | INFO | File is => 123333333333xxxxxxxx
+2020-03-27 09:40:33 | 1585273233.2302 | ERROR | ErrorNO: 8
+2020-03-27 09:40:33 | 1585273233.2438 | ERROR | Error: PDO::query(): send of 40 bytes failed with errno=32 Broken pipe
+2020-03-27 09:40:33 | 1585273233.2459 | ERROR | File: /project/miniHttp/library/core/Model.php
+2020-03-27 09:40:33 | 1585273233.2481 | ERROR | Line: 515
+2020-03-27 09:40:33 | 1585273233.2500 | ERROR | ================================================================================
+2020-03-27 09:40:33 | 1585273233.2524 | ERROR | ErrorNO: 2
+2020-03-27 09:40:33 | 1585273233.2544 | ERROR | Error: Error while sending QUERY packet. PID=26512
+2020-03-27 09:40:33 | 1585273233.2566 | ERROR | File: /project/miniHttp/library/core/Model.php
+2020-03-27 09:40:33 | 1585273233.2587 | ERROR | Line: 515
+2020-03-27 09:40:33 | 1585273233.2607 | ERROR | ================================================================================
+[2020-03-27 01:40:33 *26512.0]	WARNING	swSignalfd_onSignal: signal[13] callback is null.
+2020-03-27 09:40:44 | 1585273244.1462 | INFO | This is an info msg
+2020-03-27 09:40:44 | 1585273244.1502 | WARN | This is a warn msg
+2020-03-27 09:40:44 | 1585273244.1520 | ERROR | This is an error msg
+2020-03-27 09:40:44 | 1585273244.1537 | FATAL | This is a fatal msg
+2020-03-27 09:40:44 | 1585273244.1557 | INFO | This is a log msg
+[2020-03-27 01:41:15 #26507.1]	NOTICE	Server is shutdown now.
+2020-03-27 09:41:15 | 1585273275.3924 | INFO | Worker 0 stop
+2020-03-27 09:41:15 | 1585273275.3926 | INFO | Worker 1 stop
