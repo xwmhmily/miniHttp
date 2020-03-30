@@ -34,7 +34,11 @@ class Router {
 
 	private static function parseHttpRouter($uri){
 		$config  = Config::get('common');
-        $modules = explode(',', $config['module']);
+
+		$modules = [];
+		if(isset($config['module'])){
+			$modules = explode(',', $config['module']);
+		}
 
         $module = $controller = $action = '';
         $request_uri = explode('/', $uri);
