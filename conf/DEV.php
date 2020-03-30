@@ -35,8 +35,6 @@ $config = [
 	],
 
 	'http' => [
-		'enable' => TRUE,
-
 		// 正常监听的端口
 		'ip'     => '*',
 		'port'   => 9100,
@@ -72,14 +70,6 @@ $config = [
 		'host' => '127.0.0.1',
 		'port' => 6379,
 		'pwd'  => '123456',
-	],
-
-	'redis_log' => [
-		'db'    => '0',
-		'host'  => '127.0.0.1',
-		'port'  => 6379,
-		'pwd'   => '123456',
-		'queue' => 'Queue_mini_log',
 	],
 
 	'process' => [

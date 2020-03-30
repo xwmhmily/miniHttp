@@ -20,6 +20,14 @@ class Request {
 		return isset(self::$data[$key]);
 	}
 
+	public static function setData($data){
+		self::$data = $data;
+	}
+
+	public static function getData(){
+		return self::$data;
+	}
+
 	public static function get($key){
 		if(isset(self::$data[$key])){
 			return self::$data[$key];
@@ -62,14 +70,6 @@ class Request {
 
 	public static function isPost(){
 		return self::getMethod() == self::HTTP_METHOD_POST;
-	}
-
-	public static function setData($data){
-		self::$data = $data;
-	}
-
-	public static function getData(){
-		return self::$data;
 	}
 
 	public static function setCookie($cookie){
