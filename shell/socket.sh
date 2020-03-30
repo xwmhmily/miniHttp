@@ -32,6 +32,7 @@ start() {
         if [ $NEW_SWOOLE_MASTER_PID ]; then
             TIP="Server start success"
         	MSG=${GREEN_COLOR}${TIP}${RES}
+            status
         else
         	TIP="Server start fail"
             MSG=${GREEN_COLOR}${TIP}${RES}

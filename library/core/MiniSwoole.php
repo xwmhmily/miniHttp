@@ -25,7 +25,7 @@ class MiniSwoole {
 	private function checkSapi(){
 		$sapi = php_sapi_name();
 		if (strtoupper($sapi) != self::MODE_CLI) {
-		    echo 'Error: Mini Swoole ONLY run in cli mode'; die;
+		    echo 'Error: Mini Swoole ONLY run in cli mode'.PHP_EOL; die;
 		}
 	}
 
@@ -33,7 +33,7 @@ class MiniSwoole {
 	private function checkVersion(){
 		$retval = version_compare(PHP_VERSION, $this->min_version);
 		if(-1 == $retval){
-			echo 'Error: PHP version must be greater then 7.0'; die;
+			echo 'Error: PHP version must be greater then 7.0'.PHP_EOL; die;
 		}
 	}
 
@@ -41,7 +41,7 @@ class MiniSwoole {
 	private function checkExtension(){
 		foreach($this->extensions as $extension){
 			if(!extension_loaded($extension)){
-				echo 'Error: Extension '.$extension.' is required '; die;
+				echo 'Error: Extension '.$extension.' is required '.PHP_EOL; die;
 			}
 		}
 	}
