@@ -35,6 +35,11 @@ class C_Http extends Controller {
         return 'PONG';
     }
 
+    // get img domain
+    public function img(){
+        return IMG_DOMAIN;
+    }
+
     // get Config with key
     public function configAndKey(){
         $redis_config = Config::get('redis');
