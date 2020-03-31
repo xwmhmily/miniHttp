@@ -69,7 +69,7 @@ class C_Http extends Controller {
         $max = 10000;
         $start_time = Logger::getMicrotime();
         for($i = 1; $i <= $max; $i++){
-            $users = $this->m_user->Select();
+            $users = $this->m_user->SelectOne();
         }
         $end_time = Logger::getMicrotime();
         $cost = $end_time - $start_time;
@@ -165,7 +165,7 @@ class C_Http extends Controller {
         
         if($key){
             $i = 1;
-            while($i < 3){
+            while($i <= 3){
                 $val = Cache::get($key);
                 $this->response->write(date('Y-m-d H:i:s'). ' => '.$val.'<br />');
                 $i++; sleep(1);
