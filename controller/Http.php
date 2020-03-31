@@ -218,7 +218,7 @@ class C_Http extends Controller {
 
     public function task(){
         $args   = [];
-        $args['callback'] = ['Importer', 'Run'];
+        $args['callback'] = ['Importer', 'task'];
         $args['param']    = ['Lakers', 'Swoole', 'Westlife'];
         $taskID = Task::add($args);
         return 'Task has been set, id is => '.$taskID;

@@ -17,8 +17,8 @@ class Importer {
 	}
 
 	public static function task(...$param){
-		$time = $param[0];
-		Logger::log('Time in '.__METHOD__.' is => '.$time);
+		Logger::log('Time in '.__METHOD__.' is => '.date('Y-m-d H:i:s'));
+		Logger::log('Param in '.__METHOD__.' is => '.JSON($param));
 	}
 
 	public static function run(...$param){
