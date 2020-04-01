@@ -114,8 +114,15 @@ status() {
         echo -e "\nPorts: "
         awk 'BEGIN{OFS="=";NF=130;print}'
 
-        ports=`cat $STAT_FILE | jq -r '.ports' | sed 's/"//g'`
-        echo $ports
+        port=`cat $STAT_FILE | jq -r '.ports' | sed 's/"//g'`
+        echo $port
+        awk 'BEGIN{OFS="=";NF=130;print}'
+
+        echo -e "\nSetting: "
+        awk 'BEGIN{OFS="=";NF=130;print}'
+
+        setting=`cat $STAT_FILE | jq -r '.setting' | sed 's/"//g'`
+        echo $setting
         awk 'BEGIN{OFS="=";NF=130;print}'
 
         echo -e "\nProcesses: "

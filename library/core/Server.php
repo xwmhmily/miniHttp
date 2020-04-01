@@ -41,16 +41,18 @@ abstract class Server {
 		$stat['masterPID'] = self::$instance->master_pid;
 
 		$ports = array(self::$instance->ports)[0];
-		$ports_arr = [];
+		$ports_arr = $setting = [];
 		foreach($ports as $port){
 			$port = array($port);
 			foreach($port as $p){
 				$p = array($p)[0];
+				unset($p->setting);
 				$ports_arr[] = $p;
 			}
 		}
 
-		$stat['ports'] = $ports_arr;
+		$stat['ports']   = $ports;
+		$stat['setting'] = Config::get();
 		$server_stat = self::$instance->stats();
 		$server_stat['start_time'] = date('Y-m-d H:i:s', $server_stat['start_time']);
 		$stat['stats'] = $server_stat;
