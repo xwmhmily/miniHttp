@@ -28,10 +28,10 @@ $config = [
 		'error_level'              => 2,
 		'module'                   => 'api',
 		'log_method'               => 'file',
-		'pid_file'                 => __DIR__.'/../log/swoole.pid',
-		'stat_file'                => __DIR__.'/../log/swoole.stat',
-		'log_file'       => __DIR__.'/../log/swoole_error_'.date('Y-m-d').'.log',
-		'mysql_log_file' => __DIR__.'/../log/swoole_mysql_'.date('Y-m-d').'.log',
+		'pid_file'                 => APP_PATH.'/log/swoole.pid',
+		'stat_file'                => APP_PATH.'/log/swoole.stat',
+		'log_file'       => APP_PATH.'/log/swoole_error_'.date('Y-m-d').'.log',
+		'mysql_log_file' => APP_PATH.'/log/swoole_mysql_'.date('Y-m-d').'.log',
 	],
 
 	'http' => [

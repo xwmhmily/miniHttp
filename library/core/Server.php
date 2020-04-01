@@ -46,7 +46,6 @@ abstract class Server {
 			$port = array($port);
 			foreach($port as $p){
 				$p = array($p)[0];
-				unset($p->setting);
 				$ports_arr[] = $p;
 			}
 		}
