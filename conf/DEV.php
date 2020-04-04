@@ -11,7 +11,7 @@ $config = [
 		'group'                    => 'www',
 		'backlog'                  => 128,
 		'daemonize'                => 1,
-		'worker_num'               => 1,
+		'worker_num'               => 4,
 		'task_ipc_mode'            => 1,
 		'task_worker_num'          => 1,
 		'open_cpu_affinity'        => 1,
@@ -37,7 +37,7 @@ $config = [
 	'http' => [
 		// 正常监听的端口
 		'ip'     => '*',
-		'port'   => 9100,
+		'port'   => 9200,
 
 		// 额外监听的端口
 		'listen_ip'   => '127.0.0.1',
