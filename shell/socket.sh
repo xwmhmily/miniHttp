@@ -2,6 +2,9 @@
 # start, stop, status, restart, reload server
 # Usage: sh socket.sh {start|stop|restart|status|reload|heartbeat}
 
+BASE_PATH=$(dirname "$0")
+cd $BASE_PATH
+
 PID_FILE=../log/swoole.pid
 STAT_FILE=../log/swoole.stat
 
