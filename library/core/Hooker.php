@@ -15,34 +15,52 @@ class Hooker {
 
     // Worker start
     public static function onWorkerStart(swoole_server $server, int $workerID){
+        $config = Config::get(Pool::TYPE_MYSQL);
+        $max = $config['max'];
+
 		if ($server->taskworker) {
             $max = 1;
             $process_name = APP_NAME.'_task';
         }else{
-            $config = Config::get(Pool::TYPE_MYSQL);
-            $max = $config['max'];
             !$max && $max = 1;
             $process_name = APP_NAME.'_worker';
         }
 
-        if(strtoupper(PHP_OS) == Server::OS_LINUX){
-            swoole_set_process_name($process_name);
-        }
+        self::setProcessName($process_name);
 
-        for($i = 1; $i <= $max; $i++){
-            $retval = Pool::getInstance(Pool::TYPE_MYSQL);
-            if($retval === FALSE){
-                Logger::error('Worker '.$workerID.' fail to connect MySQL !');
+        // Is MySQL connection required ?
+        if($config['required']){
+            for($i = 1; $i <= $max; $i++){
+                $retval = Pool::getInstance(Pool::TYPE_MYSQL);
+                if($retval === FALSE){
+                    Logger::error('Worker '.$workerID.' fail to connect MySQL !');
+                }
             }
+        }else{
+            Logger::log('MySQL is not required');
         }
 
-        $retval = Pool::getInstance(Pool::TYPE_REDIS);
-        if($retval === FALSE){
-            Logger::error('Worker '.$workerID.' fail to connect Redis !');
+        // Is Redis connection required ?
+        $config = Config::get(Pool::TYPE_REDIS);
+        if($config['required']){
+            $retval = Pool::getInstance(Pool::TYPE_REDIS);
+            if($retval === FALSE){
+                Logger::error('Worker '.$workerID.' fail to connect Redis !');
+            }
+        }else{
+            Logger::log('Redis is not required');
         }
 
         Worker::afterStart($server, $workerID);
         Logger::log('Worker '.$workerID.' ready for connections ...');
+    }
+
+    private static function setProcessName($process_name){
+        if(strtoupper(PHP_OS) == Server::OS_LINUX){
+            swoole_set_process_name($process_name);
+        }
+
+        return TRUE;
     }
 
     // Http onRequest, 将请求路由至控制器

@@ -35,19 +35,15 @@ $config = [
 	],
 
 	'http' => [
-		// 正常监听的端口
 		'ip'     => '*',
 		'port'   => 9200,
-
-		// 额外监听的端口
-		'listen_ip'   => '127.0.0.1',
-		'listen_port' => 9908,
 
 		'enable_static_handler' => true,
 		'document_root' => APP_PATH.'/public',
 	],
 
 	'mysql' => [
+		'required' => true,
 		'db'   => 'test',
 		'host' => '127.0.0.1',
 		'port' => 3306,
@@ -66,6 +62,7 @@ $config = [
 	],
 	
 	'redis' => [
+		'required' => true,
 		'db'   => '0',
 		'host' => '127.0.0.1',
 		'port' => 6379,

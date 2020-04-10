@@ -7,47 +7,28 @@
 class MiniSwoole {
 
 	const MODE_CLI = 'CLI';
-	private $min_version = '7.0';
+
+	private $log_file;
+	private $min_version = '7.0';	
 	private $extensions  = ['pdo', 'redis', 'swoole', 'pdo_mysql'];
 
 	public function boostrap(){
+		$this->init();
 		$this->checkSapi();
 		$this->checkVersion();
 		$this->checkExtension();
-		$this->init();
 		$this->initLogger();
 		$this->initAutoload();
 
 		return $this;
 	}
 
-	// Only run in CLI
-	private function checkSapi(){
-		$sapi = php_sapi_name();
-		if (strtoupper($sapi) != self::MODE_CLI) {
-		    echo 'Error: Mini Swoole ONLY run in cli mode'.PHP_EOL; die;
-		}
-	}
-
-	// PHP Version must be greater then 7.0
-	private function checkVersion(){
-		$retval = version_compare(PHP_VERSION, $this->min_version);
-		if(-1 == $retval){
-			echo 'Error: PHP version must be greater then 7.0'.PHP_EOL; die;
-		}
-	}
-
-	// Must install necessary extensions
-	private function checkExtension(){
-		foreach($this->extensions as $extension){
-			if(!extension_loaded($extension)){
-				echo 'Error: Extension '.$extension.' is required '.PHP_EOL; die;
-			}
-		}
-	}
-
 	private function init(){
-		date_default_timezone_set('Asia/Chongqing');
+		date_default_timezone_set('Asia/Shanghai');
+		error_reporting(E_ALL ^ E_NOTICE);
+		
+		ini_set('log_errors', 'on');
+		ini_set('display_errors', 'off');
 		
 		define('MINI_HTTP_VERSION', '1.0');
 		define('LIB_PATH',  APP_PATH.'/library');
@@ -69,13 +50,50 @@ class MiniSwoole {
 		if($config['tb_suffix_sf']){
 			define('TB_SUFFIX_SF', $config['tb_suffix_sf']);
 		}
+
+		$this->setLogFile($config['log_file']);
+	}
+
+	private function setLogFile($log_file){
+		$this->log_file = $log_file;
+	}
+
+	private function error($error){
+		file_put_contents($this->log_file, $error."\r\n", FILE_APPEND);
+	}
+
+	// Only run in CLI
+	private function checkSapi(){
+		$sapi = php_sapi_name();
+		if (strtoupper($sapi) != self::MODE_CLI) {
+			$error = 'Error: MiniHttp ONLY run in cli mode';
+			$this->error($error);
+			echo $error.PHP_EOL; die;
+		}
+	}
+
+	// PHP Version must be greater then 7.0
+	private function checkVersion(){
+		$retval = version_compare(PHP_VERSION, $this->min_version);
+		if(-1 == $retval){
+			$error = 'Error: PHP version must be greater then 7.0';
+			$this->error($error);
+			echo $error.PHP_EOL; die;
+		}
+	}
+
+	// Must install necessary extensions
+	private function checkExtension(){
+		foreach($this->extensions as $extension){
+			if(!extension_loaded($extension)){
+				$error = 'Error: Extension '.$extension.' is required';
+				$this->error($error);
+				echo $error.PHP_EOL; die;
+			}
+		}
 	}
 
 	private function initLogger(){
-		error_reporting(E_ALL ^ E_NOTICE);
-		
-		ini_set('log_errors', 'on');
-		ini_set('display_errors', 'off');
         ini_set('error_log', Config::get('common', 'log_file'));
 		set_error_handler(['Logger', 'errorHandler'], E_ALL | E_STRICT);
 		Logger::init();
