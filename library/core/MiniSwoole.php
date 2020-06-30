@@ -101,15 +101,20 @@ class MiniSwoole {
 
 	// Autoload
 	private function initAutoload(){
+		spl_autoload_register([$this, 'classLoader']);
         spl_autoload_register(function($class){
 			$file = LIB_PATH.'/'.$class.'.php';
 			if(file_exists($file)){
 				require_once($file);
 			}else{
 				$error = 'Error in autoload: No such file => '.$file;
-				Helper::raiseError(debug_backtrace(), $error);
+				Helper::raiseError(debug_backtrace(), $error);			
 			}
-		});
+		}, true, false);
+	}
+
+	public function classLoader(){
+		require_once LIB_PATH.'/vendor/autoload.php';
 	}
 
 	public function process(){
