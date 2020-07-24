@@ -437,7 +437,7 @@ public static function onFinish(swoole_server $server, int $taskID, string $data
 ```
 
 #### 协程
-- 木有问题, 只要安装的 Swoole 的 4+ 以上，任意地方调用 go(function()) 均可
+- 木有问题, 只要安装的 Swoole 版本 4+ 以上，任意地方调用 go(function()) 均可
 
 #### 插件
 - 将插件放在 plugin 目录下, 文件名与类名保持一致。如类名为 Permission, 则文件名为 Permission.php <br />
