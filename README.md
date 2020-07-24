@@ -59,7 +59,7 @@
 - 停止: sh shell/socket.sh stop <br />
 - 重启: sh shell/socket.sh restart <br />
 - Reload: sh shell/socket.sh reload, 重启所有Worker/Task进程 <br />
-- Process 心跳: sh shell/process, 对所有的 Process 进行心跳检测 <br />
+- Process 心跳: sh shell/process.sh, 对所有的 Process 进行心跳检测 <br />
 <hr />
 
 #### 心跳检测
