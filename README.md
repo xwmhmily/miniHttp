@@ -438,6 +438,28 @@ public static function onFinish(swoole_server $server, int $taskID, string $data
 
 #### 协程
 - 木有问题, 只要安装的 Swoole 版本 4+ 以上，任意地方调用 go(function()) 均可
+```
+    public static function Remove(){
+		Logger::log(__METHOD__);
+
+		while(TRUE){
+			$queue = Config::get('elasticsearch', 'queue_remove');
+			$data = Cache::rpop($queue);
+			if($data){
+				go([__CLASS__, 'doRemove'], $data);
+			}
+
+			sleep(1);
+		}
+	}
+
+	private static function doRemove($data){
+		Logger::log(__METHOD__);
+		Logger::log('Removing '.$data);
+
+		// Do business here
+	}
+```
 
 #### 插件
 - 将插件放在 plugin 目录下, 文件名与类名保持一致。如类名为 Permission, 则文件名为 Permission.php <br />
