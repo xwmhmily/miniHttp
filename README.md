@@ -31,7 +31,7 @@
 
 #### 环境要求
 - PHP >= 7.0 <br />
-- swoole, 建议 2.2.0 <br />
+- swoole, 建议 4+ <br />
 - pdo <br />
 - redis <br />
 - pdo_mysql <br />
@@ -59,6 +59,7 @@
 - 停止: sh shell/socket.sh stop <br />
 - 重启: sh shell/socket.sh restart <br />
 - Reload: sh shell/socket.sh reload, 重启所有Worker/Task进程 <br />
+- Process 心跳: sh shell/process, 对所有的 Process 进行心跳检测 <br />
 <hr />
 
 #### 心跳检测
@@ -289,7 +290,9 @@ $customer = $this->load('Customer')->SetDB('SLAVE')->Suffix(38)->SelectOne();
 <hr />
 
 #### Autoload
-- 框架设置了 autoload 的目录是 library, 因此只要将类位于此目录下, 就能实现自动加载<br />
+- 框架设置了 autoload 的目录是 vendor 与 library, 因此只要将类位于此目录下, 就能实现自动加载<br />
+- vendor 下的则用于 composer 包, 第一优先
+- library 下的则是自己写的 class, 第发给优先
 - 例如控制器中要实例化 RabbitMQ, 文件名是 /library/RabbitMQ.php
 ```
 public function rabbit(){
@@ -432,6 +435,9 @@ public static function onFinish(swoole_server $server, int $taskID, string $data
         return $this->getParam('token');
     }
 ```
+
+#### 协程
+- 木有问题, 只要安装的 Swoole 的 4+ 以上，任意地方调用 go(function()) 均可
 
 #### 插件
 - 将插件放在 plugin 目录下, 文件名与类名保持一致。如类名为 Permission, 则文件名为 Permission.php <br />
