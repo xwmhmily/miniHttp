@@ -292,7 +292,7 @@ $customer = $this->load('Customer')->SetDB('SLAVE')->Suffix(38)->SelectOne();
 #### Autoload
 - 框架设置了 autoload 的目录是 vendor 与 library, 因此只要将类位于此目录下, 就能实现自动加载<br />
 - vendor 下的则用于 composer 包, 第一优先
-- library 下的则是自己写的 class, 第发给优先
+- library 下的则是自己写的 class, 第二优先
 - 例如控制器中要实例化 RabbitMQ, 文件名是 /library/RabbitMQ.php
 ```
 public function rabbit(){
