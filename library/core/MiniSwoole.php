@@ -116,7 +116,7 @@ class MiniSwoole {
 	public function classLoader(){
 		$autoload_file = LIB_PATH.'/vendor/autoload.php';
 		if(file_exists($autoload_file)){
-			require_once LIB_PATH.'/vendor/autoload.php';
+			require_once $autoload_file;
 		}else{
 			return false;
 		}
