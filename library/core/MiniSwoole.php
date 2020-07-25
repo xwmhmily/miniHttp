@@ -114,7 +114,12 @@ class MiniSwoole {
 	}
 
 	public function classLoader(){
-		require_once LIB_PATH.'/vendor/autoload.php';
+		$autoload_file = LIB_PATH.'/vendor/autoload.php';
+		if(file_exists($autoload_file)){
+			require_once LIB_PATH.'/vendor/autoload.php';
+		}else{
+			return false;
+		}
 	}
 
 	public function process(){
