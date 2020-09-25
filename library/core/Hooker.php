@@ -70,6 +70,11 @@ class Hooker {
             $response->end('Error: Only GET and POST supported now !'); return;
         }
 
+        if ($request->server['request_uri'] == '/favicon.ico') {
+            $response->status(404);
+            $response->end();
+        }
+
         Worker::beforeRequest($method, $request, $response);
         Router::routerStartup();
         $retval = Router::parse($request->server['request_uri']);

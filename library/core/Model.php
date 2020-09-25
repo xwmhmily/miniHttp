@@ -19,7 +19,8 @@ abstract class Model {
 	private static $retries = 0;
 	private $result         = NULL;		
 	private $success        = FALSE;	
-	private $selectOne      = FALSE;		   
+	private $selectOne      = FALSE;
+	private $error          = NULL;	   
 
 	const MAX_RETRY    = 3;
 	const CODE_SUCCESS = '00000';
@@ -697,6 +698,19 @@ abstract class Model {
 		}
 	}
 
+	public function getLastError(){
+		$retval = [];
+		if($this->success){
+			$retval['success'] = true;
+			$retval['error']   = '';
+		}else{
+			$retval['success'] = false;
+			$retval['error']   = $this->error;
+		}
+
+		return $retval;
+	}
+
 	/**
 	 * Check result for the last execution
 	 */
@@ -719,6 +733,8 @@ abstract class Model {
 		
 		$retry = FALSE;
 		if($this->success === FALSE){
+			$this->error = $error[2];
+
 			Helper::raiseError(debug_backtrace(), $error[2], $this->sql);
 			if(strpos($error[2], self::ERROR_MYSQL_HAS_GONE_AWAY) !== FALSE){
 				$retry = TRUE;
