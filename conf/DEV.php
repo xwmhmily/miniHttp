@@ -53,7 +53,7 @@ $config = [
 		'port' => 3306,
 		'user' => 'ec_stock',
 		'pwd'  => 'wTmANN2wbANBp@2101',
-		'max'  => 3,
+		'max'  => 2,
 		'log_sql' => true,
 	],
 	
