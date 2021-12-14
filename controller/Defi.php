@@ -13,14 +13,14 @@ class C_Defi extends Controller {
     }
 
     public function protocols(){
-        return $this->m_protocols->Select();
+        return JSON($this->m_protocols->Select());
     }
 
     public function portfolios(){
-        return $this->m_portfolios->Select();
+        return JSON($this->m_portfolios->Select());
     }
 
     public function chart(){
-        return $this->m_chart->Select();
+        return JSON($this->m_chart->Select());
     }
 }
