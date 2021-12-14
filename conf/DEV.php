@@ -48,21 +48,21 @@ $config = [
 
 	'mysql' => [
 		'required' => true,
-		'db'   => 'test',
-		'host' => '127.0.0.1',
+		'db'   => 'defi',
+		'host' => '172.28.67.108',
 		'port' => 3306,
 		'user' => 'root',
-		'pwd'  => '123456789',
+		'pwd'  => 'wTmANN2wbANBp@2101',
 		'max'  => 3,
 		'log_sql' => true,
 	],
 	
 	'redis' => [
-		'required' => true,
+		'required' => false,
 		'db'   => '0',
 		'host' => '127.0.0.1',
 		'port' => 6379,
-		'pwd'  => '123456789',
+		'pwd'  => '123456',
 	],
 
 	'process' => [
