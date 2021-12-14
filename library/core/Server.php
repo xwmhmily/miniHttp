@@ -59,7 +59,6 @@ abstract class Server {
 		$json = json_encode($stat, JSON_UNESCAPED_UNICODE);
 
 		$stat_file = Config::get('app', 'stat_file');
-		file_put_contents("/data/www/miniHttp/log", "stat_file => ".$stat_file.PHP_EOL, FILE_APPEND);
 		file_put_contents($stat_file, $json.PHP_EOL);
 	}
 }
