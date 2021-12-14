@@ -9,7 +9,9 @@ class M_Protocols extends Model {
 
     // 今天是否抓取过了
     public function has_today_done(){
-        $data = $this->Where('add_date', date('Y-m-d'))->SelectOne();
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $data = $this->Where($where)->SelectOne();
         if($data){
             return true;
         }
