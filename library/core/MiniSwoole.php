@@ -94,7 +94,7 @@ class MiniSwoole {
 	}
 
 	private function initLogger(){
-        ini_set('error_log', Config::get('common', 'log_file'));
+        ini_set('error_log', Config::get('log', 'log_file'));
 		set_error_handler(['Logger', 'errorHandler'], E_ALL | E_STRICT);
 		Logger::init();
 	}
