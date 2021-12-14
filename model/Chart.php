@@ -7,7 +7,19 @@ class M_Chart extends Model {
         parent::__construct();
     }
 
-    public function get_charts_by_date($date){
-        return $this->Where('add_date', $date)->SelectOne();
+    public function save($charts){
+        $charts['add_time'] = time();
+        $charts['add_date'] = date('Y-m-d H:i:s');
+        return $this->Insert($charts);
+    }
+
+    // 今天是否抓取过了
+    public function has_today_done(){
+        $data = $this->Where('add_date', date('Y-m-d'))->SelectOne();
+        if($data){
+            return true;
+        }
+
+        return false;
     }
 }

@@ -7,4 +7,20 @@ class M_Protocols extends Model {
         parent::__construct();
     }
 
+    // 今天是否抓取过了
+    public function has_today_done(){
+        $data = $this->Where('add_date', date('Y-m-d'))->SelectOne();
+        if($data){
+            return true;
+        }
+
+        return false;
+    }
+
+    public function save_protocols($protocols){
+        $protocols['add_time'] = time();
+        $protocols['add_date'] = date('Y-m-d H:i:s');
+        return $this->Insert($protocols);
+    }
+
 }

@@ -2,21 +2,12 @@
 
 class C_Crawler extends Controller {
 
-	private $m_protocols;
-    private $m_portfolios;
-    private $m_chart;
-    
-    function __construct(){
-    	$this->m_protocols = $this->load('Portfolios');
-        $this->m_chart = $this->load('Chart');
-        $this->m_protocols = $this->load('Protocols');
-    }
-
     public function protocols(){
         Crawler::protocols();
         return "Working hard to fetch protocols data, pls wait";
     }
 
+    /*
     public function portfolios(){
         $protocols = $this->m_protocols->Select();
         if(!$protocols){
@@ -30,6 +21,7 @@ class C_Crawler extends Controller {
 
         return "Working hard to fetch portfolios data, pls wait";
     }
+    */
 
     public function chart(){
         Crawler::charts();
