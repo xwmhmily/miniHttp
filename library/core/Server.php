@@ -58,7 +58,7 @@ abstract class Server {
 		$stat['stats'] = $server_stat;
 		$json = json_encode($stat, JSON_UNESCAPED_UNICODE);
 
-		$stat_file = Config::get('common', 'stat_file');
+		$stat_file = Config::get('app', 'stat_file');
 		file_put_contents($stat_file, $json.PHP_EOL);
 	}
 }
