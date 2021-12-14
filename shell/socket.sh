@@ -50,7 +50,7 @@ stop() {
     ### DO NOT USE KILL -9, GIVE THE MASTER CHANCE TO DO SOMETHING ###
     SWOOLE_MASTER_PID=`cat $PID_FILE`
     kill -15 $SWOOLE_MASTER_PID
-    sleep 1
+    sleep 3
     NEW_SWOOLE_MASTER_PID=`ps -ef | grep ${SWOOLE_MASTER_PID} | grep -v "grep" | sed -n '1p' | awk -F ' ' '{print $2}'`
     if [ $NEW_SWOOLE_MASTER_PID ]; then
         TIP="Server stop fail !!!"
