@@ -66,7 +66,7 @@ stop() {
 
 restart() {
     stop
-    sleep 1
+    sleep 3
     start
 }
 
