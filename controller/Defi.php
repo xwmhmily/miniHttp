@@ -21,6 +21,6 @@ class C_Defi extends Controller {
     }
 
     public function chart(){
-        return $this->chart->Select();
+        return $this->m_chart->Select();
     }
 }
