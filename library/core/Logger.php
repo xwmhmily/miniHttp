@@ -25,7 +25,7 @@ abstract class Logger {
 
     public static function init(){
         if(empty(self::$log_method)){
-            $config = Config::get('common');
+            $config = Config::get('log');
             self::$log_file       = $config['log_file'];
             self::$error_level    = $config['error_level'];
             self::$mysql_log_file = $config['mysql_log_file'];

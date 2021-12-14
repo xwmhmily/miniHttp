@@ -1,12 +1,16 @@
 <?php
 
 $config = [
+	'app' => [
+		'app_name'      => 'Mini_Http',
+		'app_version'   => '2.0',
+		'tb_pk'         => 'id',
+		'tb_prefix'     => 'sl_',
+		'tb_suffix_sf'  => '_',
+		'stat_file'     => APP_PATH.'/log/swoole.stat',
+	],
+
 	'common' => [
-		'app_name'                 => 'Mini_Http',
-		'app_version'              => '2.0',
-		'tb_pk'                    => 'id',
-		'tb_prefix'                => 'sl_',
-		'tb_suffix_sf'             => '_',
 		'user'                     => 'www',
 		'group'                    => 'www',
 		'backlog'                  => 128,
@@ -24,11 +28,12 @@ $config = [
 		'package_length_offset'    => 8,
   		'package_body_offset'      => 16,
 		'log_level'                => 4,
-		'error_level'              => 2,
-		'module'                   => 'api',
-		'log_method'               => 'redis',
 		'pid_file'                 => APP_PATH.'/log/swoole.pid',
-		'stat_file'                => APP_PATH.'/log/swoole.stat',
+	],
+
+	'log' => [
+		'error_level'    => 2,
+		'log_method'     => 'file',
 		'log_file'       => APP_PATH.'/log/swoole_error_'.date('Y-m-d').'.log',
 		'mysql_log_file' => APP_PATH.'/log/swoole_mysql_'.date('Y-m-d').'.log',
 	],

@@ -41,7 +41,7 @@ class MiniSwoole {
 			require_once $f;
 		}
 
-		$config = Config::get('common');
+		$config = Config::get('app');
 		define('APP_NAME', $config['app_name']);
 		
 		// PK and TABLE_PREFIX and TB_SUFFIX_SF
