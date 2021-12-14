@@ -18,7 +18,7 @@ class C_Http extends Controller {
         Logger::fatal('This is a fatal msg');
         Logger::log('This is a log msg');
 
-        $level = Config::get('common', 'error_level');
+        $level = Config::get('log', 'error_level');
         return 'Current error_level is => '.$level;
     }
 
