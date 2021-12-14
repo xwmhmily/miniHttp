@@ -64,15 +64,6 @@ $config = [
 		'port' => 6379,
 		'pwd'  => '123456789',
 	],
-
-	'process' => [
-		'Mini_Swoole_importer'=> [
-			'num' => 1, 
-			'mysql' => true,
-			'redis' => true,
-			'callback' => ['Importer', 'run'],
-		],
-	],
 ];
 
 return $config;
