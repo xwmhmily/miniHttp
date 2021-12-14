@@ -5,7 +5,7 @@ $config = [
 		'app_name'      => 'Mini_Http',
 		'app_version'   => '2.0',
 		'tb_pk'         => 'id',
-		'tb_prefix'     => 'sl_',
+		'tb_prefix'     => 'df_',
 		'tb_suffix_sf'  => '_',
 		'stat_file'     => APP_PATH.'/log/swoole.stat',
 	],
