@@ -64,7 +64,6 @@ class Crawler {
 	}
 
 	private static function portfolios($slug){
-		return true;
 		$m_portfolios = Helper::load('Portfolios');
 		$slug = $m_portfolios->convert_slug($slug);
 		$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
