@@ -63,7 +63,7 @@ class Crawler {
 
 		foreach($slugs as $slug){
 			$i = 0;
-			$slug = convert_slug($slug);
+			$slug = convert_slug($slug['name']);
 
 			self::detail($slug);
 			self::contract_call($slug);
