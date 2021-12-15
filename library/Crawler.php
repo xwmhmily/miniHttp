@@ -29,8 +29,15 @@ class Crawler {
 			$protocols = json_decode($protocols, true);
 			$m_protocols->save_protocols($protocols);
 
+			$i = 0;
 			foreach($protocols as $slug){
 				self::portfolios($slug['name']);
+				$i++;
+
+				if($i == 10){
+					sleep(1);
+					$i = 0;
+				}
 			}
 		}
 
