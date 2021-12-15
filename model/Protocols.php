@@ -28,17 +28,15 @@ class M_Protocols extends Model {
                     unset($protocol[$key]);
                 }
 
+                $protocol[$key] = addslashes($val);
+
                 if(is_array($val)){
                     $protocol[$key] = json_encode($val, 256);
                 }
             }
 
-            $protocol['add_time']    = time();
-            $protocol['name']        = addslashes($protocol['name']);
-            $protocol['add_date']    = date('Y-m-d H:i:s');
-            $protocol['chains']      = json_encode($protocol['chains']);
-            $protocol['chainTvls']   = json_encode($protocol['chainTvls']);
-            $protocol['description'] = addslashes($protocol['description']);
+            $protocol['add_time'] = time();
+            $protocol['add_date'] = date('Y-m-d H:i:s');
             $this->Insert($protocol);
         }
 
