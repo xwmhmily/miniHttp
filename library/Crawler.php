@@ -36,7 +36,7 @@ class Crawler {
 			*/
 
 			foreach($protocols as $slug){
-				self::portfolios($slug);
+				self::portfolios($slug['name']);
 			}
 		}
 
