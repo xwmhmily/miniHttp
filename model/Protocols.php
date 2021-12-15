@@ -22,21 +22,19 @@ class M_Protocols extends Model {
     }
 
     public function save_protocols($protocols){
-        foreach($protocols as $key => $protocol){
-            if($key == 'id'){
-                unset($protocols[$key]);
-            }
+        foreach($protocols as &$protocol){
+            foreach($protocol as $key => $val){
+                if(!in_array($key, $this->fields)){
+                    unset($protocol[$key]);
+                }
 
-            if(!in_array($key, $this->fields)){
-                unset($protocols[$key]);
-            }
-        }
+                unset($protocol['id']);
 
-        foreach($protocol as $key => $val){
-            if(is_array($val)){
-                $protocol[$key] = addslashes(json_encode($val, 256));
-            }else{
-                $protocol[$key] = addslashes($val);
+                if(is_array($val)){
+                    $protocol[$key] = addslashes(json_encode($val, 256));
+                }else{
+                    $protocol[$key] = addslashes($val);
+                }
             }
 
             $protocol['add_time'] = time();
