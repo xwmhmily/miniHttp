@@ -9,7 +9,7 @@ class M_Contract_user extends Model {
 
     public function save($slug, $data){
         $data = json_decode($data, true);
-        if(!$data){
+        if(!$data || !$data['data']){
             return;
         }
         
