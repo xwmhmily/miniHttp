@@ -9,6 +9,10 @@ class M_Protocols extends Model {
         parent::__construct();
     }
 
+    public function get_all_slugs(){
+        return $this->Field('name')->Select();
+    }
+
     // 今天是否抓取过了
     public function has_today_done(){
         $where = [];

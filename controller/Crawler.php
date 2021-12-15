@@ -7,6 +7,11 @@ class C_Crawler extends Controller {
         return Crawler::protocols($reget);
     }
 
+    public function portfolios(){
+        $reget = $this->getParam('reget');
+        return Crawler::portfolios($reget);
+    }
+
     public function chart(){
         $reget = $this->getParam('reget');
         return Crawler::charts($reget);
