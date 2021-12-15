@@ -38,11 +38,17 @@ class M_Protocols extends Model {
             }
 
             $protocol['add_time'] = time();
-            $protocol['add_date'] = date('Y-m-d H:i:s');
+            $protocol['add_date'] = date('Y-m-d');
             $this->Insert($protocol);
         }
 
         return true;
+    }
+
+    public function remove_today_data(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $this->Where($where)->Delete();
     }
 
 }

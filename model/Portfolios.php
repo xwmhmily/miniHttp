@@ -17,7 +17,7 @@ class M_Portfolios extends Model {
             foreach($portfolios['data']['user_list'] as $val){
                 $val['slug']     = $slug;
                 $val['add_time'] = time();
-                $val['add_date'] = date('Y-m-d H:i:s');
+                $val['add_date'] = date('Y-m-d');
                 $this->Insert($val);
             }
         }
@@ -33,6 +33,12 @@ class M_Portfolios extends Model {
         }
 
         return false;
+    }
+
+    public function remove_today_data(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $this->Where($where)->Delete();
     }
 
 }

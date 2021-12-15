@@ -11,7 +11,7 @@ class M_Chart extends Model {
         $charts = json_decode($charts, true);
         foreach($charts as $chart){
             $chart['add_time'] = time();
-            $chart['add_date'] = date('Y-m-d H:i:s');
+            $chart['add_date'] = date('Y-m-d');
             $this->Insert($chart);
         }
 
@@ -28,5 +28,11 @@ class M_Chart extends Model {
         }
 
         return false;
+    }
+
+    public function remove_today_data(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $this->Where($where)->Delete();
     }
 }
