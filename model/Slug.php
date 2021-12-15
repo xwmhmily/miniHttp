@@ -9,10 +9,10 @@ class M_Slug extends Model {
 
     public function save($detail){
         $detail = json_decode($detail, true);
-        if(!$detail){
+        if(!$detail || !$detail['data']){
             return;
         }
-        
+
         $data = $detail['data'];
         $slug = $data['name'];
         unset($data['id']);

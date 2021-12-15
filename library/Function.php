@@ -30,6 +30,8 @@ function convert_slug($slug){
 }
 
 function format_array_data_to_json($data){
+	if(!is_array($data)) return $data;
+
 	foreach($data as $key => $val){
 		if(is_array($val)){
 			$data[$key] = json_encode($val, 256);
