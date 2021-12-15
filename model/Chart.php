@@ -8,9 +8,14 @@ class M_Chart extends Model {
     }
 
     public function save($charts){
-        $charts['add_time'] = time();
-        $charts['add_date'] = date('Y-m-d H:i:s');
-        return $this->Insert($charts);
+        $charts = json_decode($charts, true);
+        foreach($charts as $chart){
+            $chart['add_time'] = time();
+            $chart['add_date'] = date('Y-m-d H:i:s');
+            $this->Insert($chart);
+        }
+
+        return true;
     }
 
     // 今天是否抓取过了

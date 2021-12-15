@@ -27,7 +27,7 @@ class Crawler {
 		$protocols = file_get_contents(self::DEFI_URL_PROTOCOLS);
 		if($protocols){
 			$protocols = json_decode($protocols, true);
-			$m_protocols->save_protocols($protocols);
+			$m_protocols->save($protocols);
 
 			$i = 0;
 			foreach($protocols as $slug){

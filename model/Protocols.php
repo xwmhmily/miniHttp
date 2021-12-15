@@ -21,7 +21,7 @@ class M_Protocols extends Model {
         return false;
     }
 
-    public function save_protocols($protocols){
+    public function save($protocols){
         foreach($protocols as &$protocol){
             foreach($protocol as $key => $val){
                 if(!in_array($key, $this->fields)){
