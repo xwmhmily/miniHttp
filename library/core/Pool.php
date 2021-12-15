@@ -80,7 +80,7 @@ abstract class Pool {
         }
 
         Logger::log('Success to init MySQL instance');
-        $mysql->query('SET NAMES utf8');
+        $mysql->query('SET NAMES utf8mb4');
         return $mysql;
 	}
 
