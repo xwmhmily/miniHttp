@@ -13,20 +13,26 @@ class M_Slug extends Model {
         $slug = $data['name'];
         unset($data['id']);
 
+        $data = $this->format_array_data_to_json($data);
+
         $where = [];
         $where['name'] = $slug;
         $exists = $this->where($where)->SelectOne();
         if($exists){
-            foreach($data as $key => $val){
-                if(is_array($val)){
-                    $data[$key] = json_encode($val);
-                }
-            }
-
             return $this->Where($where)->update($data);
         }else{
             return $this->Insert($data);
         }
+    }
+
+    private function format_array_data_to_json($data){
+        foreach($data as $key => $val){
+            if(is_array($val)){
+                $data[$key] = json_encode($val, 256);
+            }
+        }
+
+        return $data;
     }
 
 }
