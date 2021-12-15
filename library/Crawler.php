@@ -63,7 +63,7 @@ class Crawler {
 		$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
 		if($portfolios){
 			$m_portfolios = Helper::load('Portfolios');
-			$m_portfolios->save($portfolios);
+			$m_portfolios->save($slug, $portfolios);
 		}
 
 		return true;
