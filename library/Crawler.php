@@ -20,8 +20,9 @@ class Crawler {
 		if(!$reget){
 			$has_today_done = $m_protocols->has_today_done();
 			if($has_today_done){
-				Logger::log("Protocols are already fetched today");
-				return;
+				$error = "Protocols are already fetched today";
+				Logger::log($error);
+				return $error;
 			}
 		}else{
 			// Remove today's data
@@ -46,7 +47,7 @@ class Crawler {
 			}
 		}
 
-		return true;
+		return "DONE";
 	}
 
 	public static function charts($reget = false){
@@ -55,8 +56,9 @@ class Crawler {
 		if(!$reget){
 			$has_today_done = $m_chart->has_today_done();
 			if($has_today_done){
-				Logger::log("Charts are already fetched today");
-				return;
+				$error = "Charts are already fetched today";
+				Logger::log($error);
+				return $error;
 			}
 		}else{
 			// Remove today's data
@@ -68,7 +70,7 @@ class Crawler {
 			$m_chart->save($charts);
 		}
 
-		return true;
+		return "DONE";;
 	}
 
 	private static function portfolios($m_portfolios, $slug){
