@@ -41,6 +41,7 @@ class Crawler {
 
 			$i = 0;
 			foreach($protocols as $slug){
+				$slug = self::convert_slug($slug);
 				self::detail($slug);
 				self::contract_call($slug);
 				self::contract_user($slug);
@@ -74,7 +75,7 @@ class Crawler {
 
 		$slugs = $m_protocols->get_all_slugs();
 		foreach($slugs as $slug){
-			$slug = $m_portfolios->convert_slug($slug['name']);
+			$slug = self::convert_slug($slug['name']);
 			$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
 			if($portfolios){
 				$m_portfolios->save($slug, $portfolios);
@@ -136,5 +137,9 @@ class Crawler {
 
 		return true;
 	}
+
+	private static function convert_slug($slug){
+        return str_replace(" ", "_", strtolower($slug));
+    }
 
 }
