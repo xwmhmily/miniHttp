@@ -25,15 +25,6 @@ class Crawler {
 		if($protocols){
 			$protocols = json_decode($protocols, true);
 			$m_protocols->save_protocols($protocols);
-			/*
-			foreach($protocols as $slug){
-				$slug = file_get_contents(self::DEFI_URL_PROTOCOL_SLUG.$slug);
-				if($slug){
-					$slug = json_decode($slug, true);
-					$m_protocols->save_slug($slug);
-				}
-			}
-			*/
 
 			foreach($protocols as $slug){
 				self::portfolios($slug['name']);
@@ -60,6 +51,7 @@ class Crawler {
 	}
 
 	private static function portfolios($slug){
+		return true;
 		$m_portfolios = Helper::load('Portfolios');
 		$slug = $m_portfolios->convert_slug($slug);
 		$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
