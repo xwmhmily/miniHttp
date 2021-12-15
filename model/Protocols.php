@@ -27,6 +27,10 @@ class M_Protocols extends Model {
                 if(!in_array($key, $this->fields)){
                     unset($protocol[$key]);
                 }
+
+                if(is_array($val)){
+                    $protocol[$key] = json_encode($val, 256);
+                }
             }
 
             $protocol['add_time']    = time();
