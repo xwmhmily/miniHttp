@@ -25,7 +25,7 @@ class M_Protocols extends Model {
             $protocol['add_date']    = date('Y-m-d H:i:s');
             $protocol['chains']      = json_encode($protocol['chains']);
             $protocol['chainTvls']   = json_encode($protocol['chainTvls']);
-            $protocol['description'] = stripslashes($protocol['description']);
+            $protocol['description'] = addslashes($protocol['description']);
             $this->Insert($protocol);
         }
 
