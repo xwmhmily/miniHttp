@@ -28,6 +28,8 @@ class M_Protocols extends Model {
                     unset($protocol[$key]);
                 }
 
+                unset($protocol['id']);
+
                 if(is_array($val)){
                     $protocol[$key] = addslashes(json_encode($val, 256));
                 }else{
