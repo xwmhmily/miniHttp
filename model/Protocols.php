@@ -10,7 +10,7 @@ class M_Protocols extends Model {
     }
 
     public function get_all_slugs(){
-        return $this->Field('name')->Select();
+        return $this->Field('name')->SelectOne();
     }
 
     // 今天是否抓取过了

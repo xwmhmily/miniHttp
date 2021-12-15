@@ -38,20 +38,6 @@ class Crawler {
 		if($protocols){
 			$protocols = json_decode($protocols, true);
 			$m_protocols->save($protocols);
-
-			$i = 0;
-			foreach($protocols as $slug){
-				$slug = self::convert_slug($slug);
-				self::detail($slug);
-				self::contract_call($slug);
-				self::contract_user($slug);
-				$i++;
-
-				if($i == 10){
-					sleep(1);
-					$i = 0;
-				}
-			}
 		}
 
 		return "DONE";
@@ -74,12 +60,60 @@ class Crawler {
 		}
 
 		$slugs = $m_protocols->get_all_slugs();
+
 		foreach($slugs as $slug){
-			$slug = self::convert_slug($slug['name']);
-			$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
-			if($portfolios){
-				$m_portfolios->save($slug, $portfolios);
+			$i = 0;
+			$slug = self::convert_slug($slug);
+			
+			self::detail($slug);
+			self::contract_call($slug);
+			self::contract_user($slug);
+			self::get_portfolios($m_portfolios, $slug);
+
+			$i++;
+			if($i == 10){
+				sleep(1);
+				$i = 0;
 			}
+		}
+
+		return true;
+	}
+
+	private static function detail($slug){
+		$detail = file_get_contents(self::DEBANK_URL_DETAIL.$slug);
+		if($detail){
+			$m_slug = Helper::load('Slug');
+			$m_slug->save($detail);
+		}
+
+		return true;
+	}
+
+	private static function get_portfolios($m_portfolios, $slug){
+		$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
+		if($portfolios){
+			$m_portfolios->save($slug, $portfolios);
+		}
+
+		return true;
+	}
+
+	private static function contract_call($slug){
+		$contract_call = file_get_contents(self::DEBANK_URL_CONTRACT_CALL.$slug);
+		if($contract_call){
+			$m_contract_call = Helper::load('Contract_call');
+			$m_contract_call->save($slug, $contract_call);
+		}
+
+		return true;
+	}
+
+	private static function contract_user($slug){
+		$contract_user = file_get_contents(self::DEBANK_URL_CONTRACT_USER.$slug);
+		if($contract_user){
+			$m_contract_user = Helper::load('Contract_user');
+			$m_contract_user->save($slug, $contract_user);
 		}
 
 		return true;
@@ -106,36 +140,6 @@ class Crawler {
 		}
 
 		return "DONE";;
-	}
-
-	private static function detail($slug){
-		$detail = file_get_contents(self::DEBANK_URL_DETAIL.$slug);
-		if($detail){
-			$m_slug = Helper::load('Slug');
-			$m_slug->save($detail);
-		}
-
-		return true;
-	}
-
-	private static function contract_call($slug){
-		$contract_call = file_get_contents(self::DEBANK_URL_CONTRACT_CALL.$slug);
-		if($contract_call){
-			$m_contract_call = Helper::load('Contract_call');
-			$m_contract_call->save($slug, $contract_call);
-		}
-
-		return true;
-	}
-
-	private static function contract_user($slug){
-		$contract_user = file_get_contents(self::DEBANK_URL_CONTRACT_USER.$slug);
-		if($contract_user){
-			$m_contract_user = Helper::load('Contract_user');
-			$m_contract_user->save($slug, $contract_user);
-		}
-
-		return true;
 	}
 
 	private static function convert_slug($slug){
