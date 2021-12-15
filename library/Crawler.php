@@ -64,7 +64,6 @@ class Crawler {
 		foreach($slugs as $slug){
 			$i = 0;
 			$slug = convert_slug($slug['name']);
-
 			self::detail($slug);
 			self::contract_call($slug);
 			self::contract_user($slug);
@@ -81,6 +80,7 @@ class Crawler {
 	}
 
 	private static function detail($slug){
+		Logger::log('Slug => '.$slug.', detail URL => '.self::DEBANK_URL_DETAIL.$slug);
 		$detail = file_get_contents(self::DEBANK_URL_DETAIL.$slug);
 		if($detail){
 			$m_slug = Helper::load('Slug');
@@ -91,6 +91,7 @@ class Crawler {
 	}
 
 	private static function get_portfolios($m_portfolios, $slug){
+		Logger::log('Slug => '.$slug.', portfolios URL => '.self::DEBANK_URL_PORTFOLIOS.$slug);
 		$portfolios = file_get_contents(self::DEBANK_URL_PORTFOLIOS.$slug);
 		if($portfolios){
 			$m_portfolios->save($slug, $portfolios);
@@ -100,6 +101,7 @@ class Crawler {
 	}
 
 	private static function contract_call($slug){
+		Logger::log('Slug => '.$slug.', call URL => '.self::DEBANK_URL_CONTRACT_CALL.$slug);
 		$contract_call = file_get_contents(self::DEBANK_URL_CONTRACT_CALL.$slug);
 		if($contract_call){
 			$m_contract_call = Helper::load('Contract_call');
@@ -110,6 +112,7 @@ class Crawler {
 	}
 
 	private static function contract_user($slug){
+		Logger::log('Slug => '.$slug.', user URL => '.self::DEBANK_URL_CONTRACT_USER.$slug);
 		$contract_user = file_get_contents(self::DEBANK_URL_CONTRACT_USER.$slug);
 		if($contract_user){
 			$m_contract_user = Helper::load('Contract_user');
