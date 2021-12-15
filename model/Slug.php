@@ -13,7 +13,7 @@ class M_Slug extends Model {
         $slug = $data['name'];
         unset($data['id']);
 
-        $data = $this->format_array_data_to_json($data);
+        $data = format_array_data_to_json($data);
 
         $where = [];
         $where['name'] = $slug;
@@ -23,16 +23,6 @@ class M_Slug extends Model {
         }else{
             return $this->Insert($data);
         }
-    }
-
-    private function format_array_data_to_json($data){
-        foreach($data as $key => $val){
-            if(is_array($val)){
-                $data[$key] = json_encode($val, 256);
-            }
-        }
-
-        return $data;
     }
 
 }

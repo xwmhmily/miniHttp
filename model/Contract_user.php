@@ -13,7 +13,7 @@ class M_Contract_user extends Model {
             return;
         }
         
-        $data = $data['data'];
+        $data = format_array_data_to_json($data['data']);
 
         $where = [];
         $where['slug'] = $slug;

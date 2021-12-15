@@ -24,3 +24,17 @@ function getClientIP(){
 
 	return $clientIP;
 }
+
+function convert_slug($slug){
+	return str_replace(" ", "_", strtolower($slug));
+}
+
+function format_array_data_to_json($data){
+	foreach($data as $key => $val){
+		if(is_array($val)){
+			$data[$key] = json_encode($val, 256);
+		}
+	}
+
+	return $data;
+}

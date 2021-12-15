@@ -12,8 +12,8 @@ class M_Contract_call extends Model {
         if(!$data){
             return;
         }
-        
-        $data = $data['data'];
+
+        $data = format_array_data_to_json($data['data']);
 
         $where = [];
         $where['slug'] = $slug;

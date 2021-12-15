@@ -63,8 +63,8 @@ class Crawler {
 
 		foreach($slugs as $slug){
 			$i = 0;
-			$slug = self::convert_slug($slug);
-			
+			$slug = convert_slug($slug);
+
 			self::detail($slug);
 			self::contract_call($slug);
 			self::contract_user($slug);
@@ -141,9 +141,5 @@ class Crawler {
 
 		return "DONE";;
 	}
-
-	private static function convert_slug($slug){
-        return str_replace(" ", "_", strtolower($slug));
-    }
 
 }
