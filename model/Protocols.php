@@ -20,8 +20,12 @@ class M_Protocols extends Model {
     }
 
     public function save_protocols($protocols){
-        $protocols['add_time'] = time();
-        $protocols['add_date'] = date('Y-m-d H:i:s');
+        foreach($protocols as $key => $protocol){
+            $protocol[$key]['chainTvls'] = json_encode($protocol['chainTvls']);
+            $protocol[$key]['add_time']  = time();
+            $protocol[$key]['add_date']  = date('Y-m-d H:i:s');
+        }
+        
         return $this->Insert($protocols);
     }
 
