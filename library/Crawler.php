@@ -13,12 +13,15 @@ class Crawler {
 
 	const DEBANK_URL_PORTFOLIOS  = 'https://api.debank.com/project/portfolios/user_list?id=';
 
-	public static function protocols(){
+	public static function protocols($force_to_get = false){
 		$m_protocols = Helper::load('Protocols');
-		$has_today_done = $m_protocols->has_today_done();
-		if($has_today_done){
-			Logger::log("Protocols are already fetched today");
-			return;
+
+		if(!$force_to_get){
+			$has_today_done = $m_protocols->has_today_done();
+			if($has_today_done){
+				Logger::log("Protocols are already fetched today");
+				return;
+			}
 		}
 
 		$protocols = file_get_contents(self::DEFI_URL_PROTOCOLS);
@@ -34,12 +37,15 @@ class Crawler {
 		return true;
 	}
 
-	public static function charts(){
+	public static function charts($force_to_get = false){
 		$m_chart = Helper::load('Chart');
-		$has_today_done = $m_chart->has_today_done();
-		if($has_today_done){
-			Logger::log("Charts are already fetched today");
-			return;
+
+		if(!$force_to_get){
+			$has_today_done = $m_chart->has_today_done();
+			if($has_today_done){
+				Logger::log("Charts are already fetched today");
+				return;
+			}
 		}
 
 		$charts = file_get_contents(self::DEFI_URL_CHARTS);
