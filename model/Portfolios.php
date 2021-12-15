@@ -7,6 +7,10 @@ class M_Portfolios extends Model {
         parent::__construct();
     }
 
+    public function convert_slug($slug){
+        return str_replace(" ", "_", strtolower($slug));
+    }
+
     public function save($slug, $portfolios){
         $portfolios = json_decode($portfolios, true);
         if($portfolios['data']['user_list']){
