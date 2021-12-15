@@ -13,7 +13,7 @@ class M_Portfolios extends Model {
             foreach($portfolios['data']['user_list'] as $val){
                 $val['slug']     = $slug;
                 $val['add_time'] = time();
-                $porvaltfolios['add_date'] = date('Y-m-d H:i:s');
+                $val['add_date'] = date('Y-m-d H:i:s');
                 $this->Insert($val);
             }
         }
