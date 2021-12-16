@@ -39,10 +39,6 @@ class Crawler {
 		if($protocols){
 			$protocols = json_decode($protocols, true);
 			$m_protocols->save($protocols);
-
-			// Save today chains
-			$m_chains = Helper::load('Chains');
-			$m_chains->save($m_protocols);
 		}
 
 		return "DONE";
@@ -157,6 +153,26 @@ class Crawler {
 			$m_chart->save($charts);
 		}
 
+		return "DONE";;
+	}
+
+	public static function chains($reget = false){
+		$m_protocols = Helper::load('Protocols');
+		$m_chains = Helper::load('Chains');
+
+		if(!$reget){
+			$has_today_done = $m_chains->has_today_done();
+			if($has_today_done){
+				$error = "Chains are already fetched today";
+				Logger::log($error);
+				return $error;
+			}
+		}else{
+			// Remove today's data
+			$m_chains->remove_today_data();
+		}
+
+		$m_chains->save($m_protocols);
 		return "DONE";;
 	}
 

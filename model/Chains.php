@@ -7,6 +7,24 @@ class M_Chains extends Model {
         parent::__construct();
     }
 
+    // 今天是否抓取过了
+    public function has_today_done(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $data = $this->Where($where)->SelectOne();
+        if($data){
+            return true;
+        }
+
+        return false;
+    }
+
+    public function remove_today_data(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $this->Where($where)->Delete();
+    }
+
     public function save($m_protocols){
         $chains = $m_protocols->get_today_chains();
 
@@ -14,6 +32,7 @@ class M_Chains extends Model {
         if($chains){
             foreach($chains as $chain){
                 foreach($chain as $key => $val){
+                    Logger::info("Val => ".$val);
                     if(!in_array($val, $final_chains)){
                         $final_chains[] = $val;
                     }
@@ -29,6 +48,8 @@ class M_Chains extends Model {
                 }
             }
         }
+
+        return true;
     }
 
 }
