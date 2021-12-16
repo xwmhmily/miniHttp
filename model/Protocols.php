@@ -57,7 +57,7 @@ class M_Protocols extends Model {
     }
 
     public function get_today_chains(){
-        $sql = "SELECT distinct(chains) FROM ".TB_PREFIX."_protocols WHERE add_date = '".date('Y-m-d')."'";
+        $sql = "SELECT distinct(chains) FROM ".TB_PREFIX."protocols WHERE add_date = '".date('Y-m-d')."'";
         return $this->Query($sql);
     }
 
