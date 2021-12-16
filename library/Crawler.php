@@ -45,9 +45,9 @@ class Crawler {
 	}
 
 	public static function portfolios($reget = false){
-		$m_protocols  = Helper::load('Protocols');
-		$m_portfolios = Helper::load('Portfolios');
 		$m_slug = Helper::load('Slug');
+		$m_protocols     = Helper::load('Protocols');
+		$m_portfolios    = Helper::load('Portfolios');
 		$m_contract_call = Helper::load('Contract_call');
 		$m_contract_user = Helper::load('Contract_user');
 
