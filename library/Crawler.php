@@ -7,7 +7,7 @@ class Crawler {
 
 	const DEFI_URL_PROTOCOLS        = 'https://api.llama.fi/protocols';
 
-	const DEFI_URL_PROTOCOL_DETAIL  = "https://api.llama.fi/protocol";
+	const DEFI_URL_PROTOCOL_DETAIL  = "https://api.llama.fi/protocol/";
 
 	const DEFI_URL_PROTOCOL_SLUG    = 'https://api.llama.fi/protocol/';
 
