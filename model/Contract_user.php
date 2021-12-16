@@ -7,6 +7,12 @@ class M_Contract_user extends Model {
         parent::__construct();
     }
 
+    public function remove_today_data(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        $this->Where($where)->Delete();
+    }
+
     public function save($slug, $data){
         $data = json_decode($data, true);
         if(!$data || !isset($data['data'])){

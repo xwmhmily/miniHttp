@@ -47,6 +47,9 @@ class Crawler {
 	public static function portfolios($reget = false){
 		$m_protocols  = Helper::load('Protocols');
 		$m_portfolios = Helper::load('Portfolios');
+		$m_slug = Helper::load('Slug');
+		$m_contract_call = Helper::load('Contract_call');
+		$m_contract_user = Helper::load('Contract_user');
 
 		if(!$reget){
 			$has_today_done = $m_portfolios->has_today_done();
@@ -58,6 +61,8 @@ class Crawler {
 		}else{
 			// Remove today's data
 			$m_portfolios->remove_today_data();
+			$m_contract_call->remove_today_data();
+			$m_contract_user->remove_today_data();
 		}
 
 		$slugs = $m_protocols->get_all_slugs();
@@ -67,13 +72,13 @@ class Crawler {
 			$original_name = $slug['name'];
 			$slug = convert_slug($slug['name']);
 			// 无则写入, 有则更新
-			self::detail($original_name, $slug);
+			self::detail($m_slug, $original_name, $slug);
 
 			// 每天写入新的
-			self::contract_call($slug);
+			self::contract_call($m_contract_call, $slug);
 
 			// 每天写入新的
-			self::contract_user($slug);
+			self::contract_user($m_contract_user, $slug);
 
 			// 每天写入新的
 			self::get_portfolios($m_portfolios, $slug);
@@ -88,11 +93,10 @@ class Crawler {
 		return true;
 	}
 
-	private static function detail($original_name, $slug){
+	private static function detail($m_slug, $original_name, $slug){
 		Logger::log('Slug => '.$slug.', detail URL => '.self::DEBANK_URL_DETAIL.$slug);
 		$detail = file_get_contents(self::DEBANK_URL_DETAIL.$slug);
 		if($detail){
-			$m_slug = Helper::load('Slug');
 			$m_slug->save($original_name, $detail);
 		}
 
@@ -109,22 +113,20 @@ class Crawler {
 		return true;
 	}
 
-	private static function contract_call($slug){
+	private static function contract_call($m_contract_call, $slug){
 		Logger::log('Slug => '.$slug.', call URL => '.self::DEBANK_URL_CONTRACT_CALL.$slug);
 		$contract_call = file_get_contents(self::DEBANK_URL_CONTRACT_CALL.$slug);
 		if($contract_call){
-			$m_contract_call = Helper::load('Contract_call');
 			$m_contract_call->save($slug, $contract_call);
 		}
 
 		return true;
 	}
 
-	private static function contract_user($slug){
+	private static function contract_user($m_contract_user, $slug){
 		Logger::log('Slug => '.$slug.', user URL => '.self::DEBANK_URL_CONTRACT_USER.$slug);
 		$contract_user = file_get_contents(self::DEBANK_URL_CONTRACT_USER.$slug);
 		if($contract_user){
-			$m_contract_user = Helper::load('Contract_user');
 			$m_contract_user->save($slug, $contract_user);
 		}
 
