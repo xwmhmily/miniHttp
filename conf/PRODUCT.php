@@ -5,7 +5,7 @@ $config = [
 		'app_name'      => 'Mini_Http',
 		'app_version'   => '2.0',
 		'tb_pk'         => 'id',
-		'tb_prefix'     => 'sl_',
+		'tb_prefix'     => 'df_',
 		'tb_suffix_sf'  => '_',
 		'stat_file'     => APP_PATH.'/log/swoole.stat',
 	],
@@ -48,21 +48,21 @@ $config = [
 
 	'mysql' => [
 		'required' => true,
-		'db'   => 'test',
-		'host' => '127.0.0.1',
+		'db'   => 'defi',
+		'host' => '172.28.67.108',
 		'port' => 3306,
-		'user' => 'root',
-		'pwd'  => '123456789',
-		'max'  => 3,
+		'user' => 'ec_stock',
+		'pwd'  => 'wTmANN2wbANBp@2101',
+		'max'  => 2,
 		'log_sql' => true,
 	],
 	
 	'redis' => [
-		'required' => true,
+		'required' => false,
 		'db'   => '0',
 		'host' => '127.0.0.1',
 		'port' => 6379,
-		'pwd'  => '123456789',
+		'pwd'  => '123456',
 	],
 
 	'process' => [
