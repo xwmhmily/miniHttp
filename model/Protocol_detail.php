@@ -35,7 +35,7 @@ class M_Protocol_detail extends Model {
                 $i['slug']  = $original_name;
                 $i['chain'] = $key;
                 $i['key']   = $k;
-                $i['data'] = $v;
+                $i['data']  = json_encode($v);
                 $i['add_date'] = date('Y-m-d');
                 $this->Insert($i);
             }
