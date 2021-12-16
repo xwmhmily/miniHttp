@@ -14,7 +14,9 @@ class M_Contract_call extends Model {
         }
 
         $data = format_array_data_to_json($data['data']);
-        $data['slug'] = $slug;
+        $data['slug']     = $slug;
+        $data['add_time'] = time();
+        $data['add_date'] = date('Y-m-d');
         return $this->Insert($data);
     }
 
