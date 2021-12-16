@@ -5,15 +5,15 @@
 
 class Crawler {
 
-	const DEFI_URL_PROTOCOLS = 'https://api.llama.fi/protocols';
+	const DEFI_URL_PROTOCOLS       = 'https://api.llama.fi/protocols';
 
-	const DEFI_URL_PROTOCOL_SLUG = 'https://api.llama.fi/protocol/';
+	const DEFI_URL_PROTOCOL_SLUG   = 'https://api.llama.fi/protocol/';
 
-	const DEFI_URL_CHARTS = 'https://api.llama.fi/charts';
+	const DEFI_URL_CHARTS          = 'https://api.llama.fi/charts';
 
-	const DEBANK_URL_DETAIL = 'https://api.debank.com/project/v2/detail?id=';
+	const DEBANK_URL_DETAIL        = 'https://api.debank.com/project/v2/detail?id=';
 
-	const DEBANK_URL_PORTFOLIOS = 'https://api.debank.com/project/portfolios/user_list?id=';
+	const DEBANK_URL_PORTFOLIOS    = 'https://api.debank.com/project/portfolios/user_list?id=';
 
 	const DEBANK_URL_CONTRACT_CALL = 'https://api.debank.com/project/chart?type=contract_call&id=';
 
@@ -39,6 +39,10 @@ class Crawler {
 		if($protocols){
 			$protocols = json_decode($protocols, true);
 			$m_protocols->save($protocols);
+
+			// Save today chains
+			$m_chains = Helper::load('Chains');
+			$m_chains->save($m_protocols);
 		}
 
 		return "DONE";
