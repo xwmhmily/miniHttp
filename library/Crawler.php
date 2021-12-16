@@ -65,7 +65,7 @@ class Crawler {
 			$m_contract_user->remove_today_data();
 		}
 
-		$slugs = $m_protocols->get_all_slugs();
+		$slugs = $m_protocols->get_today_slugs();
 
 		foreach($slugs as $slug){
 			$i = 0;

@@ -9,8 +9,8 @@ class M_Protocols extends Model {
         parent::__construct();
     }
 
-    public function get_all_slugs(){
-        return $this->Field('name')->Where('status', '=', 1)->Select();
+    public function get_today_slugs(){
+        return $this->Field('name')->Where('status', '=', 1)->Where('add_date', '=', date('Y-m-d'))->Select();
     }
 
     public function disable($original_name){
