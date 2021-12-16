@@ -19,6 +19,7 @@ class Crawler {
 
 	const DEBANK_URL_CONTRACT_USER = 'https://api.debank.com/project/chart?type=contract_user&id=';
 
+	// 每天都写入新的
 	public static function protocols($reget = false){
 		$m_protocols = Helper::load('Protocols');
 
@@ -64,9 +65,16 @@ class Crawler {
 		foreach($slugs as $slug){
 			$i = 0;
 			$slug = convert_slug($slug['name']);
+			// 无则写入, 有则更新
 			self::detail($slug);
+
+			// 每天写入新的
 			self::contract_call($slug);
+
+			// 每天写入新的
 			self::contract_user($slug);
+
+			// 每天写入新的
 			self::get_portfolios($m_portfolios, $slug);
 
 			$i++;

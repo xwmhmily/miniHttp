@@ -14,16 +14,8 @@ class M_Contract_user extends Model {
         }
         
         $data = format_array_data_to_json($data['data']);
-
-        $where = [];
-        $where['slug'] = $slug;
-        $exists = $this->Where($where)->Total();
-        if($exists){
-            return $this->Where($where)->Update($data);
-        }else{
-            $data['slug'] = $slug;
-            return $this->Insert($data);
-        }
+        $data['slug'] = $slug;
+        return $this->Insert($data);
     }
 
 }
