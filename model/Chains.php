@@ -31,7 +31,7 @@ class M_Chains extends Model {
         $final_chains = [];
         if($chains){
             foreach($chains as $chain){
-                foreach($chain as $key => $val){
+                foreach($chain as $val){
                     $val = json_decode($val, true);
                     foreach($val as $v){
                         if(!in_array($v, $final_chains)){

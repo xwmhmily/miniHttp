@@ -5,19 +5,21 @@
 
 class Crawler {
 
-	const DEFI_URL_PROTOCOLS       = 'https://api.llama.fi/protocols';
+	const DEFI_URL_PROTOCOLS        = 'https://api.llama.fi/protocols';
 
-	const DEFI_URL_PROTOCOL_SLUG   = 'https://api.llama.fi/protocol/';
+	const DEFI_URL_PROTOCOL_DETAIL  = "https://api.llama.fi/protocol";
 
-	const DEFI_URL_CHARTS          = 'https://api.llama.fi/charts';
+	const DEFI_URL_PROTOCOL_SLUG    = 'https://api.llama.fi/protocol/';
 
-	const DEBANK_URL_DETAIL        = 'https://api.debank.com/project/v2/detail?id=';
+	const DEFI_URL_CHARTS           = 'https://api.llama.fi/charts';
 
-	const DEBANK_URL_PORTFOLIOS    = 'https://api.debank.com/project/portfolios/user_list?id=';
+	const DEBANK_URL_DETAIL         = 'https://api.debank.com/project/v2/detail?id=';
 
-	const DEBANK_URL_CONTRACT_CALL = 'https://api.debank.com/project/chart?type=contract_call&id=';
+	const DEBANK_URL_PORTFOLIOS     = 'https://api.debank.com/project/portfolios/user_list?id=';
 
-	const DEBANK_URL_CONTRACT_USER = 'https://api.debank.com/project/chart?type=contract_user&id=';
+	const DEBANK_URL_CONTRACT_CALL  = 'https://api.debank.com/project/chart?type=contract_call&id=';
+
+	const DEBANK_URL_CONTRACT_USER  = 'https://api.debank.com/project/chart?type=contract_user&id=';
 
 	// 每天都写入新的
 	public static function protocols($reget = false){
@@ -39,6 +41,36 @@ class Crawler {
 		if($protocols){
 			$protocols = json_decode($protocols, true);
 			$m_protocols->save($protocols);
+		}
+
+		return "DONE";
+	}
+
+	// 每天都写入新的
+	public static function protocol_detail($reget = false){
+		$m_protocols_detail = Helper::load('Protocol_detail');
+
+		if(!$reget){
+			$has_today_done = $m_protocols_detail->has_today_done();
+			if($has_today_done){
+				$error = "Protocol detail are already fetched today";
+				Logger::log($error);
+				return $error;
+			}
+		}else{
+			// Remove today's data
+			$m_protocols_detail->remove_today_data();
+		}
+
+		$m_protocols = Helper::load('Protocols');
+		$slugs = $m_protocols->get_today_slugs();
+		foreach($slugs as $slug){
+			$original_name = $slug['name'];
+			$slug = convert_slug($original_name);
+			$data = file_get_contents(self::DEFI_URL_PROTOCOL_DETAIL.$slug);
+			if($data){
+				$m_protocols_detail->save($original_name, $data);
+			}
 		}
 
 		return "DONE";
@@ -70,7 +102,7 @@ class Crawler {
 		foreach($slugs as $slug){
 			$i = 0;
 			$original_name = $slug['name'];
-			$slug = convert_slug($slug['name']);
+			$slug = convert_slug($original_name);
 			// 无则写入, 有则更新
 			self::detail($m_slug, $original_name, $slug);
 
