@@ -64,9 +64,10 @@ class Crawler {
 
 		foreach($slugs as $slug){
 			$i = 0;
+			$original_name = $slug['name'];
 			$slug = convert_slug($slug['name']);
 			// 无则写入, 有则更新
-			self::detail($slug);
+			self::detail($original_name, $slug);
 
 			// 每天写入新的
 			self::contract_call($slug);
@@ -87,12 +88,12 @@ class Crawler {
 		return true;
 	}
 
-	private static function detail($slug){
+	private static function detail($original_name, $slug){
 		Logger::log('Slug => '.$slug.', detail URL => '.self::DEBANK_URL_DETAIL.$slug);
 		$detail = file_get_contents(self::DEBANK_URL_DETAIL.$slug);
 		if($detail){
 			$m_slug = Helper::load('Slug');
-			$m_slug->save($detail);
+			$m_slug->save($original_name, $detail);
 		}
 
 		return true;

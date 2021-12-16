@@ -7,9 +7,11 @@ class M_Slug extends Model {
         parent::__construct();
     }
 
-    public function save($detail){
+    public function save($original_name, $detail){
         $detail = json_decode($detail, true);
         if(!$detail || !isset($detail['data'])){
+            $m_protocol = Helper::load('Protocols');
+            $m_protocol->disable($original_name);
             return;
         }
 

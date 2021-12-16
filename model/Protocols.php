@@ -10,7 +10,14 @@ class M_Protocols extends Model {
     }
 
     public function get_all_slugs(){
-        return $this->Field('name')->Select();
+        return $this->Field('name')->Where('status', '=', 1)->Select();
+    }
+
+    public function disable($original_name){
+        $where = $update = [];
+        $where['name'] = $original_name;
+        $update['status'] = 0;
+        return $this->Where($where)->Update($update);
     }
 
     // 今天是否抓取过了
