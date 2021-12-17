@@ -25,10 +25,26 @@ class M_Slug extends Model {
         $where['name'] = $slug;
         $exists = $this->where($where)->SelectOne();
         if($exists){
+            unset($data['logo_url']);
             return $this->Where($where)->update($data);
         }else{
+            $data['logo_url'] = $this->save_logo($data['logo_url']);
             return $this->Insert($data);
         }
+    }
+
+    private function save_logo($logo_url){
+        $save_path = APP_PATH.'/public/image';
+        $image_data = file_get_contents($logo_url);
+        if($image_data){
+            $image_name = get_image_name_via_url($logo_url);
+            $retval = file_put_contents($save_path.'/'.$image_name, $image_data);
+            if($retval){
+                return $image_data;
+            }
+        }
+
+        return null;
     }
 
 }

@@ -40,3 +40,12 @@ function format_array_data_to_json($data){
 
 	return $data;
 }
+
+function get_image_name_via_url($url){
+	$data = explode("/", $url);
+	if($data){
+		return $data[sizeof($data) - 1];
+	}else{
+		return null;
+	}
+}

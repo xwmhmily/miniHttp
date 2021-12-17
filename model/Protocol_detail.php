@@ -27,17 +27,23 @@ class M_Protocol_detail extends Model {
 
         $data = $data['chainTvls'];
         foreach($data as $key => $val){
+            if(!$val) continue;
+
             // key: Avalanche, Harmony, Ethereum
             // val & k: tvl, tokensInUsd, tokens
             foreach($val as $k => $v){
+                if(!$v) continue;
+
                 // $v = json_decode($v, true);
-                $i = [];
-                $i['slug']  = $original_name;
-                $i['chain'] = $key;
-                $i['key']   = $k;
-                $i['data']  = json_encode($v);
-                $i['add_date'] = date('Y-m-d');
-                $this->Insert($i);
+                foreach($v as $kk => $vv){
+                    $i = [];
+                    $i['slug']  = $original_name;
+                    $i['chain'] = $key;
+                    $i['key']   = $k;
+                    $i['data']  = json_encode($v);
+                    $i['add_date'] = date('Y-m-d');
+                    $this->Insert($i);
+                }
             }
         }
 
