@@ -56,14 +56,17 @@ class M_Protocol_detail extends Model {
                         }
                     }else if($k == self::KEY_TOKEN_IN_USD){
                         foreach($v as $token_key => $token_val){
-                            if($token_key == 'date'){
-                                $i['date'] = $token_val;
-                            }else{
-                                //$token_arr = json_decode($token_val, true);
-                                foreach($token_val as $tk => $tv){
-                                    $i['key'] = $tk;
-                                    $i['num'] = $tv;
-                                    $this->Insert($i);
+                            foreach($token_val as $tk => $tv){
+                                if($tk == 'date'){
+                                    $i['date'] = $tv;
+                                }else{
+                                    if($tv){
+                                        foreach($tv as $kkk => $vvv){
+                                            $i['key'] = $kkk;
+                                            $i['num'] = $vvv;
+                                            $this->Insert($i);
+                                        }
+                                    }
                                 }
                             }
                         }
