@@ -41,6 +41,7 @@ class M_Protocol_detail extends Model {
             // key: Avalanche, Harmony, Ethereum => chain
             // k: tvl, tokensInUsd, tokens => currency
             foreach($val as $k => $v){
+                Logger::info('K => '.$k);
                 if(!$v) continue;
 
                 $i['currency'] = $k;
