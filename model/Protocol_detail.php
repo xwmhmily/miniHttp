@@ -33,6 +33,8 @@ class M_Protocol_detail extends Model {
         foreach($data as $key => $val){
             if(!$val) continue;
 
+            Logger::info('Key => '.$key);
+
             $i = [];
             $i['chain']    = $key;
             $i['slug']     = $original_name;
