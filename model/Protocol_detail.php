@@ -73,8 +73,8 @@ class M_Protocol_detail extends Model {
                                 $i['date'] = $token_val;
                             }else{
                                 // tokens
-                                $token_arr = json_decode($token_val, true);
-                                foreach($token_arr as $tk => $tv){
+                                // $token_arr = json_decode($token_val, true);
+                                foreach($token_val as $tk => $tv){
                                     $i['key'] = $tk;
                                     $i['num'] = $tv;
                                     $this->Insert($i);
