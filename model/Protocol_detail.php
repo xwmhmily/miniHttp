@@ -79,6 +79,8 @@ class M_Protocol_detail extends Model {
                                     $i['num'] = $tv;
                                     $this->Insert($i);
                                 }
+
+                                return true;
                             }
                         }
                     }
