@@ -69,10 +69,10 @@ class M_Protocol_detail extends Model {
                         // }
                     }else if($k == self::KEY_TOKENS){
                         foreach($v as $token_key => $token_val){
-                            Logger::info("token_key => ", $token_key);
-                            Logger::info("token_val => ", $token_val);
-                            Logger::info("token_key_encode => ", json_encode($token_key, 256));
-                            Logger::info("token_val_encode => ", json_encode($token_val, 256));
+                            Logger::info("token_key => ".$token_key);
+                            Logger::info("token_val => ".$token_val);
+                            Logger::info("token_key_encode => ".json_encode($token_key, 256));
+                            Logger::info("token_val_encode => ".json_encode($token_val, 256));
                             // if($token_key == 'date'){
                             //     $i['date'] = $token_val;
                             // }else{
