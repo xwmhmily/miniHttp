@@ -48,6 +48,7 @@ class M_Protocol_detail extends Model {
                 if(is_array($v)){
                     if($k == self::KEY_TVL){
                         foreach($v as $tvl_key => $tvl_val){
+                            $i['key']  = '';
                             $i['date'] = $tvl_val['date'];
                             $i['num']  = $tvl_val['totalLiquidityUSD'];
                             $this->Insert($i);
