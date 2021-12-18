@@ -69,14 +69,13 @@ class M_Protocol_detail extends Model {
                         // }
                     }else if($k == self::KEY_TOKENS){
                         foreach($v as $token_key => $token_val){
+                            Logger::info("token_val => ", json_encode($token_val, 256));
                             if($token_key == 'date'){
                                 $i['date'] = $token_val;
                             }else{
                                 // tokens
                                 // $token_arr = json_decode($token_val, true);
                                 foreach($token_val as $tk => $tv){
-                                    Logger::info("TK => ", json_encode($tk, 256));
-                                    Logger::info("TV => ", json_encode($tv, 256));
                                     $i['key'] = $tk;
                                     $i['num'] = $tv;
                                     $this->Insert($i);
