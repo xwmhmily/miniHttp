@@ -23,11 +23,14 @@ class M_Protocol_detail extends Model {
         return false;
     }
 
+    // TO-DO: 优化只抓取昨天的数据
     public function save($original_name, $data){
         $data = json_decode($data, true);
         if(!$data || !isset($data['chainTvls'])){
             return;
         }
+
+        $date_of_yesterday = date('Y-m-d', strtotime('Y-m-d') - 86400);
 
         $data = $data['chainTvls'];
         foreach($data as $key => $val){
@@ -51,6 +54,9 @@ class M_Protocol_detail extends Model {
                 if(is_array($v)){
                     if($k == self::KEY_TVL){
                         foreach($v as $tvl_val){
+                            $date_of_val = date('Y-m-d', $tvl_val['date']);
+                            if($date_of_val != $date_of_yesterday) continue;
+
                             $i['key']  = '';
                             $i['date'] = $tvl_val['date'];
                             $i['num']  = $tvl_val['totalLiquidityUSD'];
@@ -61,6 +67,9 @@ class M_Protocol_detail extends Model {
                             foreach($token_val as $tk => $tv){
                                 if($tk == 'date'){
                                     $i['date'] = $tv;
+
+                                    $date_of_val = date('Y-m-d', $tv);
+                                    if($date_of_val != $date_of_yesterday) continue;
                                 }else{
                                     if($tv){
                                         foreach($tv as $kkk => $vvv){
@@ -77,6 +86,8 @@ class M_Protocol_detail extends Model {
                             foreach($token_val as $tk => $tv){
                                 if($tk == 'date'){
                                     $i['date'] = $tv;
+                                    $date_of_val = date('Y-m-d', $tv);
+                                    if($date_of_val != $date_of_yesterday) continue;
                                 }else{
                                     if($tv){
                                         foreach($tv as $kkk => $vvv){
