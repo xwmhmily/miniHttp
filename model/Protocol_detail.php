@@ -48,25 +48,25 @@ class M_Protocol_detail extends Model {
 
                 if(is_array($v)){
                     if($k == self::KEY_TVL){
-                        // foreach($v as $tvl_key => $tvl_val){
-                        //     $i['key']  = '';
-                        //     $i['date'] = $tvl_val['date'];
-                        //     $i['num']  = $tvl_val['totalLiquidityUSD'];
-                        //     $this->Insert($i);
-                        // }
+                        foreach($v as $tvl_key => $tvl_val){
+                            $i['key']  = '';
+                            $i['date'] = $tvl_val['date'];
+                            $i['num']  = $tvl_val['totalLiquidityUSD'];
+                            $this->Insert($i);
+                        }
                     }else if($k == self::KEY_TOKEN_IN_USD){
-                        // foreach($v as $token_key => $token_val){
-                        //     if($token_key == 'date'){
-                        //         $i['date'] = $token_val;
-                        //     }else{
-                        //         //$token_arr = json_decode($token_val, true);
-                        //         foreach($token_val as $tk => $tv){
-                        //             $i['key'] = $tk;
-                        //             $i['num'] = $tv;
-                        //             $this->Insert($i);
-                        //         }
-                        //     }
-                        // }
+                        foreach($v as $token_key => $token_val){
+                            if($token_key == 'date'){
+                                $i['date'] = $token_val;
+                            }else{
+                                //$token_arr = json_decode($token_val, true);
+                                foreach($token_val as $tk => $tv){
+                                    $i['key'] = $tk;
+                                    $i['num'] = $tv;
+                                    $this->Insert($i);
+                                }
+                            }
+                        }
                     }else if($k == self::KEY_TOKENS){
                         foreach($v as $token_key => $token_val){
                             foreach($token_val as $tk => $tv){
