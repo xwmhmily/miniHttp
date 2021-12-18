@@ -13,6 +13,10 @@ class M_Protocols extends Model {
         return $this->Field('name')->Where('status', '=', 1)->Where('add_date', '=', date('Y-m-d'))->Select();
     }
 
+    public function get_today_slugs_with_curve(){
+        return $this->Field('name')->Where('name', '=', 'curve')->Select();
+    }
+
     public function disable($original_name){
         $where = $update = [];
         $where['name'] = $original_name;

@@ -63,7 +63,8 @@ class Crawler {
 		}
 
 		$m_protocols = Helper::load('Protocols');
-		$slugs = $m_protocols->get_today_slugs();
+		//$slugs = $m_protocols->get_today_slugs();
+		$slugs = $m_protocols->get_today_slugs_with_curve();
 		foreach($slugs as $slug){
 			$original_name = $slug['name'];
 			$slug = convert_slug($original_name);

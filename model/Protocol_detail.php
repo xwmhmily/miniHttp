@@ -1,6 +1,10 @@
 <?php
 
 class M_Protocol_detail extends Model {
+
+    const KEY_TVL          = 'tvl';
+    const KEY_TOKENS       = 'tokens';
+    const KEY_TOKEN_IN_USD = 'tokensInUsd';
     
     function __construct(){
         $this->table = TB_PREFIX.'protocol_detail';
@@ -29,20 +33,51 @@ class M_Protocol_detail extends Model {
         foreach($data as $key => $val){
             if(!$val) continue;
 
-            // key: Avalanche, Harmony, Ethereum
-            // val & k: tvl, tokensInUsd, tokens
+            $i = [];
+            $i['chain']    = $key;
+            $i['slug']     = $original_name;
+            $i['add_date'] = date('Y-m-d');
+
+            // key: Avalanche, Harmony, Ethereum => chain
+            // k: tvl, tokensInUsd, tokens => currency
             foreach($val as $k => $v){
                 if(!$v) continue;
 
-                // $v = json_decode($v, true);
-                foreach($v as $kk => $vv){
-                    $i = [];
-                    $i['slug']  = $original_name;
-                    $i['chain'] = $key;
-                    $i['key']   = $k;
-                    $i['data']  = json_encode($v);
-                    $i['add_date'] = date('Y-m-d');
-                    $this->Insert($i);
+                $i['currency'] = $k;
+
+                if(is_array($v)){
+                    if($k == self::KEY_TVL){
+                        $i['date'] = $v['date'];
+                        $i['num']  = $v['totalLiquidityUSD'];
+                        $this->Insert($i);
+                    }else if($k == self::KEY_TOKEN_IN_USD){
+                        foreach($v as $token_key => $token_val){
+                            if($token_key == 'date'){
+                                $i['date'] = $token_val;
+                            }else{
+                                $token_arr = json_decode($token_val, true);
+                                foreach($token_arr as $tk => $tv){
+                                    $i['key'] = $tk;
+                                    $i['num'] = $tv;
+                                    $this->Insert($i);
+                                }
+                            }
+                        }
+                    }else if($k == self::KEY_TOKENS){
+                        foreach($v as $token_key => $token_val){
+                            if($token_key == 'date'){
+                                $i['date'] = $token_val;
+                            }else{
+                                // tokens
+                                $token_arr = json_decode($token_val, true);
+                                foreach($token_arr as $tk => $tv){
+                                    $i['key'] = $tk;
+                                    $i['num'] = $tv;
+                                    $this->Insert($i);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
