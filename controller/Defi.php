@@ -12,8 +12,8 @@ class C_Defi extends Controller {
         $this->m_protocols = $this->load('Protocols');
     }
 
-    public function dasbhoard(){
-        return JSON($this->m_protocols->dasbhoard());
+    public function dashboard(){
+        return JSON($this->m_protocols->dashboard());
     }
 
     public function protocols(){

@@ -71,7 +71,7 @@ class M_Protocols extends Model {
         $this->Where($where)->Delete();
     }
 
-    public function dasbhoard(){
+    public function dashboard(){
         $retval = [];
         $retval['tvl'] = $this->get_total_tvl_by_date(date('Y-m-d'));
         $yesterday_tvl = $this->get_total_tvl_by_date(date_of_yesterday());
