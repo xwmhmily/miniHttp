@@ -54,4 +54,10 @@ class M_Chains extends Model {
         return true;
     }
 
+    public function today_chains(){
+        $where = [];
+        $where['add_date'] = date('Y-m-d');
+        return $this->Where($where)->Select();
+    }
+
 }
