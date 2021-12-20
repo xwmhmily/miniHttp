@@ -3,7 +3,7 @@
 class M_Chain_chart extends Model {
     
     function __construct(){
-        $this->table = TB_PREFIX.'chain_chart';
+        $this->table = TB_PREFIX.'chain_charts';
         parent::__construct();
     }
 
