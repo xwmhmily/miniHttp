@@ -95,4 +95,13 @@ class M_Protocols extends Model {
         return $data['total'];
     }
 
+    public function get_protocols_by_chain($chain){
+        $sql = "SELECT id, name, symbol, tvl, chains, chainTvls, change_1h, change_1d, change_7d, mcap";
+        if($chain){
+            $sql .= " WHERE FIND_IN_SET(chains, '".$chain."')";
+        }
+
+        return $this->Query($sql);
+    }
+
 }
