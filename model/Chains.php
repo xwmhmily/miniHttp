@@ -64,9 +64,9 @@ class M_Chains extends Model {
             foreach($data as $val){
                 $chains[] = $val['name'];
             }
-
-            return $chains;
         }
+
+        return $chains;
     }
 
 }
