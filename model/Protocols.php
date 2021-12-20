@@ -98,7 +98,7 @@ class M_Protocols extends Model {
     public function get_protocols_by_chain($chain, $page){
         $sql = "SELECT id, name, symbol, tvl, chains, chainTvls, change_1h, change_1d, change_7d, mcap FROM ".TB_PREFIX."protocols WHERE add_date= '".date('Y-m-d')."'";
         if($chain){
-            $sql .= " AND FIND_IN_SET(chains, '".$chain."')";
+            $sql .= " AND chains LIKE '%".$chain."%')";
         }
 
         $sql .= " ORDER BY mcap DESC, tvl DESC";
