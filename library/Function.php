@@ -55,9 +55,9 @@ function date_of_yesterday(){
 }
 
 function calc_24h_change($tvl1, $tvl2){
-	return (round((($tvl1 - $tvl2) / $tvl2), 2) * 100).'%';
+	return (round((($tvl1 - $tvl2) / $tvl2), 4) * 100)."%";
 }
 
 function calc_dominance($tvl1, $tvl2){
-	return (round(($tvl2 / $tvl1), 2) * 100).'%';
+	return (round(($tvl2 / $tvl1), 4) * 100).'%';
 }
