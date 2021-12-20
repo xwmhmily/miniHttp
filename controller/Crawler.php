@@ -26,4 +26,9 @@ class C_Crawler extends Controller {
         $reget = $this->getParam('reget');
         return Crawler::chains($reget);
     }
+
+    public function chain_chart(){
+        $reget = $this->getParam('reget');
+        return Crawler::chain_chart($reget);
+    }
 }

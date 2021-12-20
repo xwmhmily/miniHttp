@@ -13,6 +13,8 @@ class Crawler {
 
 	const DEFI_URL_CHARTS           = 'https://api.llama.fi/charts';
 
+	const DEFI_URL_CHAIN_CHARTS     = 'https://api.llama.fi/charts/';
+
 	const DEBANK_URL_DETAIL         = 'https://api.debank.com/project/v2/detail?id=';
 
 	const DEBANK_URL_PORTFOLIOS     = 'https://api.debank.com/project/portfolios/user_list?id=';
@@ -206,6 +208,35 @@ class Crawler {
 		}
 
 		$m_chains->save($m_protocols);
+		return "DONE";;
+	}
+
+	public static function chain_chart($reget = false){
+		$m_chain_chart = Helper::load('Chain_chart');
+
+		if(!$reget){
+			$has_today_done = $m_chain_chart->has_today_done();
+			if($has_today_done){
+				$error = "Chain charts are already fetched today";
+				Logger::log($error);
+				return $error;
+			}
+		}else{
+			// Remove today's data
+			$m_chain_chart->remove_today_data();
+		}
+
+		$m_chain = Helper::load('Chain');
+		$chains = $m_chain->get_chains_by_date(date('Y-m-d'));
+		if($chains){
+			foreach($chains as $chain){
+				$charts = file_get_contents(self::DEFI_URL_CHAIN_CHARTS.$chain);
+				if($charts){
+					$m_chain_chart->save($charts);
+				}
+			}
+		}
+
 		return "DONE";;
 	}
 
