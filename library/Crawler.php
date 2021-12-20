@@ -231,10 +231,10 @@ class Crawler {
 		if($chains){
 			foreach($chains as $chain){
 				Logger::log('Chain => '.$chain);
-				$charts = file_get_contents(self::DEFI_URL_CHAIN_CHARTS.$chain);
-				if($charts){
-					$m_chain_chart->save($charts);
-				}
+				// $charts = file_get_contents(self::DEFI_URL_CHAIN_CHARTS.$chain);
+				// if($charts){
+				// 	$m_chain_chart->save($charts);
+				// }
 			}
 		}
 
