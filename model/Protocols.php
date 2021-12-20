@@ -95,13 +95,17 @@ class M_Protocols extends Model {
         return $data['total'];
     }
 
-    public function get_protocols_by_chain($chain){
+    public function get_protocols_by_chain($chain, $page){
         $sql = "SELECT id, name, symbol, tvl, chains, chainTvls, change_1h, change_1d, change_7d, mcap FROM ".TB_PREFIX."protocols";
         if($chain){
             $sql .= " WHERE FIND_IN_SET(chains, '".$chain."')";
         }
 
         $sql .= " ORDER BY mcap DESC, tvl DESC";
+        if(!$page) $page = 1;
+        $page_size = 10;
+        $limit_string = ($page - 1) * $page_size;
+        $sql .= " LIMIT ".$limit_string;
         return $this->Query($sql);
     }
 

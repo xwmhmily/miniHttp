@@ -23,8 +23,9 @@ class C_Defi extends Controller {
     }
 
     public function protocols(){
+        $page  = $this->getParam('page');
         $chain = $this->getParam('chain');
-        return JSON($this->m_protocols->get_protocols_by_chain($chain));
+        return JSON($this->m_protocols->get_protocols_by_chain($chain, $page));
     }
 
     public function portfolios(){
