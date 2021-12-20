@@ -19,7 +19,7 @@ class C_Defi extends Controller {
     }
 
     public function chains(){
-        return JSON($this->m_chains->today_chains());
+        return JSON($this->m_chains->get_chains_by_date(date('Y-m-d')));
     }
 
     public function protocols(){
