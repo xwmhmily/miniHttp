@@ -12,6 +12,10 @@ class C_Defi extends Controller {
         $this->m_protocols = $this->load('Protocols');
     }
 
+    public function dasbhoard(){
+        return JSON($this->m_protocols->dasbhoard());
+    }
+
     public function protocols(){
         return JSON($this->m_protocols->Select());
     }
@@ -20,7 +24,7 @@ class C_Defi extends Controller {
         return JSON($this->m_portfolios->Select());
     }
 
-    public function chart(){
+    public function charts(){
         return JSON($this->m_chart->Select());
     }
 }

@@ -71,4 +71,27 @@ class M_Protocols extends Model {
         $this->Where($where)->Delete();
     }
 
+    public function dasbhoard(){
+        $retval = [];
+        $retval['tvl'] = $this->get_total_tvl_by_date(date('Y-m-d'));
+        $yesterday_tvl = $this->get_total_tvl_by_date(date_of_yesterday());
+        $retval['24h_change'] = calc_24h_change($retval['tvl'], $yesterday_tvl);
+        $curve_tvl = $this->get_today_total_tvl_by_protocol('curve');
+        $retval['curve_dominance'] = calc_dominance($retval['tvl'], $curve_tvl);
+
+        return $retval;
+    }
+
+    public function get_today_total_tvl_by_protocol($protocol){
+        $sql = "SELECT sum(tvl) AS total FROM ".TB_PREFIX."protocols WHERE add_date = '".date('Y-m-d')."' AND name = '".$protocol."'";
+        $data = $this->QueryOne($sql);
+        return $data['tvl'];
+    }
+
+    public function get_total_tvl_by_date($date){
+        $sql = "SELECT sum(tvl) AS total FROM ".TB_PREFIX."protocols WHERE add_date = '".$date."'";
+        $data = $this->QueryOne($sql);
+        return $data['tvl'];
+    }
+
 }

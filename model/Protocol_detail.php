@@ -30,7 +30,7 @@ class M_Protocol_detail extends Model {
             return;
         }
 
-        $date_of_yesterday = date('Y-m-d', strtotime('Y-m-d') - 86400);
+        $date_of_yesterday = date_of_yesterday();
 
         $data = $data['chainTvls'];
         foreach($data as $key => $val){

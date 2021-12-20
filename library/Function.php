@@ -49,3 +49,15 @@ function get_image_name_via_url($url){
 		return null;
 	}
 }
+
+function date_of_yesterday(){
+	return date('Y-m-d', strtotime(date('Y-m-d')) - 86400);
+}
+
+function calc_24h_change($tvl1, $tvl2){
+	return ((($tvl2 - $tvl1) / $tvl1) * 100).'%';
+}
+
+function calc_dominance($tvl1, $tvl2){
+	return (($tvl2 / $tvl1) * 100).'%';
+}
