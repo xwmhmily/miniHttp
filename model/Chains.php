@@ -57,7 +57,7 @@ class M_Chains extends Model {
     public function get_chains_by_date($date){
         $where = [];
         $where['add_date'] = $date;
-        return $this->Where($where)->Select();
+        return $this->Field("name")->Where($where)->Select();
     }
 
 }
