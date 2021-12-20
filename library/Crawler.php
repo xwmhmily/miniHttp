@@ -230,6 +230,7 @@ class Crawler {
 		$chains = $m_chain->get_chains_by_date(date('Y-m-d'));
 		if($chains){
 			foreach($chains as $chain){
+				Logger::log('Chain => '.$chain);
 				$charts = file_get_contents(self::DEFI_URL_CHAIN_CHARTS.$chain);
 				if($charts){
 					$m_chain_chart->save($charts);
