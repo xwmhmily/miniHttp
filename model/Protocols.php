@@ -104,8 +104,8 @@ class M_Protocols extends Model {
         $sql .= " ORDER BY mcap DESC, tvl DESC";
         if(!$page) $page = 1;
         $page_size = 10;
-        $limit_string = ($page - 1) * $page_size;
-        $sql .= " LIMIT ".$page_size.",".$limit_string;
+        $start = ($page - 1) * $page_size;
+        $sql .= " LIMIT ".$start.",".$page_size;
         return $this->Query($sql);
     }
 
