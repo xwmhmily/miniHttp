@@ -105,7 +105,7 @@ class M_Protocols extends Model {
         if(!$page) $page = 1;
         $page_size = 10;
         $limit_string = ($page - 1) * $page_size;
-        $sql .= " LIMIT ".$limit_string;
+        $sql .= " LIMIT ".$page_size.",".$limit_string;
         return $this->Query($sql);
     }
 
