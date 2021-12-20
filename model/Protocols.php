@@ -85,15 +85,13 @@ class M_Protocols extends Model {
     public function get_today_total_tvl_by_protocol($protocol){
         $sql = "SELECT sum(tvl) AS total FROM ".TB_PREFIX."protocols WHERE add_date = '".date('Y-m-d')."' AND name = '".$protocol."'";
         $data = $this->QueryOne($sql);
-        Logger::info('data => '.json_encode($data));
-        return $data['tvl'];
+        return $data['total'];
     }
 
     public function get_total_tvl_by_date($date){
         $sql = "SELECT sum(tvl) AS total FROM ".TB_PREFIX."protocols WHERE add_date = '".$date."'";
         $data = $this->QueryOne($sql);
-        Logger::info('data => '.json_encode($data));
-        return $data['tvl'];
+        return $data['total'];
     }
 
 }
