@@ -75,6 +75,10 @@ class M_Protocols extends Model {
         $retval = [];
         $retval['tvl'] = $this->get_total_tvl_by_date(date('Y-m-d'));
         $yesterday_tvl = $this->get_total_tvl_by_date(date_of_yesterday());
+
+        Logger::log('tvl1 => '.$retval['tvl']);
+        Logger::log('tvl2 => '.$yesterday_tvl);
+
         $retval['24h_change'] = calc_24h_change($retval['tvl'], $yesterday_tvl);
         $curve_tvl = $this->get_today_total_tvl_by_protocol('curve');
         $retval['curve_dominance'] = calc_dominance($retval['tvl'], $curve_tvl);
