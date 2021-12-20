@@ -55,6 +55,10 @@ function date_of_yesterday(){
 }
 
 function calc_24h_change($tvl1, $tvl2){
+	Logger::info('tvl1 => '.$tvl1);
+	Logger::info('tvl2 => '.$tvl1);
+	Logger::info('tvl1 - tvl2 => '.($tvl1 - $tvl2));
+	Logger::info('Retval => '.(($tvl1 - $tvl2) / $tvl2));
 	return ((($tvl1 - $tvl2) / $tvl2) * 100).'%';
 }
 
